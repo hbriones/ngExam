@@ -1,0 +1,20 @@
+md-sidenav ng-md-icon {
+  position: relative;
+  top: 5px;
+}
+
+.pdf-controls {
+  width: 100%;
+  display: block;
+  padding: 3em;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: calc(50% - 480px);
+  z-index: 100;
+  width: 100%;
+  padding: 3em;
+  width: 960px;
+}

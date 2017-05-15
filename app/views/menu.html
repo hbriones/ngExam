@@ -1,0 +1,38 @@
+<md-toolbar layout="row" layout-padding>
+
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" aria-label="Menu">
+      <ng-md-icon icon="menu" style="fill:white"></ng-md-icon>
+    </md-button>
+    <h2>
+      <span>Material App</span>
+    </h2>
+    <span flex></span>
+    <md-button class="md-icon-button" aria-label="Favorite">
+      <ng-md-icon icon="favorite" style="fill:white"></ng-md-icon>
+    </md-button>
+    <md-button class="md-icon-button md-hue-1" aria-label="Info">
+      <ng-md-icon icon="info_outline" style="fill:white"></ng-md-icon>
+    </md-button>
+  </div>
+</md-toolbar>
+
+<div flex layout="row">
+  <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" class="md-sidenav-left md-whiteframe-z2">
+    <md-list>
+      <md-list-item>
+        <md-button flex class="md-raised md-primary" ng-click="goHome()">Home</md-button>
+      </md-list-item>
+
+      <md-divider></md-divider>
+
+      <md-list-item>
+        <md-button flex class="md-raised md-primary" ng-click="goPage()">Page</md-button>
+      </md-list-item>
+  </md-sidenav>
+
+  <md-content flex id="content" layout-padding>
+    <md-content layout-padding ui-view="menuContent">
+    </md-content>
+  </md-content>
+</div>
