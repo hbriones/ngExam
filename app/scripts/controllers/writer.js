@@ -9,6 +9,8 @@
  */
 angular.module('ngmaterialApp')
 .controller('WriterCtrl', function($scope) {
-  $scope.page = 'Other Page';
-  $scope.content = 'This is the content of the other page.'
+  $scope.editIntro = function () {
+    $scope.templatePath = 'edit-intro.html';
+    $scope.intro = true;
+  }
 });
