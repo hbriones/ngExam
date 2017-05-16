@@ -1,5 +1,5 @@
 {
-  "name": "ngmaterial",
+  "name": "ngExam",
   "version": "0.0.1",
   "dependencies": {
     "body-parser": "^1.17.1",

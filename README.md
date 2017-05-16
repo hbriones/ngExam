@@ -1,5 +1,5 @@
 
-# Boilerplate for AngularJS with Angular Material design.
+# BOS EXAM
 
 ## Build & development
 
