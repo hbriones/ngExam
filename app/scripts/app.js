@@ -62,7 +62,12 @@ function AppCtrl($scope, $mdSidenav, $location) {
     $scope.goHome = function () {
         $location.path('/app/main');
     };
+
     $scope.goPage = function () {
         $location.path('/app/page');
+    };
+
+    $scope.toggleSidenav = function () {
+      $mdSidenav('left').toggle();
     };
 }

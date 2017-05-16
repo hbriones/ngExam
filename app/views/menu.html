@@ -1,7 +1,6 @@
 <md-toolbar layout="row" layout-padding>
-
   <div class="md-toolbar-tools">
-    <md-button class="md-icon-button" aria-label="Menu">
+    <md-button class="md-icon-button" aria-label="Menu" ng-click="toggleSidenav()">
       <ng-md-icon icon="menu" style="fill:white"></ng-md-icon>
     </md-button>
     <h2>
@@ -17,8 +16,8 @@
   </div>
 </md-toolbar>
 
-<div flex layout="row">
-  <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" class="md-sidenav-left md-whiteframe-z2">
+<md-content flex>
+  <md-sidenav md-component-id="left" class="md-sidenav-left">
     <md-list>
       <md-list-item>
         <md-button flex class="md-raised md-primary" ng-click="goHome()">Home</md-button>
@@ -35,4 +34,4 @@
     <md-content layout-padding ui-view="menuContent">
     </md-content>
   </md-content>
-</div>
+</md-content>
