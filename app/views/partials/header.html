@@ -1,3 +1,4 @@
+<md-content flex>
 <md-toolbar layout="row" layout-padding>
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Menu" ng-click="toggleSidenav()">
@@ -16,7 +17,6 @@
   </div>
 </md-toolbar>
 
-<md-content flex>
   <md-sidenav md-component-id="left" class="md-sidenav-left">
     <md-list>
       <md-list-item>
@@ -27,6 +27,10 @@
 
       <md-list-item>
         <md-button flex class="md-raised md-primary" ng-click="goPage()">Page</md-button>
+      </md-list-item>
+
+      <md-list-item>
+        <md-button flex class="md-raised md-primary" ng-click="goOther()">Other</md-button>
       </md-list-item>
   </md-sidenav>
 

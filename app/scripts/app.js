@@ -26,12 +26,6 @@ angular
     function ($stateProvider, $urlRouterProvider, $mdThemingProvider) {
 
         $stateProvider
-            // .state('app', {
-            //     url: '/app',
-            //     abstract: true,
-            //     templateUrl: 'views/partials/header.html',
-            //     controller: 'AppCtrl'
-            // })
             .state('app', {
                 url: '/app',
                 abstract: true,
@@ -64,6 +58,15 @@ angular
                     }
                 }
             })
+            .state('app.other', {
+                url: '/other',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'views/other.html',
+                        controller: 'OtherCtrl'
+                    }
+                }
+            })
         ;
 
         $urlRouterProvider.otherwise('/app/main');
@@ -77,6 +80,10 @@ function AppCtrl($scope, $location, $mdSidenav, $mdToast) {
 
     $scope.goPage = function () {
         $location.path('/app/page');
+    };
+
+    $scope.goOther = function () {
+        $location.path('/app/other');
     };
 
     $scope.toggleSidenav = function () {
