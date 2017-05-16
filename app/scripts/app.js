@@ -56,9 +56,9 @@ angular
         // For any unmatched url, redirect to /state1
         $urlRouterProvider.otherwise('/app/main');
     })
-    .controller('AppCtrl', ['$scope', '$mdSidenav', '$location', AppCtrl]);
+    .controller('AppCtrl', ['$scope', '$location', '$mdSidenav', '$mdToast', AppCtrl]);
 
-function AppCtrl($scope, $mdSidenav, $location) {
+function AppCtrl($scope, $location, $mdSidenav, $mdToast) {
     $scope.goHome = function () {
         $location.path('/app/main');
     };
@@ -69,5 +69,17 @@ function AppCtrl($scope, $mdSidenav, $location) {
 
     $scope.toggleSidenav = function () {
       $mdSidenav('left').toggle();
+    };
+
+    $scope.message = 'Hello There!';
+
+    $scope.showToast = function (message) {
+      var toast = $mdToast.simple()
+        .content(message)
+        .action('Close')
+        .highlightAction(true)
+        .position('top right');
+
+        $mdToast.show(toast);
     };
 }
