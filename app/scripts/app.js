@@ -26,11 +26,25 @@ angular
     function ($stateProvider, $urlRouterProvider, $mdThemingProvider) {
 
         $stateProvider
+            // .state('app', {
+            //     url: '/app',
+            //     abstract: true,
+            //     templateUrl: 'views/partials/header.html',
+            //     controller: 'AppCtrl'
+            // })
             .state('app', {
                 url: '/app',
                 abstract: true,
-                templateUrl: 'views/menu.html',
-                controller: 'AppCtrl'
+                views: {
+                  'header': {
+                    templateUrl: 'views/partials/header.html',
+                    controller: 'AppCtrl'
+                  },
+                  'footer': {
+                    templateUrl: 'views/partials/footer.html',
+                    controller: 'AppCtrl'
+                  }
+                }
             })
             .state('app.main', {
                 url: '/main',
@@ -52,8 +66,6 @@ angular
             })
         ;
 
-        //
-        // For any unmatched url, redirect to /state1
         $urlRouterProvider.otherwise('/app/main');
     })
     .controller('AppCtrl', ['$scope', '$location', '$mdSidenav', '$mdToast', AppCtrl]);
@@ -71,7 +83,7 @@ function AppCtrl($scope, $location, $mdSidenav, $mdToast) {
       $mdSidenav('left').toggle();
     };
 
-    $scope.message = 'Hello There!';
+    $scope.toastMessage = 'Hello There!';
 
     $scope.showToast = function (message) {
       var toast = $mdToast.simple()
