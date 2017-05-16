@@ -58,12 +58,12 @@ angular
                     }
                 }
             })
-            .state('app.other', {
-                url: '/other',
+            .state('app.writer', {
+                url: '/writer',
                 views: {
                     'menuContent': {
-                        templateUrl: 'views/other.html',
-                        controller: 'OtherCtrl'
+                        templateUrl: 'views/writer/profile.html',
+                        controller: 'WriterCtrl'
                     }
                 }
             })
@@ -82,8 +82,8 @@ function AppCtrl($scope, $location, $mdSidenav, $mdToast) {
         $location.path('/app/page');
     };
 
-    $scope.goOther = function () {
-        $location.path('/app/other');
+    $scope.goWriter = function () {
+        $location.path('/app/writer');
     };
 
     $scope.toggleSidenav = function () {

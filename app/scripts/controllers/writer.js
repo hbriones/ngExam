@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name ngmaterialApp.controller:OtherCtrl
+ * @name ngmaterialApp.controller:WriterCtrl
  * @description
- * # OtherCtrl
+ * # WriterCtrl
  * Controller of the ngmaterialApp
  */
 angular.module('ngmaterialApp')
-.controller('OtherCtrl', function($scope) {
+.controller('WriterCtrl', function($scope) {
   $scope.page = 'Other Page';
   $scope.content = 'This is the content of the other page.'
 });
