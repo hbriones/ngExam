@@ -62,7 +62,7 @@ angular
                 url: '/writer',
                 views: {
                     'menuContent': {
-                        templateUrl: 'views/writer/profile.html',
+                        templateUrl: 'views/writer/main.html',
                         controller: 'WriterCtrl'
                     }
                 }

@@ -13,12 +13,13 @@ angular.module('ngmaterialApp')
     firstname: 'Jigno Alfred',
     lastname: 'Venezuela',
     headline: 'JavaScript Cultist | Web Developer',
+    summary: 'Web Developer'
   }
 
   $scope.editIntro = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'views/writer/edit-intro.html',
+      templateUrl: 'views/writer/profile-intro.html',
       parent: angular.element(document.body),
       scope: $scope,
       preserveScope: true,
