@@ -140,7 +140,7 @@
                     <p id="ember5723" class="pv-top-card-section__summary Sans-15px-black-55% mt5 pt5 ember-view">
                       <div class="truncate-multiline--truncation-target">
                         <span class="truncate-multiline--last-line-wrapper">
-                          <span>{{summary}}</span>
+                          <span>{{profile.summary}}</span>
                         <button class="truncate-multiline--button-hidden" data-ember-action="" data-ember-action-9599="9599"></button>
                         </span>
                       </div>
@@ -364,82 +364,103 @@
                       </li>
                     </ul>
                   </section>
+
+                  <!-- NOTE: Skills list -->
+                  <section id="ember3813" class="pv-profile-section artdeco-container-card pv-featured-skills-section ember-view">
+                    <a data-control-name="edit_skills" href="/in/jigno-alfred-venezuela-757600b3/skills/" id="ember3814" class="pv-profile-section__edit-action pv-profile-section__edit-action--show ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Edit skills</span>
+                      <li-icon aria-hidden="true" type="pencil-icon"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
+        <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
+      </g></svg></li-icon>
+                      </span>
+                    </a>
+                    <a data-control-name="edit_skills_add" href="/in/jigno-alfred-venezuela-757600b3/skills/add/" id="ember3815" class="pv-skills-section__add-label button-tertiary-medium-muted ember-view">  Add a new skill
+</a>
+
+                    <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">
+  Featured Skills &amp; Endorsements
+</h2>
+                    <div id="featured-skills-expanded" tabindex="-1">
+                      <ul class="pv-featured-skills-list pv-featured-skills-list--no-highlights section-info no-highlights">
+                        <li ng-repeat="skill in skills" id="ember5496" class="pv-skill-entity--featured pb5 pv-skill-entity relative ember-view">
+                          <div class="pv-skill-entity__header">
+                            <div class="tooltip-container">
+
+                              <div class="pv-skill-entity__pill-contents static-pill">
+                                <span class="pv-skill-entity__skill-name truncate Sans-15px-black-85%-semibold inline-block">{{skill}}</span>
+                              </div>
+
+                              <div role="tooltip" id="pv-skill-entity-name-tooltip" class="tooltip">
+                                {{skill}}
+                              </div>
+                            </div>
+                          </div>
+
+                          <span class="pv-skill-entity--reorder-disabled">
+  <span class="pv-skill-entity__handle svg-icon-wrap"><span class="visually-hidden">Click and drag to reorder skills</span>
+                          <li-icon aria-hidden="true" type="reorder-icon" size="medium"><svg viewBox="0 0 24 24" width="24" height="24" style="" x="0" y="0" preserveAspectRatio="xMinYMin meet"><g class="large-icon" style="fill: currentColor">
+        <path d="M22,5V7H2V5H22ZM2,11H22V9H2v2Zm0,4H22V13H2v2Zm0,4H22V17H2v2Z" style="isolation: isolate"></path>
+      </g></svg></li-icon>
+                          </span>
+                          </span>
+                        </li>
+                      </ul>
+                  </section>
                   </section>
                   </span>
-                </div>
-                <div style="min-height: 145px" id="ember5757" class="pv-deferred-area pv-deferred-area--pending ember-view">
-                  <li-icon aria-hidden="true" type="loader" class="pv-deferred-area__loader pv-deferred-area__loader--dark" size="large"><svg x="50%" y="50%" width="60px" height="60px" viewBox="0 0 60 60"><g class="large-icon" style="fill: currentColor;">
-          <path opacity="1" d="M30.1,16.1L30.1,16.1c-0.6,0-1-0.5-1-1V1c0-0.6,0.5-1,1-1l0,0c0.6,0,1,0.5,1,1v14.1C31.1,15.7,30.6,16.1,30.1,16.1z"></path>
-          <path opacity="0.85" d="M23.1,18.1L23.1,18.1c-0.5,0.3-1.1,0.1-1.4-0.4L14.5,5.6c-0.3-0.5-0.2-1.1,0.4-1.4l0,0C15.4,3.9,16,4,16.3,4.6l7.2,12.1C23.8,17.2,23.6,17.8,23.1,18.1z"></path>
-          <path opacity="0.77" d="M17.9,23.1L17.9,23.1c-0.3,0.5-0.9,0.7-1.4,0.4l-12.2-7c-0.5-0.3-0.7-0.9-0.4-1.4l0,0c0.3-0.5,0.9-0.7,1.4-0.4l12.2,7C18,22,18.2,22.7,17.9,23.1z"></path>
-          <path opacity="0.69" d="M16.1,30.1L16.1,30.1c0,0.6-0.5,1-1,1L1,31.2c-0.6,0-1-0.5-1-1l0,0c0-0.6,0.5-1,1-1l14.1-0.1C15.7,29.1,16.1,29.5,16.1,30.1z"></path>
-          <path opacity="0.61" d="M18,36.9L18,36.9c0.3,0.5,0.2,1.1-0.4,1.4L5.5,45.6c-0.5,0.3-1.1,0.2-1.4-0.4l0,0c-0.3-0.5-0.2-1.1,0.4-1.4l12.1-7.3C17.1,36.2,17.7,36.4,18,36.9z"></path>
-          <path opacity="0.53" d="M23.3,42.1L23.3,42.1c0.5,0.3,0.6,0.9,0.4,1.4l-7.3,12.1c-0.3,0.5-0.9,0.6-1.4,0.4l0,0c-0.5-0.3-0.6-0.9-0.4-1.4l7.3-12.1C22.1,41.9,22.8,41.8,23.3,42.1z"></path>
-          <path opacity="0.45" d="M30.1,43.9L30.1,43.9c0.6,0,1,0.5,1,1V59c0,0.6-0.5,1-1,1l0,0c-0.6,0-1-0.5-1-1V44.9C29,44.4,29.5,43.9,30.1,43.9z"></path>
-          <path opacity="0.37" d="M37,41.9L37,41.9c0.5-0.3,1.1-0.2,1.4,0.4l7.2,12.1c0.3,0.5,0.2,1.1-0.4,1.4l0,0c-0.5,0.3-1.1,0.2-1.4-0.4l-7.2-12.1C36.4,42.8,36.6,42.2,37,41.9z"></path>
-          <path opacity="0.29" d="M42.2,36.8L42.2,36.8c0.3-0.5,0.9-0.7,1.4-0.4l12.2,7c0.5,0.3,0.7,0.9,0.4,1.4l0,0c-0.3,0.5-0.9,0.7-1.4,0.4l-12.2-7C42.1,38,41.9,37.4,42.2,36.8z"></path>
-          <path opacity="0.21 " d="M44,29.9L44,29.9c0-0.6,0.5-1,1-1h14.1c0.6,0,1,0.5,1,1l0,0c0,0.6-0.5,1-1,1L45,31C44.4,31,44,30.5,44,29.9z"></path>
-          <path opacity="0.13" d="M42.1,23.1L42.1,23.1c-0.3-0.5-0.2-1.1,0.4-1.4l12.1-7.3c0.5-0.3,1.1-0.2,1.4,0.4l0,0c0.3,0.4,0.1,1.1-0.4,1.3l-12.1,7.3C43.1,23.7,42.4,23.6,42.1,23.1z"></path>
-          <path opacity="0.05" d="M36.9,17.9L36.9,17.9c-0.5-0.3-0.6-0.9-0.4-1.4l7.3-12.1c0.3-0.5,0.9-0.6,1.4-0.4l0,0c0.5,0.3,0.6,0.9,0.4,1.4l-7.4,12.2C38,18.1,37.3,18.2,36.9,17.9z"></path>
-        </g></svg></li-icon>
-                </div>
-                <div style="min-height: 285px" id="ember5758" class="pv-deferred-area pv-deferred-area--pending ember-view">
-                  <li-icon aria-hidden="true" type="loader" class="pv-deferred-area__loader pv-deferred-area__loader--dark" size="large"><svg x="50%" y="50%" width="60px" height="60px" viewBox="0 0 60 60"><g class="large-icon" style="fill: currentColor;">
-          <path opacity="1" d="M30.1,16.1L30.1,16.1c-0.6,0-1-0.5-1-1V1c0-0.6,0.5-1,1-1l0,0c0.6,0,1,0.5,1,1v14.1C31.1,15.7,30.6,16.1,30.1,16.1z"></path>
-          <path opacity="0.85" d="M23.1,18.1L23.1,18.1c-0.5,0.3-1.1,0.1-1.4-0.4L14.5,5.6c-0.3-0.5-0.2-1.1,0.4-1.4l0,0C15.4,3.9,16,4,16.3,4.6l7.2,12.1C23.8,17.2,23.6,17.8,23.1,18.1z"></path>
-          <path opacity="0.77" d="M17.9,23.1L17.9,23.1c-0.3,0.5-0.9,0.7-1.4,0.4l-12.2-7c-0.5-0.3-0.7-0.9-0.4-1.4l0,0c0.3-0.5,0.9-0.7,1.4-0.4l12.2,7C18,22,18.2,22.7,17.9,23.1z"></path>
-          <path opacity="0.69" d="M16.1,30.1L16.1,30.1c0,0.6-0.5,1-1,1L1,31.2c-0.6,0-1-0.5-1-1l0,0c0-0.6,0.5-1,1-1l14.1-0.1C15.7,29.1,16.1,29.5,16.1,30.1z"></path>
-          <path opacity="0.61" d="M18,36.9L18,36.9c0.3,0.5,0.2,1.1-0.4,1.4L5.5,45.6c-0.5,0.3-1.1,0.2-1.4-0.4l0,0c-0.3-0.5-0.2-1.1,0.4-1.4l12.1-7.3C17.1,36.2,17.7,36.4,18,36.9z"></path>
-          <path opacity="0.53" d="M23.3,42.1L23.3,42.1c0.5,0.3,0.6,0.9,0.4,1.4l-7.3,12.1c-0.3,0.5-0.9,0.6-1.4,0.4l0,0c-0.5-0.3-0.6-0.9-0.4-1.4l7.3-12.1C22.1,41.9,22.8,41.8,23.3,42.1z"></path>
-          <path opacity="0.45" d="M30.1,43.9L30.1,43.9c0.6,0,1,0.5,1,1V59c0,0.6-0.5,1-1,1l0,0c-0.6,0-1-0.5-1-1V44.9C29,44.4,29.5,43.9,30.1,43.9z"></path>
-          <path opacity="0.37" d="M37,41.9L37,41.9c0.5-0.3,1.1-0.2,1.4,0.4l7.2,12.1c0.3,0.5,0.2,1.1-0.4,1.4l0,0c-0.5,0.3-1.1,0.2-1.4-0.4l-7.2-12.1C36.4,42.8,36.6,42.2,37,41.9z"></path>
-          <path opacity="0.29" d="M42.2,36.8L42.2,36.8c0.3-0.5,0.9-0.7,1.4-0.4l12.2,7c0.5,0.3,0.7,0.9,0.4,1.4l0,0c-0.3,0.5-0.9,0.7-1.4,0.4l-12.2-7C42.1,38,41.9,37.4,42.2,36.8z"></path>
-          <path opacity="0.21 " d="M44,29.9L44,29.9c0-0.6,0.5-1,1-1h14.1c0.6,0,1,0.5,1,1l0,0c0,0.6-0.5,1-1,1L45,31C44.4,31,44,30.5,44,29.9z"></path>
-          <path opacity="0.13" d="M42.1,23.1L42.1,23.1c-0.3-0.5-0.2-1.1,0.4-1.4l12.1-7.3c0.5-0.3,1.1-0.2,1.4,0.4l0,0c0.3,0.4,0.1,1.1-0.4,1.3l-12.1,7.3C43.1,23.7,42.4,23.6,42.1,23.1z"></path>
-          <path opacity="0.05" d="M36.9,17.9L36.9,17.9c-0.5-0.3-0.6-0.9-0.4-1.4l7.3-12.1c0.3-0.5,0.9-0.6,1.4-0.4l0,0c0.5,0.3,0.6,0.9,0.4,1.4l-7.4,12.2C38,18.1,37.3,18.2,36.9,17.9z"></path>
-        </g></svg></li-icon>
-                </div>
-                <div id="ember5759" class="pv-occludable__accomplishments ember-view">
-                  <!---->
-                </div>
-                <div style="min-height: 200px" id="ember5760" class="pv-deferred-area pv-deferred-area--pending ember-view">
-                  <li-icon aria-hidden="true" type="loader" class="pv-deferred-area__loader pv-deferred-area__loader--dark" size="large"><svg x="50%" y="50%" width="60px" height="60px" viewBox="0 0 60 60"><g class="large-icon" style="fill: currentColor;">
-          <path opacity="1" d="M30.1,16.1L30.1,16.1c-0.6,0-1-0.5-1-1V1c0-0.6,0.5-1,1-1l0,0c0.6,0,1,0.5,1,1v14.1C31.1,15.7,30.6,16.1,30.1,16.1z"></path>
-          <path opacity="0.85" d="M23.1,18.1L23.1,18.1c-0.5,0.3-1.1,0.1-1.4-0.4L14.5,5.6c-0.3-0.5-0.2-1.1,0.4-1.4l0,0C15.4,3.9,16,4,16.3,4.6l7.2,12.1C23.8,17.2,23.6,17.8,23.1,18.1z"></path>
-          <path opacity="0.77" d="M17.9,23.1L17.9,23.1c-0.3,0.5-0.9,0.7-1.4,0.4l-12.2-7c-0.5-0.3-0.7-0.9-0.4-1.4l0,0c0.3-0.5,0.9-0.7,1.4-0.4l12.2,7C18,22,18.2,22.7,17.9,23.1z"></path>
-          <path opacity="0.69" d="M16.1,30.1L16.1,30.1c0,0.6-0.5,1-1,1L1,31.2c-0.6,0-1-0.5-1-1l0,0c0-0.6,0.5-1,1-1l14.1-0.1C15.7,29.1,16.1,29.5,16.1,30.1z"></path>
-          <path opacity="0.61" d="M18,36.9L18,36.9c0.3,0.5,0.2,1.1-0.4,1.4L5.5,45.6c-0.5,0.3-1.1,0.2-1.4-0.4l0,0c-0.3-0.5-0.2-1.1,0.4-1.4l12.1-7.3C17.1,36.2,17.7,36.4,18,36.9z"></path>
-          <path opacity="0.53" d="M23.3,42.1L23.3,42.1c0.5,0.3,0.6,0.9,0.4,1.4l-7.3,12.1c-0.3,0.5-0.9,0.6-1.4,0.4l0,0c-0.5-0.3-0.6-0.9-0.4-1.4l7.3-12.1C22.1,41.9,22.8,41.8,23.3,42.1z"></path>
-          <path opacity="0.45" d="M30.1,43.9L30.1,43.9c0.6,0,1,0.5,1,1V59c0,0.6-0.5,1-1,1l0,0c-0.6,0-1-0.5-1-1V44.9C29,44.4,29.5,43.9,30.1,43.9z"></path>
-          <path opacity="0.37" d="M37,41.9L37,41.9c0.5-0.3,1.1-0.2,1.4,0.4l7.2,12.1c0.3,0.5,0.2,1.1-0.4,1.4l0,0c-0.5,0.3-1.1,0.2-1.4-0.4l-7.2-12.1C36.4,42.8,36.6,42.2,37,41.9z"></path>
-          <path opacity="0.29" d="M42.2,36.8L42.2,36.8c0.3-0.5,0.9-0.7,1.4-0.4l12.2,7c0.5,0.3,0.7,0.9,0.4,1.4l0,0c-0.3,0.5-0.9,0.7-1.4,0.4l-12.2-7C42.1,38,41.9,37.4,42.2,36.8z"></path>
-          <path opacity="0.21 " d="M44,29.9L44,29.9c0-0.6,0.5-1,1-1h14.1c0.6,0,1,0.5,1,1l0,0c0,0.6-0.5,1-1,1L45,31C44.4,31,44,30.5,44,29.9z"></path>
-          <path opacity="0.13" d="M42.1,23.1L42.1,23.1c-0.3-0.5-0.2-1.1,0.4-1.4l12.1-7.3c0.5-0.3,1.1-0.2,1.4,0.4l0,0c0.3,0.4,0.1,1.1-0.4,1.3l-12.1,7.3C43.1,23.7,42.4,23.6,42.1,23.1z"></path>
-          <path opacity="0.05" d="M36.9,17.9L36.9,17.9c-0.5-0.3-0.6-0.9-0.4-1.4l7.3-12.1c0.3-0.5,0.9-0.6,1.4-0.4l0,0c0.5,0.3,0.6,0.9,0.4,1.4l-7.4,12.2C38,18.1,37.3,18.2,36.9,17.9z"></path>
-        </g></svg></li-icon>
+                  </div>
+
+                  <div id="ember5759" class="pv-occludable__accomplishments ember-view">
+
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="right-rail ">
-              <section id="ember5769" class="pv-profile-section pv-profile-info-section pv-profile-section ember-view">
-                <div id="ember5778" class="pv-profile-info-section__sticky-content sticky ember-view">
-                  <section id="ember5791" class="pe-hub-section mb2 ember-view"><button data-control-name="profile_edit_fab" aria-expanded="false" class="pe-hub-section__expand-button pe-hub__action " data-ember-action="" data-ember-action-5796="5796">
+              <div class="right-rail ">
+                <section id="ember5769" class="pv-profile-section pv-profile-info-section pv-profile-section ember-view">
+                  <div id="ember5778" class="pv-profile-info-section__sticky-content sticky ember-view">
+                    <section id="ember5791" class="pe-hub-section mb2 ember-view"><button data-control-name="profile_edit_fab" aria-expanded="false" class="pe-hub-section__expand-button pe-hub__action " data-ember-action="" data-ember-action-5796="5796">
     <span>Add new profile section</span>
     <span class="pe-hub-section__icon triangle-icon "></span>
   </button>
 
-                    <!---->
+                    </section>
+
+                  </div>
+
+                  <section id="ember5805" class="view-public-profile profile-action ember-view">
+                    <a target="_blank" href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" id="ember5814" class="profile-action-text ember-view">  Edit your public profile
+  </a>
+                    <div class="icon-tooltip">
+                      <div id="ember5819" class="ember-view">
+                        <div class="hovercard-container">
+                          <span class="svg-icon-wrap"><span class="visually-hidden">See and edit how you look to people who are not signed in, and find you through search engines (ex: Google, Bing).</span>
+                          <li-icon aria-hidden="true" type="question-pebble-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
+          <g id="question-pebble-icon">
+            <g>
+              <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
+              <rect style="fill:none;" width="16" height="16"></rect>
+            </g>
+          </g>
+          <g id="Layer_1">
+          </g>
+        </g></svg></li-icon>
+                          </span>
+
+                          <div role="tooltip" class="hovercard ">
+                            See and edit how you look to people who are not signed in, and find you through search engines (ex: Google, Bing).
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </section>
 
-                </div>
-                <!---->
-                <section id="ember5805" class="view-public-profile profile-action ember-view"><a target="_blank" href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" id="ember5814" class="profile-action-text ember-view">  Edit your public profile
+                  <section id="ember5828" class="add-secondary-language profile-action ember-view">
+                    <a data-control-name="add_secondary_language" href="https://www.linkedin.com/in/jigno-alfred-venezuela-757600b3/edit/secondary-language/" id="ember5829" class="profile-action-text ember-view">  Add profile in another language
   </a>
-                  <div class="icon-tooltip">
-                    <div id="ember5819" class="ember-view">
-                      <div class="hovercard-container">
-                        <span class="svg-icon-wrap"><span class="visually-hidden">See and edit how you look to people who are not signed in, and find you through search engines (ex: Google, Bing).</span>
-                        <li-icon aria-hidden="true" type="question-pebble-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
+                    <div class="icon-tooltip">
+                      <div id="ember5830" class="ember-view">
+                        <div class="hovercard-container">
+                          <span class="svg-icon-wrap"><span class="visually-hidden">Creating a profile in another language makes it easier for local business contacts and recruiters to find you on LinkedIn.</span>
+                          <li-icon aria-hidden="true" type="question-pebble-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
           <g id="question-pebble-icon">
             <g>
               <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
@@ -449,72 +470,45 @@
           <g id="Layer_1">
           </g>
         </g></svg></li-icon>
-                        </span>
+                          </span>
 
-                        <div role="tooltip" class="hovercard ">
-                          See and edit how you look to people who are not signed in, and find you through search engines (ex: Google, Bing).
+                          <div role="tooltip" class="hovercard ">
+                            Creating a profile in another language makes it easier for local business contacts and recruiters to find you on LinkedIn.
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </section>
                 </section>
-
-                <section id="ember5828" class="add-secondary-language profile-action ember-view">
-                  <a data-control-name="add_secondary_language" href="https://www.linkedin.com/in/jigno-alfred-venezuela-757600b3/edit/secondary-language/" id="ember5829" class="profile-action-text ember-view">  Add profile in another language
-  </a>
-                  <div class="icon-tooltip">
-                    <div id="ember5830" class="ember-view">
-                      <div class="hovercard-container">
-                        <span class="svg-icon-wrap"><span class="visually-hidden">Creating a profile in another language makes it easier for local business contacts and recruiters to find you on LinkedIn.</span>
-                        <li-icon aria-hidden="true" type="question-pebble-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
-          <g id="question-pebble-icon">
-            <g>
-              <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
-              <rect style="fill:none;" width="16" height="16"></rect>
-            </g>
-          </g>
-          <g id="Layer_1">
-          </g>
-        </g></svg></li-icon>
-                        </span>
-
-                        <div role="tooltip" class="hovercard ">
-                          Creating a profile in another language makes it easier for local business contacts and recruiters to find you on LinkedIn.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <section id="ember5831" class="ad-banner-container ember-view"><iframe width="300" height="250" src="javascript:void(0)" scrolling="no" title="advertisement" class="ad-banner" src="./Jigno Alfred Venezuela _ LinkedIn_files/saved_resource(1).html"></iframe>
                 </section>
-              </section>
-              <section id="ember5831" class="ad-banner-container ember-view"><iframe width="300" height="250" src="javascript:void(0)" scrolling="no" title="advertisement" class="ad-banner" src="./Jigno Alfred Venezuela _ LinkedIn_files/saved_resource(1).html"></iframe>
-              </section>
-              <section class="right-rail__info_container">
-                <section id="ember5840" class="pv-profile-section artdeco-container-card connections-section ember-view">
-                  <a data-control-name="view_all_connections" href="https://www.linkedin.com/mynetwork/invite-connect/connections/" id="ember5841" class="ember-view">
-                    <h2 class="pv-profile-section__card-heading Sans-17px-black-85%-semibold">
-      See connections (64)
+                <section class="right-rail__info_container">
+                  <section id="ember5840" class="pv-profile-section artdeco-container-card connections-section ember-view">
+                    <a data-control-name="view_all_connections" href="https://www.linkedin.com/mynetwork/invite-connect/connections/" id="ember5841" class="ember-view">
+                      <h2 class="pv-profile-section__card-heading Sans-17px-black-85%-semibold">
+      See connections (0)
     </h2>
 
-                    <div id="ember5854" class="facepile facepile-overlap xsmall stack-to-right ember-view">
-                      <!---->
-                    </div>
-                  </a>
-                </section>
+                      <div id="ember5854" class="facepile facepile-overlap xsmall stack-to-right ember-view">
+                        <!---->
+                      </div>
+                    </a>
+                  </section>
 
-                <section tabindex="-1" id="ember5867" class="pv-profile-section artdeco-container-card pv-contact-info ember-view">
-                  <a data-control-name="self_edit_contact_info" href="https://www.linkedin.com/in/jigno-alfred-venezuela-757600b3/edit/contact-info/" id="ember5876" class="pv-profile-section__edit-action pv-profile-section__edit-action--show ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Edit contact info</span>
-                    <li-icon aria-hidden="true" type="pencil-icon"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
+                  <section tabindex="-1" id="ember5867" class="pv-profile-section artdeco-container-card pv-contact-info ember-view">
+                    <a data-control-name="self_edit_contact_info" href="https://www.linkedin.com/in/jigno-alfred-venezuela-757600b3/edit/contact-info/" id="ember5876" class="pv-profile-section__edit-action pv-profile-section__edit-action--show ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Edit contact info</span>
+                      <li-icon aria-hidden="true" type="pencil-icon"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
           <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
         </g></svg></li-icon>
-                    </span>
-                  </a>
-                  <h2 class="pv-profile-section__card-heading Sans-17px-black-85%-semibold">Contact and Personal Info</h2>
+                      </span>
+                    </a>
+                    <h2 class="pv-profile-section__card-heading Sans-17px-black-85%-semibold">Contact and Personal Info</h2>
 
-                  <div class="pv-contact-info__card-sub-heading Sans-15px-black-55%-semibold mv1">
-                    Jigno Alfred’s Profile, Phone, Email, IM, and Birthday
-                  </div>
+                    <div class="pv-contact-info__card-sub-heading Sans-15px-black-55%-semibold mv1">
+                      {{profile.firstname}}’s Profile, Phone, Email, IM, and Birthday
+                    </div>
 
-                  <button data-control-name="contact_see_more" class="contact-see-more-less link-without-visited-state" data-ember-action="" data-ember-action-5877="5877">
+                    <button data-control-name="contact_see_more" class="contact-see-more-less link-without-visited-state" data-ember-action="" data-ember-action-5877="5877">
     <span aria-hidden="true">
       Show more
       <span class="svg-icon-wrap"><li-icon aria-hidden="true" type="chevron-down-icon" class="icon-state" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
@@ -523,194 +517,70 @@
      </span>
     <span class="visually-hidden">See more contact and personal info</span>
   </button>
-                </section>
-
-              </section>
-
-              <div style="" id="ember5878" class="pv-deferred-area ember-view">
-                <div class="pv-deferred-area__content">
-                  <section id="ember5949" class="pv-profile-section artdeco-container-card pv-browsemap-section profile-section ember-view">
-                    <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">People Also Viewed</h2>
-
-                    <!---->
-                    <ul class="pv-profile-section__section-info section-info browsemap mt4">
-                      <li class="pv-browsemap-section__member-container mt4">
-                        <a data-control-name="browsemap_profile" href="https://www.linkedin.com/in/katherine-vi%C3%B1as-221b08b9/" id="ember5951" class="pv-browsemap-section__member ember-view"> <img class="lazy-image pv-browsemap-section__member-image EntityPhoto-circle-4" alt="Katherine Viñas" height="56" width="56">
-                          <div class="pv-browsemap-section__member-detail">
-                            <h3 id="ember5964" class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view"><span class="name-and-icon"><span class="name actor-name">Katherine Viñas</span><!----></span>
-
-  <span id="ember5973" class="distance-badge separator ember-view">  <span class="visually-hidden">1st degree connection</span>
-
-  <span class="dist-value">1st</span>
-  </span>
-  </h3>
-                            <p class="browsemap-headline Sans-15px-white-100%">Owner at Nail Port Nail Spa</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="pv-browsemap-section__member-container mt4">
-                        <a data-control-name="browsemap_profile" href="https://www.linkedin.com/in/karyl-anne-lanting-rn-cpc-06108268/" id="ember5975" class="pv-browsemap-section__member ember-view"> <img class="lazy-image pv-browsemap-section__member-image EntityPhoto-circle-4" alt="Karyl Anne Lanting, RN, CPC" height="56" width="56">
-                          <div class="pv-browsemap-section__member-detail">
-                            <h3 id="ember5976" class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view"><span class="name-and-icon"><span class="name actor-name">Karyl Anne Lanting, RN, CPC</span><!----></span>
-
-  <span id="ember5977" class="distance-badge separator ember-view">  <span class="visually-hidden">1st degree connection</span>
-
-  <span class="dist-value">1st</span>
-  </span>
-  </h3>
-                            <p class="browsemap-headline Sans-15px-white-100%">Medical Coder at UST Global</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="pv-browsemap-section__member-container mt4">
-                        <a data-control-name="browsemap_profile" href="https://www.linkedin.com/in/aylnntenorio/" id="ember5979" class="pv-browsemap-section__member ember-view"> <img class="lazy-image pv-browsemap-section__member-image EntityPhoto-circle-4" alt="Aylnn Tenorio-Ganelo" height="56" width="56">
-                          <div class="pv-browsemap-section__member-detail">
-                            <h3 id="ember5980" class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view"><span class="name-and-icon"><span class="name actor-name">Aylnn Tenorio-Ganelo</span><!----></span>
-
-  <span id="ember5981" class="distance-badge separator ember-view">  <span class="visually-hidden">1st degree connection</span>
-
-  <span class="dist-value">1st</span>
-  </span>
-  </h3>
-                            <p class="browsemap-headline Sans-15px-white-100%">Advocate of beautiful beginnings</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="pv-browsemap-section__member-container mt4">
-                        <a data-control-name="browsemap_profile" href="https://www.linkedin.com/in/josef-habit-23a05236/" id="ember5983" class="pv-browsemap-section__member ember-view"> <img class="lazy-image pv-browsemap-section__member-image EntityPhoto-circle-4" alt="Josef Habit" height="56" width="56">
-                          <div class="pv-browsemap-section__member-detail">
-                            <h3 id="ember5984" class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view"><span class="name-and-icon"><span class="name actor-name">Josef Habit</span><!----></span>
-
-  <span id="ember5985" class="distance-badge separator ember-view">  <span class="visually-hidden">2nd degree connection</span>
-
-  <span class="dist-value">2nd</span>
-  </span>
-  </h3>
-                            <p class="browsemap-headline Sans-15px-white-100%">OBC Integrated Circuits</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="pv-browsemap-section__member-container mt4">
-                        <a data-control-name="browsemap_profile" href="https://www.linkedin.com/in/shiela-zara-causapin-80717646/" id="ember5987" class="pv-browsemap-section__member ember-view"> <img class="lazy-image pv-browsemap-section__member-image EntityPhoto-circle-4" alt="Shiela Zara - Causapin" height="56" width="56">
-                          <div class="pv-browsemap-section__member-detail">
-                            <h3 id="ember5988" class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view"><span class="name-and-icon"><span class="name actor-name">Shiela Zara - Causapin</span><!----></span>
-
-  <span id="ember5989" class="distance-badge separator ember-view">  <span class="visually-hidden">1st degree connection</span>
-
-  <span class="dist-value">1st</span>
-  </span>
-  </h3>
-                            <p class="browsemap-headline Sans-15px-white-100%">Client Services Officer at Standard Chartered Bank</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="pv-browsemap-section__member-container mt4">
-                        <a data-control-name="browsemap_profile" href="https://www.linkedin.com/in/welfeb-cualbar-b47841126/" id="ember5991" class="pv-browsemap-section__member ember-view"> <img class="lazy-image pv-browsemap-section__member-image EntityPhoto-circle-4 ghost-person" alt="Welfeb Cualbar" height="56" width="56">
-                          <div class="pv-browsemap-section__member-detail">
-                            <h3 id="ember5992" class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view"><span class="name-and-icon"><span class="name actor-name">Welfeb Cualbar</span><!----></span>
-
-  <span id="ember5993" class="distance-badge separator ember-view">  <span class="visually-hidden">3rd degree connection</span>
-
-  <span class="dist-value">3rd</span>
-  </span>
-  </h3>
-                            <p class="browsemap-headline Sans-15px-white-100%">Audit Associate at Navarro Amper &amp; Co. - Member Firm of Deloitte Touche Tohmatsu Ltd.</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="pv-browsemap-section__member-container mt4">
-                        <a data-control-name="browsemap_profile" href="https://www.linkedin.com/in/jansen-torrecampo-3271b746/" id="ember5995" class="pv-browsemap-section__member ember-view"> <img class="lazy-image pv-browsemap-section__member-image EntityPhoto-circle-4" alt="Jansen Torrecampo" height="56" width="56">
-                          <div class="pv-browsemap-section__member-detail">
-                            <h3 id="ember5996" class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view"><span class="name-and-icon"><span class="name actor-name">Jansen Torrecampo</span><!----></span>
-
-  <span id="ember5997" class="distance-badge separator ember-view">  <span class="visually-hidden">3rd degree connection</span>
-
-  <span class="dist-value">3rd</span>
-  </span>
-  </h3>
-                            <p class="browsemap-headline Sans-15px-white-100%">SEO - Social Media Marketing at Eyewebmaster</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="pv-browsemap-section__member-container mt4">
-                        <a data-control-name="browsemap_profile" href="https://www.linkedin.com/in/erren-quintos-a7a07265/" id="ember5999" class="pv-browsemap-section__member ember-view"> <img class="lazy-image pv-browsemap-section__member-image EntityPhoto-circle-4" alt="Erren Quintos" height="56" width="56">
-                          <div class="pv-browsemap-section__member-detail">
-                            <h3 id="ember6000" class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view"><span class="name-and-icon"><span class="name actor-name">Erren Quintos</span><!----></span>
-
-  <span id="ember6001" style="display: none;" class="distance-badge ember-view">  <span class="visually-hidden">&nbsp;</span>
-
-  <span class="dist-value">&nbsp;</span>
-  </span>
-  </h3>
-                            <p class="browsemap-headline Sans-15px-white-100%">Broadcast Media Professional</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="pv-browsemap-section__member-container mt4">
-                        <a data-control-name="browsemap_profile" href="https://www.linkedin.com/in/sheila-abello-6632ba51/" id="ember6003" class="pv-browsemap-section__member ember-view"> <img class="lazy-image pv-browsemap-section__member-image EntityPhoto-circle-4" alt="Sheila Abello" height="56" width="56">
-                          <div class="pv-browsemap-section__member-detail">
-                            <h3 id="ember6004" class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view"><span class="name-and-icon"><span class="name actor-name">Sheila Abello</span><!----></span>
-
-  <span id="ember6005" class="distance-badge separator ember-view">  <span class="visually-hidden">3rd degree connection</span>
-
-  <span class="dist-value">3rd</span>
-  </span>
-  </h3>
-                            <p class="browsemap-headline Sans-15px-white-100%">SEO Content Developer at Eyewebmaster</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="pv-browsemap-section__member-container mt4">
-                        <a data-control-name="browsemap_profile" href="https://www.linkedin.com/in/manuelito-romano-jr-983b5113/" id="ember6007" class="pv-browsemap-section__member ember-view"> <img class="lazy-image pv-browsemap-section__member-image EntityPhoto-circle-4" alt="manuelito romano jr" height="56" width="56">
-                          <div class="pv-browsemap-section__member-detail">
-                            <h3 id="ember6008" class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view"><span class="name-and-icon"><span class="name actor-name">manuelito romano jr</span><!----></span>
-
-  <span id="ember6009" class="distance-badge separator ember-view">  <span class="visually-hidden">3rd degree connection</span>
-
-  <span class="dist-value">3rd</span>
-  </span>
-  </h3>
-                            <p class="browsemap-headline Sans-15px-white-100%">Account Executive at Technology Links International Corppration</p>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-
-                    <!---->
                   </section>
 
+                </section>
+
+                <div style="" id="ember5878" class="pv-deferred-area ember-view">
+                  <div class="pv-deferred-area__content">
+                    <section id="ember5949" class="pv-profile-section artdeco-container-card pv-browsemap-section profile-section ember-view">
+                      <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">People Also Viewed</h2>
+
+                      <ul class="pv-profile-section__section-info section-info browsemap mt4">
+                        <li ng-repeat="list in viewed" class="pv-browsemap-section__member-container mt4">
+                          <a data-control-name="browsemap_profile" href="https://www.linkedin.com/in/katherine-vi%C3%B1as-221b08b9/" id="ember5951" class="pv-browsemap-section__member ember-view"> <img class="lazy-image pv-browsemap-section__member-image EntityPhoto-circle-4" alt="Katherine Viñas" height="56" width="56">
+                            <div class="pv-browsemap-section__member-detail">
+                              <h3 id="ember5964" class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view">
+                              <span class="name-and-icon">
+                                <span class="name actor-name">{{list.name}}</span>
+                              </span>
+
+  <span id="ember5973" class="distance-badge separator ember-view">  <span class="visually-hidden">{{list.connection}} degree connection</span>
+
+  <span class="dist-value">{{list.connection}}</span>
+  </span>
+  </h3>
+                              <p class="browsemap-headline Sans-15px-white-100%">{{list.headline}}</p>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </section>
+
+
+                  </div>
+                </div>
+
+                <div id="ember6097" class="pv-occludable__course-recommendations ember-view">
+
+                </div>
+
+              </div>
+
+              <div id="ember5881" class="nav-footer nav-footer--static ember-view">
+                <div id="ember5882" class="nav-footer__occlusion-hint ember-view">
 
                 </div>
               </div>
-              <div id="ember6097" class="pv-occludable__course-recommendations ember-view">
-                <!---->
-              </div>
-              <!---->
             </div>
 
-            <div id="ember5881" class="nav-footer nav-footer--static ember-view">
-              <div id="ember5882" class="nav-footer__occlusion-hint ember-view">
-                <!---->
+            <div id="ember9145" class="ember-view">
+              <div id="ember9146" class="ember-view">
+
               </div>
             </div>
-          </div>
-
-          <div id="ember9145" class="ember-view">
-            <div id="ember9146" class="ember-view"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
-
-
-  <!-- TODO Include edit-intro.html -->
 
   <div id="type-ahead-wormhole" class="type-ahead type-ahead-wormhole">
+
   </div>
 
   <div id="toast-wormhole" class="toast-wormhole">
+
   </div>
   </div>
 </md-content>

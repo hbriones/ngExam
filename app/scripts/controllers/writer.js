@@ -56,6 +56,22 @@ angular.module('ngmaterialApp')
     }
   ]
 
+  $scope.skills = [
+    'Node.js',
+    'Angular.js',
+    'JavaScript'
+  ]
+
+  $scope.viewed = [{
+    name: 'Jigno Alfred V. Venezuela',
+    headline: 'VP of Misc Stuff at Imaginary Company',
+    connection: '1st',
+  }, {
+    name: 'Rommel Lagurin',
+    headline: 'Bubbles of Powerpuff Girls',
+    connection: '1st',
+  }]
+
   $scope.editIntro = function(ev) {
     $mdDialog.show({
       controller: DialogController,
