@@ -10,25 +10,21 @@
 angular.module('ngmaterialApp')
 .controller('WriterCtrl', function($scope, $mdDialog) {
   $scope.profile = {
-    firstname: 'Jigno Alfred',
-    lastname: 'Venezuela',
-    headline: 'JavaScript Cultist | Web Developer',
-    summary: 'Web Developer'
+    firstname: 'Devon',
+    lastname: 'Sloan',
+    headline: '',
+    summary: '',
+    work: '',
+    school: '',
+    location: '',
   }
 
   $scope.experience = [
     {
       name: 'Big Outsource',
-      location: 'San Pablo City, Laguna',
-      title: 'IT Associate',
+      location: '',
+      title: 'IT',
       startdate: '',
-      duration: '',
-      description: ''
-    }, {
-      name: 'Telus',
-      location: 'Quezon City',
-      title: 'Tech Support',
-      enddate: '',
       duration: '',
       description: ''
     }
@@ -36,18 +32,9 @@ angular.module('ngmaterialApp')
 
   $scope.education = [
     {
-      name: 'First Asia Institute of Technology and Humanities',
-      degree: 'Bachelor of Science - BS',
-      field: 'Computer Science',
-      grade: '',
-      activities: '',
-      startdate: 'May 2017',
-      enddate: 'June 2017',
-      description: '',
-    }, {
-      name: 'De La Salle Lipa',
+      name: 'Harvard',
       degree: '',
-      field: 'Computer Engineering',
+      field: '',
       grade: '',
       activities: '',
       startdate: '',
@@ -56,11 +43,7 @@ angular.module('ngmaterialApp')
     }
   ]
 
-  $scope.skills = [
-    'Node.js',
-    'Angular.js',
-    'JavaScript'
-  ]
+  $scope.skills = []
 
   $scope.viewed = [{
     name: 'Jigno Alfred V. Venezuela',
@@ -70,11 +53,15 @@ angular.module('ngmaterialApp')
     name: 'Rommel Lagurin',
     headline: 'Bubbles of Powerpuff Girls',
     connection: '1st',
+  }, {
+    name: 'Hyacinth Briones',
+    headline: 'Blossom of Powerpuff Girls',
+    connection: '1st',
   }]
 
   $scope.editIntro = function(ev) {
     $mdDialog.show({
-      controller: DialogController,
+      controller: IntroCtrl,
       templateUrl: 'views/writer/profile-intro.html',
       parent: angular.element(document.body),
       scope: $scope,
@@ -85,8 +72,136 @@ angular.module('ngmaterialApp')
     })
   };
 
-  function DialogController($scope, $mdDialog) {
-    $scope.hide = function() {
+  $scope.addExperience = function(ev) {
+    $mdDialog.show({
+      controller: ExperienceCtrl,
+      templateUrl: 'views/writer/profile-experience-add.html',
+      parent: angular.element(document.body),
+      scope: $scope,
+      preserveScope: true,
+      targetEvent: ev,
+      clickOutsideToClose: true,
+      fullscreen: $scope.customFullscreen
+    })
+  };
+
+  $scope.editExperience = function(ev) {
+    $mdDialog.show({
+      controller: ExperienceCtrl,
+      templateUrl: 'views/writer/profile-experience-edit.html',
+      parent: angular.element(document.body),
+      scope: $scope,
+      preserveScope: true,
+      targetEvent: ev,
+      clickOutsideToClose: true,
+      fullscreen: $scope.customFullscreen
+    })
+  };
+
+  $scope.addEducation = function(ev) {
+    $mdDialog.show({
+      controller: EducationCtrl,
+      templateUrl: 'views/writer/profile-education-add.html',
+      parent: angular.element(document.body),
+      scope: $scope,
+      preserveScope: true,
+      targetEvent: ev,
+      clickOutsideToClose: true,
+      fullscreen: $scope.customFullscreen
+    })
+  };
+
+  $scope.editEducation = function(ev) {
+    $mdDialog.show({
+      controller: EducationCtrl,
+      templateUrl: 'views/writer/profile-education-edit.html',
+      parent: angular.element(document.body),
+      scope: $scope,
+      preserveScope: true,
+      targetEvent: ev,
+      clickOutsideToClose: true,
+      fullscreen: $scope.customFullscreen
+    })
+  };
+
+  $scope.addSkills = function(ev) {
+    $mdDialog.show({
+      controller: SkillsCtrl,
+      templateUrl: 'views/writer/profile-skills-add.html',
+      parent: angular.element(document.body),
+      scope: $scope,
+      preserveScope: true,
+      targetEvent: ev,
+      clickOutsideToClose: true,
+      fullscreen: $scope.customFullscreen
+    })
+  };
+
+  $scope.editSkills = function(ev) {
+    $mdDialog.show({
+      controller: SkillsCtrl,
+      templateUrl: 'views/writer/profile-skills-edit.html',
+      parent: angular.element(document.body),
+      scope: $scope,
+      preserveScope: true,
+      targetEvent: ev,
+      clickOutsideToClose: true,
+      fullscreen: $scope.customFullscreen
+    })
+  };
+
+  function IntroCtrl($scope, $mdDialog) {
+    $scope.save = function() {
+      $scope.profile.work = $scope.work;
+      $scope.profile.school = $scope.school;
+      $mdDialog.hide();
+    };
+
+    $scope.cancel = function() {
+      $mdDialog.cancel();
+    };
+  }
+
+  function ExperienceCtrl($scope, $mdDialog) {
+    $scope.save = function() {
+
+      $mdDialog.hide();
+    };
+
+    $scope.delete = function() {
+
+      $mdDialog.hide();
+    };
+
+    $scope.cancel = function() {
+      $mdDialog.cancel();
+    };
+  }
+
+  function EducationCtrl($scope, $mdDialog) {
+    $scope.save = function() {
+
+      $mdDialog.hide();
+    };
+
+    $scope.delete = function() {
+
+      $mdDialog.hide();
+    };
+
+    $scope.cancel = function() {
+      $mdDialog.cancel();
+    };
+  }
+
+  function SkillsCtrl($scope, $mdDialog) {
+    $scope.save = function() {
+
+      $mdDialog.hide();
+    };
+
+    $scope.delete = function() {
+
       $mdDialog.hide();
     };
 

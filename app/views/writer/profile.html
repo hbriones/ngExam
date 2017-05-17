@@ -63,7 +63,7 @@
                 </div>
 
                 <span id="ember5703" style="display: none;" class="pv-member-badge ember-view">
-                  <span class="visually-hidden">Jigno Alfred has a  account</span>
+                  <span class="visually-hidden">{{porfile.firstname}} has a  account</span>
                 </span>
 
                 <div class="pv-top-card-section__header">
@@ -102,23 +102,22 @@
                   </span>
                 </a>
 
-                <!-- TODO Get scope variables -->
                 <div class="pv-top-card-section__body">
                   <div class="pv-top-card-section__information mt3">
                     <h1 class="pv-top-card-section__name Sans-26px-black-85% mb1">{{profile.firstname}} {{profile.lastname}}</h1>
                     <h2 class="pv-top-card-section__headline Sans-19px-black-85% mb1">{{profile.headline}}</h2>
                     <div class="pv-top-card-section__experience truncate">
-                      <h3 class="pv-top-card-section__company Sans-17px-black-70% mb1 inline-block">
-                        Big Outsource
+                      <h3 ng-if="profile.work" class="pv-top-card-section__company Sans-17px-black-70% mb1 inline-block">
+                        {{profile.work}}
                       </h3>
 
-                      <h3 class="pv-top-card-section__school pv-top-card-section__school--with-separator Sans-17px-black-70% mb1 inline-block">
-                        First Asia Institute of Technology and Humanities
+                      <h3 ng-if="profile.school" class="pv-top-card-section__school pv-top-card-section__school--with-separator Sans-17px-black-70% mb1 inline-block">
+                        {{profile.school}}
                       </h3>
                     </div>
 
-                    <h3 class="pv-top-card-section__location Sans-17px-black-70% mb1 inline-block">
-                      Region IVA - Calabarzon, Philippines
+                    <h3 ng-if="profile.location" class="pv-top-card-section__location Sans-17px-black-70% mb1 inline-block">
+                      {{profile.location}}
                     </h3>
 
                     <h3 class="pv-top-card-section__connections pv-top-card-section__connections--with-separator Sans-17px-black-70% mb1 inline-block">
@@ -139,8 +138,8 @@
                   <div class="pv-top-card-section__rich-content mt4 ph2">
                     <p id="ember5723" class="pv-top-card-section__summary Sans-15px-black-55% mt5 pt5 ember-view">
                       <div class="truncate-multiline--truncation-target">
-                        <span class="truncate-multiline--last-line-wrapper">
-                          <span>{{profile.summary}}</span>
+                        <span layout-align="center center" class="truncate-multiline--last-line-wrapper">
+                          <span class="md-subhead">{{profile.summary}}</span>
                         <button class="truncate-multiline--button-hidden" data-ember-action="" data-ember-action-9599="9599"></button>
                         </span>
                       </div>
@@ -209,7 +208,7 @@
                           <a data-control-name="add_position" id="ember6233" class="pv-profile-section__header-add-action add-position ember-view">
                             <span class="svg-icon-wrap">
                               <span class="visually-hidden">Add new position</span>
-                  <li-icon aria-hidden="true" type="plus-icon">
+                  <li-icon aria-hidden="true" type="plus-icon" ng-click="addExperience($event)">
                     <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
                                   <g class="large-icon" style="fill: currentColor">
                                     <path d="M21,13H13v8H11V13H3V11h8V3h2v8h8v2Z"></path>
@@ -226,7 +225,7 @@
                         <a data-control-name="edit_position" id="ember6246" class="pv-profile-section__edit-action ember-view">
                           <span class="svg-icon-wrap">
                                         <span class="visually-hidden">Edit position {{company.title}}</span>
-                          <li-icon aria-hidden="true" type="pencil-icon">
+                          <li-icon aria-hidden="true" type="pencil-icon" ng-click="editExperience($event)">
                             <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
                                             <g class="large-icon" style="fill: currentColor">
                                               <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
@@ -291,14 +290,14 @@
                   </section>
 
                   <!-- NOTE: Education list -->
-                  <section id="education-section" class="pv-profile-section education-section ember-view">
+                  <section ng-if="education" id="education-section" class="pv-profile-section education-section ember-view">
                     <header class="pv-profile-section__card-header">
                       <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">
       Education
     </h2>
 
-                      <a data-control-name="add_education" href="https://www.linkedin.com/in/jigno-alfred-venezuela-757600b3/edit/education/new/" id="ember6294" class="pv-profile-section__header-add-action add-education ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Add new education</span>
-                        <li-icon aria-hidden="true" type="plus-icon"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
+                      <a data-control-name="add_education" id="ember6294" class="pv-profile-section__header-add-action add-education ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Add new education</span>
+                        <li-icon aria-hidden="true" type="plus-icon" ng-click="addEducation($event)"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
           <path d="M21,13H13v8H11V13H3V11h8V3h2v8h8v2Z"></path>
         </g></svg></li-icon>
                         </span>
@@ -307,13 +306,13 @@
 
                     <ul class="pv-profile-section__section-info section-info pv-profile-section__section-info--has-no-more">
                       <li ng-repeat="school in education" id="317208516" class="pv-education-entity pv-profile-section__card-item ember-view">
-                        <a data-control-name="edit_education" href="https://www.linkedin.com/in/jigno-alfred-venezuela-757600b3/edit/education/317208516/" id="ember6305" class="pv-profile-section__edit-action ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Edit education First Asia Institute of Technology and Humanities</span>
-                          <li-icon aria-hidden="true" type="pencil-icon"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
+                        <a data-control-name="edit_education" id="ember6305" class="pv-profile-section__edit-action ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Edit education First Asia Institute of Technology and Humanities</span>
+                          <li-icon aria-hidden="true" type="pencil-icon" ng-click="editEducation($event)"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
           <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
         </g></svg></li-icon>
                           </span>
                         </a>
-                        <a data-control-name="background_details_school" href="https://www.linkedin.com/edu/school/39332/?legacySchoolId=39332" id="ember6306" class="ember-view">
+                        <a data-control-name="background_details_school" id="ember6306" class="ember-view">
                           <div class="pv-entity__summary-info">
                             <div class="pv-entity__degree-info">
                               <h3 ng-if="school.name" class="pv-entity__school-name Sans-17px-black-85%-semibold">{{school.name}}</h3>
@@ -367,13 +366,13 @@
 
                   <!-- NOTE: Skills list -->
                   <section id="ember3813" class="pv-profile-section artdeco-container-card pv-featured-skills-section ember-view">
-                    <a data-control-name="edit_skills" href="/in/jigno-alfred-venezuela-757600b3/skills/" id="ember3814" class="pv-profile-section__edit-action pv-profile-section__edit-action--show ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Edit skills</span>
-                      <li-icon aria-hidden="true" type="pencil-icon"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
+                    <a data-control-name="edit_skills" id="ember3814" class="pv-profile-section__edit-action pv-profile-section__edit-action--show ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Edit skills</span>
+                      <li-icon aria-hidden="true" type="pencil-icon" ng-click="editSkills($event)"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
         <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
       </g></svg></li-icon>
                       </span>
                     </a>
-                    <a data-control-name="edit_skills_add" href="/in/jigno-alfred-venezuela-757600b3/skills/add/" id="ember3815" class="pv-skills-section__add-label button-tertiary-medium-muted ember-view">  Add a new skill
+                    <a ng-click="addSkills($event)"data-control-name="edit_skills_add" id="ember3815" class="pv-skills-section__add-label button-tertiary-medium-muted ember-view">  Add a new skill
 </a>
 
                     <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">
