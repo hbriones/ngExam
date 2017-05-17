@@ -16,6 +16,46 @@ angular.module('ngmaterialApp')
     summary: 'Web Developer'
   }
 
+  $scope.experience = [
+    {
+      name: 'Big Outsource',
+      location: 'San Pablo City, Laguna',
+      title: 'IT Associate',
+      startdate: '',
+      duration: '',
+      description: ''
+    }, {
+      name: 'Telus',
+      location: 'Quezon City',
+      title: 'Tech Support',
+      enddate: '',
+      duration: '',
+      description: ''
+    }
+  ]
+
+  $scope.education = [
+    {
+      name: 'First Asia Institute of Technology and Humanities',
+      degree: 'Bachelor of Science - BS',
+      field: 'Computer Science',
+      grade: '',
+      activities: '',
+      startdate: 'May 2017',
+      enddate: 'June 2017',
+      description: '',
+    }, {
+      name: 'De La Salle Lipa',
+      degree: '',
+      field: 'Computer Engineering',
+      grade: '',
+      activities: '',
+      startdate: '',
+      enddate: '',
+      description: '',
+    }
+  ]
+
   $scope.editIntro = function(ev) {
     $mdDialog.show({
       controller: DialogController,

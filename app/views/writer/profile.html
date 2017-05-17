@@ -140,7 +140,7 @@
                     <p id="ember5723" class="pv-top-card-section__summary Sans-15px-black-55% mt5 pt5 ember-view">
                       <div class="truncate-multiline--truncation-target">
                         <span class="truncate-multiline--last-line-wrapper">
-                          <span>Web Developer</span>
+                          <span>{{summary}}</span>
                         <button class="truncate-multiline--button-hidden" data-ember-action="" data-ember-action-9599="9599"></button>
                         </span>
                       </div>
@@ -221,11 +221,11 @@
                   </header>
 
                   <ul class="pv-profile-section__section-info section-info pv-profile-section__section-info--has-no-more">
-                    <li id="747258657" class="pv-profile-section__card-item pv-position-entity ember-view">
+                    <li ng-repeat="company in experience" id="747258657" class="pv-profile-section__card-item pv-position-entity ember-view">
                       <div class="pv-entity__actions">
                         <a data-control-name="edit_position" id="ember6246" class="pv-profile-section__edit-action ember-view">
                           <span class="svg-icon-wrap">
-                                        <span class="visually-hidden">Edit position IT Associate</span>
+                                        <span class="visually-hidden">Edit position {{company.title}}</span>
                           <li-icon aria-hidden="true" type="pencil-icon">
                             <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
                                             <g class="large-icon" style="fill: currentColor">
@@ -237,39 +237,38 @@
                         </a>
                       </div>
 
+                      <!-- NOTE: Experience list -->
                       <a data-control-name="background_details_company" id="ember6247" class="ember-view">
-                        <div class="pv-position-entity__logo pv-entity__logo company-logo">
-                          <img class="lazy-image pv-position-entity__logo-img pv-entity__logo-img EntityPhoto-square-4" alt="Big Outsource">
-                        </div>
                         <div class="pv-entity__summary-info">
-                          <h3 class="Sans-17px-black-85%-semibold">IT Associate</h3>
+                          <h3 ng-if="company.title" class="Sans-17px-black-85%-semibold">{{company.title}}</h3>
 
                           <h4>
                                   <span class="visually-hidden">Company Name</span>
-                                  <span class="pv-position-entity__secondary-title pv-entity__secondary-title Sans-15px-black-55%">Big Outsource</span>
+                                  <span ng-if="company.name" class="pv-position-entity__secondary-title pv-entity__secondary-title Sans-15px-black-55%">
+                                    {{company.name}}
+                                  </span>
                                 </h4>
 
-                          <h4 class="pv-entity__date-range Sans-15px-black-55%">
+                          <h4 ng-if="company.startdate" class="pv-entity__date-range Sans-15px-black-55%">
                                   <span class="visually-hidden">Dates Employed</span>
-                                  <span>Mar 2015 – Present</span>
+                                  <span>{{company.startdate}} – {{company.enddate}}</span>
                                 </h4>
 
-                          <h4 class="pv-entity__duration Sans-15px-black-55% ml1">
+                          <h4 ng-if="company.duration" class="pv-entity__duration Sans-15px-black-55% ml1">
                                   <span class="visually-hidden">Employment Duration</span>
-                                  <span class="pv-entity__bullet-item">2 yrs 3 mos</span>
+                                  <span class="pv-entity__bullet-item">{{duration}}</span>
                                 </h4>
 
-                          <h4 class="pv-entity__location Sans-15px-black-55% block">
+                          <h4 ng-if="company.location" class="pv-entity__location Sans-15px-black-55% block">
                                   <span class="visually-hidden">Location</span>
-                                  <span>San Pablo City, Laguna</span>
+                                  <span>{{company.location}}</span>
                                 </h4>
                         </div>
                       </a>
 
-                      <div class="pv-entity__extra-details">
+                      <div ng-if="company.description" class="pv-entity__extra-details">
                         <p id="profile-position-747258657" tabindex="-1" class="pv-entity__description Sans-15px-black-70% mt4">
-                          Provides technical expertise and analysis to departmental management and staff.<br>Extracts and aggregates data from multiple sources.<br>Perform data management activities and evaluate datasets for data integrity.<br>Handles
-                          and relegates tasks to BSIT and BSCS interns from different schools.
+                          {{company.description}}
                         </p>
 
                         <button aria-controls="profile-position-747258657" aria-expanded="true" class="pv-profile-section__hide-more-detail link Sans-15px-black-55% mt3 block" data-ember-action="" data-ember-action-6264="6264">
@@ -284,13 +283,14 @@
                                     </li-icon>
                                   </span>
                                 </span>
-                                <span class="visually-hidden">See less about IT Associate, Big Outsource</span>
+                                <span class="visually-hidden">See less about {{company.title}}, {{company.name}}</span>
                               </button>
                       </div>
                     </li>
                   </ul>
                   </section>
 
+                  <!-- NOTE: Education list -->
                   <section id="education-section" class="pv-profile-section education-section ember-view">
                     <header class="pv-profile-section__card-header">
                       <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">
@@ -306,7 +306,7 @@
                     </header>
 
                     <ul class="pv-profile-section__section-info section-info pv-profile-section__section-info--has-no-more">
-                      <li id="317208516" class="pv-education-entity pv-profile-section__card-item ember-view">
+                      <li ng-repeat="school in education" id="317208516" class="pv-education-entity pv-profile-section__card-item ember-view">
                         <a data-control-name="edit_education" href="https://www.linkedin.com/in/jigno-alfred-venezuela-757600b3/edit/education/317208516/" id="ember6305" class="pv-profile-section__edit-action ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Edit education First Asia Institute of Technology and Humanities</span>
                           <li-icon aria-hidden="true" type="pencil-icon"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
           <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
@@ -314,20 +314,53 @@
                           </span>
                         </a>
                         <a data-control-name="background_details_school" href="https://www.linkedin.com/edu/school/39332/?legacySchoolId=39332" id="ember6306" class="ember-view">
-                          <div class="pv-education-entity__logo pv-entity__logo">
-                            <img class="lazy-image pv-education-entity__logo-img pv-entity__logo-img EntityPhoto-square-4 ghost-school" alt="First Asia Institute of Technology and Humanities">
-                          </div>
-
                           <div class="pv-entity__summary-info">
                             <div class="pv-entity__degree-info">
-                              <h3 class="pv-entity__school-name Sans-17px-black-85%-semibold">First Asia Institute of Technology and Humanities</h3>
-                              <p class="pv-education-entity__secondary-title pv-entity__fos pv-entity__secondary-title Sans-15px-black-55%">
-                                <span class="visually-hidden">Field Of Study</span>
-                                <span class="pv-entity__comma-item">Computer Science</span>
+                              <h3 ng-if="school.name" class="pv-entity__school-name Sans-17px-black-85%-semibold">{{school.name}}</h3>
+
+                              <p ng-if="school.degree" class="pv-education-entity__secondary-title pv-entity__degree-name pv-entity__secondary-title Sans-15px-black-55%">
+                                <span class="visually-hidden">Degree Name</span>
+                                <span class="pv-entity__comma-item">{{school.degree}}</span>
                               </p>
+
+                              <p ng-if="school.field" class="pv-education-entity__secondary-title pv-entity__fos pv-entity__secondary-title Sans-15px-black-55%">
+                                <span class="visually-hidden">Field Of Study</span>
+                                <span class="pv-entity__comma-item">{{school.field}}</span>
+                              </p>
+
+                              <p ng-if="school.grade" class="pv-education-entity__secondary-title pv-entity__grade pv-entity__secondary-title Sans-15px-black-55%">
+                                <span class="visually-hidden">Grade</span>
+                                <span class="pv-entity__comma-item">{{school.grade}}</span>
+                              </p>
+
+                              <p ng-if="school.startdate" class="pv-education-entity__date pv-entity__dates Sans-15px-black-55%">
+                                <span class="visually-hidden">Dates attended or expected graduation</span>
+                                <span>
+            <time>{{school.startdate}}</time> – <time>{{school.enddate}}</time>
+      </span>
+                              </p>
+
+                              <p ng-if="school.activities" class="pv-education-entity__activities pv-entity__secondary-title Sans-15px-black-55%">
+                                <span class="activities-label">Activities and Societies:</span>
+                                <span class="activities-societies">{{school.activities}}</span>
+                              </p>
+
                             </div>
                           </div>
                         </a>
+
+                        <div ng-if="school.description" class="pv-entity__extra-details">
+                          <p tabindex="-1" class="pv-entity__description Sans-15px-black-70% mt4">
+                            {{school.description}}
+                          </p>
+
+                          <button aria-expanded="true" class="pv-profile-section__hide-more-detail link Sans-15px-black-55% mt3 block" data-ember-action="" data-ember-action-6606="6606">
+      <span aria-hidden="true">See less<span class="svg-icon-wrap"><li-icon aria-hidden="true" type="chevron-up-icon" class="pv-profile-section__toggle-detail-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
+        <path d="M8,7l-5.9,4L1,9.5l6.2-4.2c0.5-0.3,1.2-0.3,1.7,0L15,9.5L13.9,11L8,7z"></path>
+      </g></svg></li-icon></span></span>
+      <span class="visually-hidden">See less about {{school.name}}, {{school.degree}}</span>
+    </button>
+                        </div>
                       </li>
                     </ul>
                   </section>
