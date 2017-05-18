@@ -344,12 +344,6 @@
 
                   <!-- NOTE: Skills list -->
                   <section id="ember3813" class="pv-profile-section artdeco-container-card pv-featured-skills-section ember-view">
-                    <a data-control-name="edit_skills" id="ember3814" class="pv-profile-section__edit-action pv-profile-section__edit-action--show ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Edit skills</span>
-                      <li-icon aria-hidden="true" type="pencil-icon" ng-click="editSkills($event)"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
-        <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
-      </g></svg></li-icon>
-                      </span>
-                    </a>
                     <a ng-click="addSkills($event)"data-control-name="edit_skills_add" id="ember3815" class="pv-skills-section__add-label button-tertiary-medium-muted ember-view">  Add a new skill
 </a>
 
@@ -359,14 +353,22 @@
                     <div id="featured-skills-expanded" tabindex="-1">
                       <ul class="pv-featured-skills-list pv-featured-skills-list--no-highlights section-info no-highlights">
                         <li ng-repeat="skill in skills" id="ember5496" class="pv-skill-entity--featured pb5 pv-skill-entity relative ember-view">
+
                           <div class="pv-skill-entity__header">
+                            <button class="pv-skill-entity__delete-button button-tertiary-small-round-muted" data-ember-action="" data-ember-action-11469="11469">
+                <span class="svg-icon-wrap"><span class="visually-hidden">Delete {{skill}}</span><li-icon ng-click="deleteSkill(skill)" aria-hidden="true" type="cancel-icon" size="large"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
+                    <path d="M20,5.32L13.32,12,20,18.68,18.66,20,12,13.33,5.34,20,4,18.68,10.68,12,4,5.32,5.32,4,12,10.69,18.68,4Z"></path>
+                  </g></svg></li-icon></span>
+              </button>
                             <div class="tooltip-container">
 
                               <div class="pv-skill-entity__pill-contents static-pill">
                                 <span class="pv-skill-entity__skill-name truncate Sans-15px-black-85%-semibold inline-block">{{skill}}</span>
                               </div>
 
+
                               <div role="tooltip" id="pv-skill-entity-name-tooltip" class="tooltip">
+
                                 {{skill}}
                               </div>
                             </div>

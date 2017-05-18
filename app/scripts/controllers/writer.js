@@ -21,25 +21,14 @@ angular.module('ngmaterialApp')
 
   $scope.experience = []
 
-  $scope.education = [
-    {
-      name: 'Harvard',
-      degree: '',
-      field: '',
-      grade: '',
-      activities: '',
-      startdate: '',
-      enddate: '',
-      description: ''
-    }
-  ]
+  $scope.education = []
 
   $scope.skills = []
 
   $scope.viewed = [
     {
       name: 'Jigno Alfred V. Venezuela',
-      headline: 'VP of Misc Stuff at Imaginary Company',
+      headline: 'CEO of Misc Stuff at Imaginary Company',
       connection: '1st'
     }, {
       name: 'Rommel Lagurin',
@@ -216,7 +205,7 @@ function AddExperienceCtrl($scope, $mdDialog) {
 
   $scope.addSkills = function(ev) {
     $mdDialog.show({
-      controller: SkillsCtrl,
+      controller: AddSkillsCtrl,
       templateUrl: 'views/writer/profile-skills-add.html',
       parent: angular.element(document.body),
       scope: $scope,
@@ -227,35 +216,18 @@ function AddExperienceCtrl($scope, $mdDialog) {
     })
   };
 
-  $scope.editSkills = function(ev) {
-    $mdDialog.show({
-      controller: SkillsCtrl,
-      templateUrl: 'views/writer/profile-skills-edit.html',
-      parent: angular.element(document.body),
-      scope: $scope,
-      preserveScope: true,
-      targetEvent: ev,
-      clickOutsideToClose: true,
-      fullscreen: $scope.customFullscreen
-    })
-  };
-
-  function SkillsCtrl($scope, $mdDialog) {
-    $scope.save = function() {
-      $scope.skills.push({
-        name: ''
-      })
-
-      $mdDialog.hide();
-    };
-
-    $scope.delete = function() {
-
+  function AddSkillsCtrl($scope, $mdDialog) {
+    $scope.add = function() {
+      $scope.skills.push($scope.modalSkills);
       $mdDialog.hide();
     };
 
     $scope.cancel = function() {
       $mdDialog.hide();
     };
+  }
+
+  $scope.deleteSkill = function(skill) {
+    $scope.skills.splice($scope.skills.indexOf(skill), 1)
   }
 });
