@@ -19,17 +19,7 @@ angular.module('ngmaterialApp')
     location: ''
   }
 
-  $scope.experience = [
-    {
-      name: 'Big Outsource',
-      location: '',
-      title: 'IT',
-      startdate: '',
-      enddate: '',
-      duration: '',
-      description: ''
-    }
-  ]
+  $scope.experience = []
 
   $scope.education = [
     {
@@ -75,6 +65,18 @@ angular.module('ngmaterialApp')
     })
   };
 
+  function IntroCtrl($scope, $mdDialog) {
+    $scope.save = function() {
+      $scope.profile.work = $scope.work;
+      $scope.profile.school = $scope.school;
+      $mdDialog.hide();
+    };
+
+    $scope.cancel = function() {
+      $mdDialog.hide();
+    };
+  }
+
 $scope.addExperience = function(ev) {
   $mdDialog.show({
     controller: AddExperienceCtrl,
@@ -104,7 +106,7 @@ function AddExperienceCtrl($scope, $mdDialog) {
   };
 
   $scope.cancel = function() {
-    $mdDialog.cancel();
+    $mdDialog.hide();
   };
 }
 
@@ -127,28 +129,25 @@ function AddExperienceCtrl($scope, $mdDialog) {
   };
 
   function EditExperienceCtrl($scope, $mdDialog, company) {
-    if (company) {
-      $scope.company = company;
-    }
+    $scope.company = company;
 
     $scope.save = function() {
-
       $mdDialog.hide();
     };
 
-    $scope.delete = function() {
-
+    $scope.delete = function(company) {
+      $scope.experience.splice($scope.items.indexOf(company), 1)
       $mdDialog.hide();
     };
 
     $scope.cancel = function() {
-      $mdDialog.cancel();
+      $mdDialog.hide();
     };
   }
 
   $scope.addEducation = function(ev) {
     $mdDialog.show({
-      controller: EducationCtrl,
+      controller: AddEducationCtrl,
       templateUrl: 'views/writer/profile-education-add.html',
       parent: angular.element(document.body),
       scope: $scope,
@@ -159,18 +158,61 @@ function AddExperienceCtrl($scope, $mdDialog) {
     })
   };
 
-  $scope.editEducation = function(ev) {
+  function AddEducationCtrl($scope, $mdDialog) {
+    $scope.save = function() {
+      $scope.education.push({
+        name: $scope.school.name || '',
+        degree: $scope.school.degree || '',
+        field: $scope.school.field || '',
+        grade: $scope.school.grade || '',
+        activities: $scope.school.activities || '',
+        startdate: $scope.school.startdate || '',
+        enddate: $scope.school.enddate || '',
+        description: $scope.school.description || '',
+      })
+
+      $mdDialog.hide();
+    };
+
+    $scope.cancel = function() {
+      $mdDialog.hide();
+    };
+  }
+
+  $scope.editEducation = function(ev, data) {
     $mdDialog.show({
-      controller: EducationCtrl,
+      controller: EditEducationCtrl,
       templateUrl: 'views/writer/profile-education-edit.html',
       parent: angular.element(document.body),
       scope: $scope,
       preserveScope: true,
       targetEvent: ev,
       clickOutsideToClose: true,
-      fullscreen: $scope.customFullscreen
+      fullscreen: $scope.customFullscreen,
+      resolve: {
+        school: function () {
+          return data;
+        }
+      }
     })
   };
+
+  function EditEducationCtrl($scope, $mdDialog, school) {
+    $scope.school = school;
+
+    $scope.save = function() {
+      $mdDialog.hide();
+    };
+
+    $scope.delete = function(school) {
+      $scope.education.splice($scope.items.indexOf(school), 1)
+      $mdDialog.hide();
+    };
+
+    $scope.cancel = function() {
+      $mdDialog.hide();
+    };
+  }
 
   $scope.addSkills = function(ev) {
     $mdDialog.show({
@@ -198,44 +240,6 @@ function AddExperienceCtrl($scope, $mdDialog) {
     })
   };
 
-  function IntroCtrl($scope, $mdDialog) {
-    $scope.save = function() {
-      $scope.profile.work = $scope.work;
-      $scope.profile.school = $scope.school;
-      $mdDialog.hide();
-    };
-
-    $scope.cancel = function() {
-      $mdDialog.cancel();
-    };
-  }
-
-  function EducationCtrl($scope, $mdDialog) {
-    $scope.save = function() {
-      $scope.education.push({
-        name: '',
-        degree: '',
-        field: '',
-        grade: '',
-        activities: '',
-        startdate: '',
-        enddate: '',
-        description: ''
-      })
-
-      $mdDialog.hide();
-    };
-
-    $scope.delete = function() {
-
-      $mdDialog.hide();
-    };
-
-    $scope.cancel = function() {
-      $mdDialog.cancel();
-    };
-  }
-
   function SkillsCtrl($scope, $mdDialog) {
     $scope.save = function() {
       $scope.skills.push({
@@ -251,7 +255,7 @@ function AddExperienceCtrl($scope, $mdDialog) {
     };
 
     $scope.cancel = function() {
-      $mdDialog.cancel();
+      $mdDialog.hide();
     };
   }
 });

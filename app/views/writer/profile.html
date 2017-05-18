@@ -292,7 +292,7 @@
                     <ul class="pv-profile-section__section-info section-info pv-profile-section__section-info--has-no-more">
                       <li ng-repeat="school in education" id="317208516" class="pv-education-entity pv-profile-section__card-item ember-view">
                         <a data-control-name="edit_education" id="ember6305" class="pv-profile-section__edit-action ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Edit education First Asia Institute of Technology and Humanities</span>
-                          <li-icon aria-hidden="true" type="pencil-icon" ng-click="editEducation($event)"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
+                          <li-icon aria-hidden="true" type="pencil-icon" ng-click="editEducation($event, school)"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
           <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
         </g></svg></li-icon>
                           </span>
@@ -320,7 +320,7 @@
                               <p ng-if="school.startdate" class="pv-education-entity__date pv-entity__dates Sans-15px-black-55%">
                                 <span class="visually-hidden">Dates attended or expected graduation</span>
                                 <span>
-            <time>{{school.startdate}}</time> – <time>{{school.enddate}}</time>
+            <time>{{school.startdate | date: 'yyyy'}}</time> – <time>{{school.enddate | date: 'yyyy'}}</time>
       </span>
                               </p>
 
@@ -337,13 +337,6 @@
                           <p tabindex="-1" class="pv-entity__description Sans-15px-black-70% mt4">
                             {{school.description}}
                           </p>
-
-                          <button aria-expanded="true" class="pv-profile-section__hide-more-detail link Sans-15px-black-55% mt3 block" data-ember-action="" data-ember-action-6606="6606">
-      <span aria-hidden="true">See less<span class="svg-icon-wrap"><li-icon aria-hidden="true" type="chevron-up-icon" class="pv-profile-section__toggle-detail-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
-        <path d="M8,7l-5.9,4L1,9.5l6.2-4.2c0.5-0.3,1.2-0.3,1.7,0L15,9.5L13.9,11L8,7z"></path>
-      </g></svg></li-icon></span></span>
-      <span class="visually-hidden">See less about {{school.name}}, {{school.degree}}</span>
-    </button>
                         </div>
                       </li>
                     </ul>
