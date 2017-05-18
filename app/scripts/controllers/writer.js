@@ -110,7 +110,7 @@ function AddExperienceCtrl($scope, $mdDialog) {
   };
 }
 
-  $scope.editExperience = function(ev, data) {
+  $scope.editExperience = function(ev, data, index) {
     $mdDialog.show({
       controller: EditExperienceCtrl,
       templateUrl: 'views/writer/profile-experience-edit.html',
@@ -136,7 +136,7 @@ function AddExperienceCtrl($scope, $mdDialog) {
     };
 
     $scope.delete = function(company) {
-      $scope.experience.splice($scope.items.indexOf(company), 1)
+      $scope.experience.splice($scope.experience.indexOf(company), 1);
       $mdDialog.hide();
     };
 
@@ -205,7 +205,7 @@ function AddExperienceCtrl($scope, $mdDialog) {
     };
 
     $scope.delete = function(school) {
-      $scope.education.splice($scope.items.indexOf(school), 1)
+      $scope.education.splice($scope.education.indexOf(school), 1)
       $mdDialog.hide();
     };
 
