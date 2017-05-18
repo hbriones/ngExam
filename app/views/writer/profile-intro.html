@@ -118,7 +118,7 @@
               </label>
 
               <select ng-model="work" id="topcard-position" class="ember-view">
-                <option ng-repeat="company in experience" value="{{company.name}}">{{company.title}} at {{company.name}}</option>
+                <option ng-repeat="company in experience" value="{{company.title}} at {{company.name}}">{{company.title}} at {{company.name}}</option>
               </select>
             </div>
 
@@ -149,7 +149,7 @@
             Industry
           </label>
 
-              <select name="topcard-industry" id="topcard-industry" class="ember-view">  <option value="">Choose an industry…</option>
+              <select ng-model="profile.industry" name="topcard-industry" id="topcard-industry" class="ember-view">  <option value="">Choose an industry…</option>
 
           <option value="urn:li:fs_industry:47">Accounting</option>
           <option value="urn:li:fs_industry:94">Airlines/Aviation</option>
@@ -307,7 +307,7 @@
             Summary
           </label>
 
-              <textarea id="topcard-summary" class="ember-text-area pe-form-field__textarea ember-view"></textarea>
+              <textarea ng-model="profile.summary" id="topcard-summary" class="ember-text-area pe-form-field__textarea ember-view"></textarea>
 
               <!---->
             </div>
@@ -345,22 +345,6 @@
               </g></svg></li-icon>
                     <span class="pe-treasury-view__supported-text Sans-13px-black-55% v-align-top">Supported formats</span>
                   </a>
-                </div>
-
-                <div class="form-preview">
-                  <div class="pe-treasury-view__preview">
-                    <button data-control-name="edit_treasury" class="pe-treasury-view__preview-button mb4" data-ember-action="" data-ember-action-8621="8621">
-                        <div style="background-image: url(https://iamjigz.github.io/jigz/)" class="pe-treasury__preview-image pe-treasury-view__preview-image"></div>
-                      <div class="pe-treasury__preview-info">
-                        <h3 class="pe-treasury__preview-title Sans-15px-black-85%-semibold">Angular.js Portfolio Page</h3>
-                        <div class="pe-treasury-view__preview-icon">
-                          <span class="svg-icon-wrap"><span class="visually-hidden">Edit media</span><li-icon aria-hidden="true" type="pencil-icon"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
-                <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
-              </g></svg></li-icon></span>
-                        </div>
-                      </div>
-                    </button>
-                  </div>
                 </div>
 
                 <li-icon aria-hidden="true" type="loader" class="pe-treasury-view__loader mt2" size="small"><svg x="50%" y="50%" width="60px" height="60px" viewBox="0 0 60 60"><g class="small-icon" style="fill-opacity: 1;-webkit-transform: translate(15px, 15px) scale(.5);transform: translate(15px, 15px) scale(.5);">

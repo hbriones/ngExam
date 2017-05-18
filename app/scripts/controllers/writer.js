@@ -16,7 +16,8 @@ angular.module('ngmaterialApp')
     summary: '',
     work: '',
     school: '',
-    location: ''
+    location: '',
+    industry: ''
   }
 
   $scope.experience = []
@@ -230,4 +231,20 @@ function AddExperienceCtrl($scope, $mdDialog) {
   $scope.deleteSkill = function(skill) {
     $scope.skills.splice($scope.skills.indexOf(skill), 1)
   }
+
+  $scope.export = function(){
+    html2canvas(document.getElementById('exportThis'), {
+        onrendered: function (canvas) {
+            var data = canvas.toDataURL();
+            var docDefinition = {
+                content: [{
+                    image: data,
+                    width: 500,
+                }]
+            };
+
+            pdfMake.createPdf(docDefinition).download(`${$scope.applicant}.pdf`);
+        }
+    });
+ }
 });

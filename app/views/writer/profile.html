@@ -7,8 +7,14 @@
 
 <script src="https://static.licdn.com/sc/h/br/91h7t9bf9daypusj0izfyufx4"></script>
 
-<md-content ng-controller="WriterCtrl">
-  <div class="authentication-outlet">
+<md-content class="md-primary" ng-controller="WriterCtrl">
+  <md-input-container>
+  <label>Submitted by</label>
+  <input ng-model="applicant">
+  <md-button class="md-primary md-raised" ng-click="export()">Export</md-button>
+</md-input-container>
+
+  <div class="authentication-outlet" id="exportThis">
     <div id="profile-content" class="extended">
       <div class="body">
         <div id="profile-wrapper" class="pv-profile-wrapper ">
