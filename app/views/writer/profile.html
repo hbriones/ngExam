@@ -225,7 +225,7 @@
                         <a data-control-name="edit_position" id="ember6246" class="pv-profile-section__edit-action ember-view">
                           <span class="svg-icon-wrap">
                                         <span class="visually-hidden">Edit position {{company.title}}</span>
-                          <li-icon aria-hidden="true" type="pencil-icon" ng-click="editExperience($event)">
+                          <li-icon aria-hidden="true" type="pencil-icon" ng-click="editExperience($event, company)">
                             <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
                                             <g class="large-icon" style="fill: currentColor">
                                               <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
@@ -248,12 +248,12 @@
                                   </span>
                                 </h4>
 
-                          <h4 ng-if="company.startdate" class="pv-entity__date-range Sans-15px-black-55%">
+                          <h4 class="pv-entity__date-range Sans-15px-black-55%">
                                   <span class="visually-hidden">Dates Employed</span>
-                                  <span>{{company.startdate}} – {{company.enddate}}</span>
+                                  <span>{{company.startdate | date: 'MMMM yyyy'}} – {{company.enddate | date: 'MMMM yyyy'}}</span>
                                 </h4>
 
-                          <h4 ng-if="company.duration" class="pv-entity__duration Sans-15px-black-55% ml1">
+                          <h4 class="pv-entity__duration Sans-15px-black-55% ml1">
                                   <span class="visually-hidden">Employment Duration</span>
                                   <span class="pv-entity__bullet-item">{{duration}}</span>
                                 </h4>
@@ -265,25 +265,10 @@
                         </div>
                       </a>
 
-                      <div ng-if="company.description" class="pv-entity__extra-details">
+                      <div class="pv-entity__extra-details">
                         <p id="profile-position-747258657" tabindex="-1" class="pv-entity__description Sans-15px-black-70% mt4">
                           {{company.description}}
                         </p>
-
-                        <button aria-controls="profile-position-747258657" aria-expanded="true" class="pv-profile-section__hide-more-detail link Sans-15px-black-55% mt3 block" data-ember-action="" data-ember-action-6264="6264">
-                                <span aria-hidden="true">See less
-                                  <span class="svg-icon-wrap">
-                                    <li-icon aria-hidden="true" type="chevron-up-icon" class="pv-profile-section__toggle-detail-icon" size="small">
-                                      <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
-                                        <g class="small-icon" style="fill-opacity: 1">
-                                          <path d="M8,7l-5.9,4L1,9.5l6.2-4.2c0.5-0.3,1.2-0.3,1.7,0L15,9.5L13.9,11L8,7z"></path>
-                                        </g>
-                                      </svg>
-                                    </li-icon>
-                                  </span>
-                                </span>
-                                <span class="visually-hidden">See less about {{company.title}}, {{company.name}}</span>
-                              </button>
                       </div>
                     </li>
                   </ul>
