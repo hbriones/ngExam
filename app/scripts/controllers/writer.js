@@ -10,8 +10,8 @@
 angular.module('ngmaterialApp')
 .controller('WriterCtrl', function($scope, $mdDialog) {
   $scope.profile = {
-    firstname: 'Devon',
-    lastname: 'Sloan',
+    firstname: '',
+    lastname: '',
     headline: '',
     summary: '',
     work: '',
