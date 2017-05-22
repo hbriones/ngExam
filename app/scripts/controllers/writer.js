@@ -36,10 +36,12 @@ angular.module('ngmaterialApp')
       toolbar: toolbarOptions,
       formula: true          // Include formula module (needs extra css + Katex Script)
     }
-  }
+   }
 
-  var container = document.getElementById('customQuill');
-  var editor = new Quill(container, options);
+  var cvContainer = document.getElementById('cvQuill');
+  var cvEditor = new Quill(cvContainer, options);
+  var resumeContainer = document.getElementById('resumeQuill');
+  var resumeEditor = new Quill(resumeContainer, options);
 
   $scope.profile = {
     firstname: '',
@@ -264,8 +266,8 @@ function AddExperienceCtrl($scope, $mdDialog) {
     $scope.skills.splice($scope.skills.indexOf(skill), 1)
   }
 
-  $scope.export = function(){
-    html2canvas(document.getElementById('exportThis'), {
+  $scope.export = function(element){
+    html2canvas(document.getElementById(element), {
         onrendered: function (canvas) {
             var data = canvas.toDataURL();
             var docDefinition = {

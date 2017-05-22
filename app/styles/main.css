@@ -23,7 +23,7 @@ md-sidenav ng-md-icon {
   background-color: whitesmoke;
 }*/
 
-#customQuill {
+#cvQuill, #resumeQuill {
   min-height: 1200px;
   overflow: auto;
 }
