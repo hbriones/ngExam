@@ -79,7 +79,7 @@ angular.module('ngmaterialApp')
   $scope.editIntro = function(ev) {
     $mdDialog.show({
       controller: IntroCtrl,
-      templateUrl: 'views/writer/profile-intro.html',
+      templateUrl: 'views/writer/partials/edit-intro.html',
       parent: angular.element(document.body),
       scope: $scope,
       preserveScope: true,
@@ -104,7 +104,7 @@ angular.module('ngmaterialApp')
 $scope.addExperience = function(ev) {
   $mdDialog.show({
     controller: AddExperienceCtrl,
-    templateUrl: 'views/writer/profile-experience-add.html',
+    templateUrl: 'views/writer/partials/add-experience.html',
     parent: angular.element(document.body),
     scope: $scope,
     preserveScope: true,
@@ -137,7 +137,7 @@ function AddExperienceCtrl($scope, $mdDialog) {
   $scope.editExperience = function(ev, data, index) {
     $mdDialog.show({
       controller: EditExperienceCtrl,
-      templateUrl: 'views/writer/profile-experience-edit.html',
+      templateUrl: 'views/writer/partials/edit-experience.html',
       parent: angular.element(document.body),
       scope: $scope,
       preserveScope: true,
@@ -172,7 +172,7 @@ function AddExperienceCtrl($scope, $mdDialog) {
   $scope.addEducation = function(ev) {
     $mdDialog.show({
       controller: AddEducationCtrl,
-      templateUrl: 'views/writer/profile-education-add.html',
+      templateUrl: 'views/writer/partials/add-education.html',
       parent: angular.element(document.body),
       scope: $scope,
       preserveScope: true,
@@ -206,7 +206,7 @@ function AddExperienceCtrl($scope, $mdDialog) {
   $scope.editEducation = function(ev, data) {
     $mdDialog.show({
       controller: EditEducationCtrl,
-      templateUrl: 'views/writer/profile-education-edit.html',
+      templateUrl: 'views/writer/edit-education.html',
       parent: angular.element(document.body),
       scope: $scope,
       preserveScope: true,
@@ -241,7 +241,7 @@ function AddExperienceCtrl($scope, $mdDialog) {
   $scope.addSkills = function(ev) {
     $mdDialog.show({
       controller: AddSkillsCtrl,
-      templateUrl: 'views/writer/profile-skills-add.html',
+      templateUrl: 'views/writer/partials/add-skills.html',
       parent: angular.element(document.body),
       scope: $scope,
       preserveScope: true,

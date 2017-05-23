@@ -40,12 +40,12 @@ angular
                   }
                 }
             })
-            .state('app.main', {
-                url: '/main',
+            .state('app.home', {
+                url: '/home',
                 views: {
                     'menuContent': {
-                        templateUrl: 'views/main.html',
-                        controller: 'MainCtrl'
+                        templateUrl: 'views/home.html',
+                        controller: 'HomeCtrl'
                     }
                 }
             })
@@ -69,13 +69,13 @@ angular
             })
         ;
 
-        $urlRouterProvider.otherwise('/app/main');
+        $urlRouterProvider.otherwise('/app/home');
     })
     .controller('AppCtrl', ['$scope', '$location', '$mdSidenav', '$mdToast', AppCtrl]);
 
 function AppCtrl($scope, $location, $mdSidenav, $mdToast) {
     $scope.goHome = function () {
-        $location.path('/app/main');
+        $location.path('/app/home');
     };
 
     $scope.goPage = function () {
