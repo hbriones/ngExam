@@ -1,5 +1,5 @@
-<md-dialog-content>
-<md-dialog aria-label="modal">
+<md-dialog-content flex="50">
+<md-dialog >
 
 
           <h2 id="ember11087-modal-label" class="visually-hidden">Edit form</h2>
@@ -142,151 +142,60 @@
                           </div>
 
                           <!---->
-                          <fieldset class="pe-form-time-period pe-form-field ">
-                            <legend class="pe-form-field__label Sans-13px-black-55% block">
-                              Time period
-                            </legend>
+                    <fieldset class="pe-form-time-period pe-form-field ">
+                      <legend class="pe-form-field__label Sans-13px-black-55% block">
+                        Time period
+                      </legend>
 
-                            <div class="pe-form-time-period__container">
-                              <fieldset class="pe-form-time-period__start-date">
-                                <legend class="pe-form-field__label Sans-15px-black-55% block">
-                                  From
-                                </legend>
+                      <div class="pe-form-time-period__container">
+                        <fieldset class="pe-form-time-period__start-date">
+                          <legend class="pe-form-field__label Sans-15px-black-55% block">
+                            From
+                          </legend>
 
-                                <div class="pe-form-time-period__date-field ">
-                                  <div class="pe-form-time-period__date-unit">
-                                    <label for="position-start-month" class="visually-hidden">
-            Start month
-          </label>
-                                    <span id="ember11120" class="ember-view">
-                                      <input ng-model="company.startdate" aria-autocomplete="list" type="date" class="ember-text-field ember-view">
-</span>
-                                  </div>
-                                </div>
-                              </fieldset>
+                          <div class="pe-form-time-period__date-field ">
+                              <!-- <label for="position-start-month" class="visually-hidden">  Start month </label> -->
+                                <input ng-model="company.startdate" aria-autocomplete="list" type="date" class="ember-text-field ember-view">
+                          </div>
+                        </fieldset>
 
-                              <fieldset class="pe-form-time-period__end-date">
-                                <legend class="pe-form-field__label Sans-15px-black-55% block">
-                                  To
-                                </legend>
+                        <fieldset class="pe-form-time-period__end-date">
+                          <legend class="pe-form-field__label Sans-15px-black-55% block">
+                            To
+                          </legend>
 
-                                <div class="pe-form-time-period__date-field ">
-                                  <div class="pe-form-time-period__date-unit">
-                                    <label for="position-end-month" class="visually-hidden">
-              End month
-            </label>
-                                    <span id="ember11196" class="ember-view">
-                                      <input ng-model="company.enddate" aria-autocomplete="list" type="date" class="ember-text-field ember-view">
-
-</span>
-                                  </div>
-                                </div>
-                              </fieldset>
+                          <div class="pe-form-time-period__date-field ">
+                            <div class="pe-form-time-period__date-unit">
+                              <!-- <label for="position-end-month" class="visually-hidden">  End month </label> -->
+                                <input ng-model="company.enddate" aria-autocomplete="list" type="date" class="ember-text-field ember-view">
                             </div>
+                          </div>
+                        </fieldset>
+                      </div>
 
-                            <!---->
 
-                            <div id="ember11272" class="pe-form-time-period__ongoing-activity toggle-switch ember-view"><input data-control-name="edit_position_date_toggle" tabindex="0" type="checkbox" id="position-currently-works-here" class="ember-checkbox state-checkbox visually-hidden ember-view">
 
-                              <label for="position-currently-works-here">
-<!---->
-    <span class="label-text">I currently work here</span>
-</label>
-                            </div>
-                          </fieldset>
+                    </fieldset>
 
 
                           <div class="pe-form-field position-description floating-label  ">
-                            <!----><label for="position-description" class="pe-form-field__label label-text">
+                          <label for="position-description" class="pe-form-field__label label-text">
     Description
   </label>
 
                             <textarea ng-model="company.description" name="description" id="position-description" class="ember-text-area pe-form-field__textarea ember-view"></textarea>
 
-                            <!---->
-                          </div>
-
-                          <!---->
-                          <div id="ember11275" class="ember-view">
-                            <div class="pe-form-field pe-treasury-view">
-                              <label class="pe-form-field__label pe-treasury-view__label label-text Sans-13px-black-55%-semibold">
-    Media
-  </label>
-
-                              <span class="pe-treasury-view__description Sans-15px-black-55% pb4 block">
-    Add or link to external documents, photos, sites, videos, and presentations.
-  </span>
-
-                              <div class="pe-treasury-view__actions display-flex justify-space-between">
-                                <input type="file" id="pe-treasury-view__media-upload" name="file" class="visually-hidden pe-treasury-view__media">
-                                <label for="pe-treasury-view__media-upload" class="pe-treasury-view__upload-label button-primary-large">
-      Upload
-    </label>
-                                <button data-control-name="add_link" class="pe-treasury-view__link-button button-secondary-large" data-ember-action="" data-ember-action-11276="11276">Link</button>
-                              </div>
-
-                              <!---->
-                              <div class="pe-treasury-view__supported-container">
-                                <a target="_blank" href="https://www.linkedin.com/help/linkedin/answer/34327/supported-providers-and-content-types-for-work-samples-on-your-profile" id="ember11277" class="pe-treasury-view__supported-link inline-block mb4 mt2 ember-view">
-                                  <li-icon aria-hidden="true" type="question-pebble-icon" class="pe-treasury-view__supported-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
-        <g id="question-pebble-icon">
-          <g>
-            <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
-            <rect style="fill:none;" width="16" height="16"></rect>
-          </g>
-        </g>
-        <g id="Layer_1">
-        </g>
-      </g></svg></li-icon>
-                                  <span class="pe-treasury-view__supported-text Sans-13px-black-55% v-align-top">Supported formats</span>
-                                </a>
-                              </div>
-
-                              <!---->
-                              <li-icon aria-hidden="true" type="loader" class="pe-treasury-view__loader mt2" size="small"><svg x="50%" y="50%" width="60px" height="60px" viewBox="0 0 60 60"><g class="small-icon" style="fill-opacity: 1;-webkit-transform: translate(15px, 15px) scale(.5);transform: translate(15px, 15px) scale(.5);">
-        <path opacity="1" d="M30.1,16.1L30.1,16.1c-0.6,0-1-0.5-1-1V1c0-0.6,0.5-1,1-1l0,0c0.6,0,1,0.5,1,1v14.1C31.1,15.7,30.6,16.1,30.1,16.1z"></path>
-        <path opacity="0.85" d="M23.1,18.1L23.1,18.1c-0.5,0.3-1.1,0.1-1.4-0.4L14.5,5.6c-0.3-0.5-0.2-1.1,0.4-1.4l0,0C15.4,3.9,16,4,16.3,4.6l7.2,12.1C23.8,17.2,23.6,17.8,23.1,18.1z"></path>
-        <path opacity="0.77" d="M17.9,23.1L17.9,23.1c-0.3,0.5-0.9,0.7-1.4,0.4l-12.2-7c-0.5-0.3-0.7-0.9-0.4-1.4l0,0c0.3-0.5,0.9-0.7,1.4-0.4l12.2,7C18,22,18.2,22.7,17.9,23.1z"></path>
-        <path opacity="0.69" d="M16.1,30.1L16.1,30.1c0,0.6-0.5,1-1,1L1,31.2c-0.6,0-1-0.5-1-1l0,0c0-0.6,0.5-1,1-1l14.1-0.1C15.7,29.1,16.1,29.5,16.1,30.1z"></path>
-        <path opacity="0.61" d="M18,36.9L18,36.9c0.3,0.5,0.2,1.1-0.4,1.4L5.5,45.6c-0.5,0.3-1.1,0.2-1.4-0.4l0,0c-0.3-0.5-0.2-1.1,0.4-1.4l12.1-7.3C17.1,36.2,17.7,36.4,18,36.9z"></path>
-        <path opacity="0.53" d="M23.3,42.1L23.3,42.1c0.5,0.3,0.6,0.9,0.4,1.4l-7.3,12.1c-0.3,0.5-0.9,0.6-1.4,0.4l0,0c-0.5-0.3-0.6-0.9-0.4-1.4l7.3-12.1C22.1,41.9,22.8,41.8,23.3,42.1z"></path>
-        <path opacity="0.45" d="M30.1,43.9L30.1,43.9c0.6,0,1,0.5,1,1V59c0,0.6-0.5,1-1,1l0,0c-0.6,0-1-0.5-1-1V44.9C29,44.4,29.5,43.9,30.1,43.9z"></path>
-        <path opacity="0.37" d="M37,41.9L37,41.9c0.5-0.3,1.1-0.2,1.4,0.4l7.2,12.1c0.3,0.5,0.2,1.1-0.4,1.4l0,0c-0.5,0.3-1.1,0.2-1.4-0.4l-7.2-12.1C36.4,42.8,36.6,42.2,37,41.9z"></path>
-        <path opacity="0.29" d="M42.2,36.8L42.2,36.8c0.3-0.5,0.9-0.7,1.4-0.4l12.2,7c0.5,0.3,0.7,0.9,0.4,1.4l0,0c-0.3,0.5-0.9,0.7-1.4,0.4l-12.2-7C42.1,38,41.9,37.4,42.2,36.8z"></path>
-        <path opacity="0.21" d="M44,29.9L44,29.9c0-0.6,0.5-1,1-1h14.1c0.6,0,1,0.5,1,1l0,0c0,0.6-0.5,1-1,1L45,31C44.4,31,44,30.5,44,29.9z"></path>
-        <path opacity="0.13" d="M42.1,23.1L42.1,23.1c-0.3-0.5-0.2-1.1,0.4-1.4l12.1-7.3c0.5-0.3,1.1-0.2,1.4,0.4l0,0c0.3,0.4,0.1,1.1-0.4,1.3l-12.1,7.3C43.1,23.7,42.4,23.6,42.1,23.1z"></path>
-        <path opacity="0.05" d="M36.9,17.9L36.9,17.9c-0.5-0.3-0.6-0.9-0.4-1.4l7.3-12.1c0.3-0.5,0.9-0.6,1.4-0.4l0,0c0.5,0.3,0.6,0.9,0.4,1.4l-7.4,12.2C38,18.1,37.3,18.2,36.9,17.9z"></path>
-      </g></svg></li-icon>
-                            </div>
 
                           </div>
+
+
+                          <!-- <div id="ember11275" class="ember-view">
+                          </div> -->
                         </div>
 
                         <footer class="pe-s-form__footer pe-form-footer">
-                          <div id="ember11278" class="form-osmosis left ember-view">
-                            <div id="ember11279" class="toggle-switch ember-view"><input data-control-name="toggle_share" tabindex="0" type="checkbox" id="osmosis-toggle-switch" class="ember-checkbox state-checkbox visually-hidden ember-view">
 
-                              <label for="osmosis-toggle-switch">
-<!---->
-    <span class="label-text">No</span>
-</label>
-                            </div>
-
-                            <div class="text">
-                              <h2 class="title toggle">
-    Share profile changes
-  </h2>
-                              <p class="message toggle">
-                                If enabled, your network may see this change.
-                              </p>
-                            </div>
-
-                            <!---->
-                          </div>
                           <div class="pe-form-footer__actions">
-
-                            <!---->
-
                             <button ng-click="add()"type="submit" class="pe-form-footer__action--submit form-submit-action Sans-15px-white-100%">
   Save
 </button>
@@ -297,9 +206,7 @@
                   </div>
 
                 </div>
-                <div id="ember11281" class="carousel-item focused-easeInOut-motion carousel-item--pop visibility-hidden ember-view">
-                  <!---->
-                </div>
+
               </div>
             </div>
             <!---->
