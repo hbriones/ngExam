@@ -14,7 +14,7 @@
       <label class="text-black">Submitted By:</label>
       <input class="text-black" ng-model="applicant">
     </md-input-container>
-    <md-button class="md-raised md-primary" ng-click="export('profile')">Submit</md-button>
+    <md-button class="md-raised md-primary" ng-click="export('profile-wrapper')">Submit</md-button>
   </div>
 </div>
 
@@ -202,9 +202,7 @@
 
               <div class="profile-detail">
                 <div style="" id="ember5749" class="pv-deferred-area ember-view">
-                  <div class="pv-deferred-area__content">
-
-                  </div>
+                  <div class="pv-deferred-area__content">  </div>
                 </div>
 
                 <div id="ember5756" class="pv-oc ember-view">
@@ -355,12 +353,11 @@
 
                   <!-- NOTE: Skills list -->
                   <section id="ember3813" class="pv-profile-section artdeco-container-card pv-featured-skills-section ember-view">
+
                     <a ng-click="addSkills($event)"data-control-name="edit_skills_add" id="ember3815" class="pv-skills-section__add-label button-tertiary-medium-muted ember-view">  Add a new skill
 </a>
 
-                    <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">
-  Featured Skills &amp; Endorsements
-</h2>
+                    <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">Featured Skills &amp; Endorsements</h2>
                     <div id="featured-skills-expanded" tabindex="-1">
                       <ul class="pv-featured-skills-list pv-featured-skills-list--no-highlights section-info no-highlights">
                         <li ng-repeat="skill in skills" id="ember5496" class="pv-skill-entity--featured pb5 pv-skill-entity relative ember-view">
@@ -371,18 +368,16 @@
                     <path d="M20,5.32L13.32,12,20,18.68,18.66,20,12,13.33,5.34,20,4,18.68,10.68,12,4,5.32,5.32,4,12,10.69,18.68,4Z"></path>
                   </g></svg></li-icon></span>
               </button>
-                            <div class="tooltip-container">
+                            <!-- <div class="tooltip-container"> -->
 
                               <div class="pv-skill-entity__pill-contents static-pill">
                                 <span class="pv-skill-entity__skill-name truncate Sans-15px-black-85%-semibold inline-block">{{skill}}</span>
                               </div>
 
-
                               <div role="tooltip" id="pv-skill-entity-name-tooltip" class="tooltip">
-
                                 {{skill}}
                               </div>
-                            </div>
+                            <!-- </div> -->
                           </div>
 
                           <span class="pv-skill-entity--reorder-disabled">
@@ -395,13 +390,13 @@
                         </li>
                       </ul>
                   </section>
+
                   </section>
                   </span>
                   </div>
 
-                  <div id="ember5759" class="pv-occludable__accomplishments ember-view">
+                  <div id="ember5759" class="pv-occludable__accomplishments ember-view"></div>
 
-                  </div>
                 </div>
               </div>
               <div class="right-rail ">
