@@ -354,85 +354,89 @@
                         </ul>
                       </section>
 
-                  <!-- NOTE: Skills list -->
-                  <section class="pv-profile-section artdeco-container-card pv-featured-skills-section ember-view">
-                    <a ng-click="addSkills($event)"data-control-name="edit_skills_add" class="pv-skills-section__add-label button-tertiary-medium-muted ember-view">Add a new skill</a>
-                    <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">Featured Skills &amp; Endorsements</h2>
-                    <div tabindex="-1">
-                      <ul class="pv-featured-skills-list pv-featured-skills-list--no-highlights section-info no-highlights">
-                        <li ng-repeat="skill in skills" class="pv-skill-entity--featured pb5 pv-skill-entity relative ember-view">
-                          <div class="pv-skill-entity__header">
-                            <button class="pv-skill-entity__delete-button button-tertiary-small-round-muted" data-ember-action="" data-ember-action-11469="11469">
-                              <span class="svg-icon-wrap">
-                                <span class="visually-hidden">Delete {{skill}}</span>
-                                <li-icon ng-click="deleteSkill(skill)" aria-hidden="true" type="cancel-icon" size="large">
-                                  <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
-                                    <g class="large-icon" style="fill: currentColor">
-                                      <path d="M20,5.32L13.32,12,20,18.68,18.66,20,12,13.33,5.34,20,4,18.68,10.68,12,4,5.32,5.32,4,12,10.69,18.68,4Z"></path>
-                                    </g>
-                                  </svg>
-                                </li-icon>
-                              </span>
-                            </button>
+                      <!-- NOTE: Skills section -->
+                      <section class="pv-profile-section artdeco-container-card pv-featured-skills-section ember-view">
+                        <a ng-click="addSkills($event)"data-control-name="edit_skills_add" class="pv-skills-section__add-label button-tertiary-medium-muted ember-view">Add a new skill</a>
+                        <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">Featured Skills &amp; Endorsements</h2>
+                        <div tabindex="-1">
+                          <ul class="pv-featured-skills-list pv-featured-skills-list--no-highlights section-info no-highlights">
+                            <li ng-repeat="skill in skills" class="pv-skill-entity--featured pb5 pv-skill-entity relative ember-view">
+                              <div class="pv-skill-entity__header">
+                                <button class="pv-skill-entity__delete-button button-tertiary-small-round-muted" data-ember-action="" data-ember-action-11469="11469">
+                                  <span class="svg-icon-wrap">
+                                    <span class="visually-hidden">Delete {{skill}}</span>
+                                    <li-icon ng-click="deleteSkill(skill)" aria-hidden="true" type="cancel-icon" size="large">
+                                      <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                                        <g class="large-icon" style="fill: currentColor">
+                                          <path d="M20,5.32L13.32,12,20,18.68,18.66,20,12,13.33,5.34,20,4,18.68,10.68,12,4,5.32,5.32,4,12,10.69,18.68,4Z"></path>
+                                        </g>
+                                      </svg>
+                                    </li-icon>
+                                  </span>
+                                </button>
 
-                            <div class="tooltip-container">
-                              <div class="pv-skill-entity__pill-contents static-pill">
-                                <span class="pv-skill-entity__skill-name truncate Sans-15px-black-85%-semibold inline-block">{{skill}}</span>
+                                <div class="tooltip-container">
+                                  <div class="pv-skill-entity__pill-contents static-pill">
+                                    <span class="pv-skill-entity__skill-name truncate Sans-15px-black-85%-semibold inline-block">{{skill}}</span>
+                                  </div>
+
+                                  <div role="tooltip" id="pv-skill-entity-name-tooltip" class="tooltip">{{skill}}</div>
+                                </div>
                               </div>
 
-                              <div role="tooltip" id="pv-skill-entity-name-tooltip" class="tooltip">{{skill}}</div>
-                            </div>
-                          </div>
-
-                          <span class="pv-skill-entity--reorder-disabled">
-  <span class="pv-skill-entity__handle svg-icon-wrap">
-    <span class="visually-hidden">Click and drag to reorder skills</span>
-                          <li-icon aria-hidden="true" type="reorder-icon" size="medium"><svg viewBox="0 0 24 24" width="24" height="24" style="" x="0" y="0" preserveAspectRatio="xMinYMin meet"><g class="large-icon" style="fill: currentColor">
-        <path d="M22,5V7H2V5H22ZM2,11H22V9H2v2Zm0,4H22V13H2v2Zm0,4H22V17H2v2Z" style="isolation: isolate"></path>
-      </g></svg></li-icon>
-                          </span>
-                          </span>
-                        </li>
-                      </ul>
-                  </section>
-                  </section>
+                              <span class="pv-skill-entity--reorder-disabled">
+                                <span class="pv-skill-entity__handle svg-icon-wrap">
+                                  <span class="visually-hidden">Click and drag to reorder skills</span>
+                                  <li-icon aria-hidden="true" type="reorder-icon" size="medium">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" style="" x="0" y="0" preserveAspectRatio="xMinYMin meet">
+                                      <g class="large-icon" style="fill: currentColor">
+                                        <path d="M22,5V7H2V5H22ZM2,11H22V9H2v2Zm0,4H22V13H2v2Zm0,4H22V17H2v2Z" style="isolation: isolate"></path>
+                                      </g>
+                                    </svg>
+                                  </li-icon>
+                                </span>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </section>
+                    </section>
                   </span>
-                  </div>
-
-                  <div id="ember5759" class="pv-occludable__accomplishments ember-view">
-
-                  </div>
                 </div>
               </div>
+            </div>
+
               <div class="right-rail ">
-                <section id="ember5769" class="pv-profile-section pv-profile-info-section pv-profile-section ember-view">
-                  <div id="ember5778" class="pv-profile-info-section__sticky-content sticky ember-view">
-                    <section id="ember5791" class="pe-hub-section mb2 ember-view"><button data-control-name="profile_edit_fab" aria-expanded="false" class="pe-hub-section__expand-button pe-hub__action " data-ember-action="" data-ember-action-5796="5796">
-    <span>Add new profile section</span>
-    <span class="pe-hub-section__icon triangle-icon "></span>
-  </button>
-
+                <section class="pv-profile-section pv-profile-info-section pv-profile-section ember-view">
+                  <div class="pv-profile-info-section__sticky-content sticky ember-view">
+                    <section class="pe-hub-section mb2 ember-view">
+                      <button data-control-name="profile_edit_fab" aria-expanded="false" class="pe-hub-section__expand-button pe-hub__action " data-ember-action="" data-ember-action-5796="5796">
+                        <span>Add new profile section</span>
+                        <span class="pe-hub-section__icon triangle-icon "></span>
+                      </button>
                     </section>
-
                   </div>
 
-                  <section id="ember5805" class="view-public-profile profile-action ember-view">
-                    <a target="_blank" href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" id="ember5814" class="profile-action-text ember-view">  Edit your public profile
-  </a>
+                  <section class="view-public-profile profile-action ember-view">
+                    <a target="_blank" href="#" class="profile-action-text ember-view">Edit your public profile</a>
                     <div class="icon-tooltip">
-                      <div id="ember5819" class="ember-view">
+                      <div class="ember-view">
                         <div class="hovercard-container">
-                          <span class="svg-icon-wrap"><span class="visually-hidden">See and edit how you look to people who are not signed in, and find you through search engines (ex: Google, Bing).</span>
-                          <li-icon aria-hidden="true" type="question-pebble-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
-          <g id="question-pebble-icon">
-            <g>
-              <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
-              <rect style="fill:none;" width="16" height="16"></rect>
-            </g>
-          </g>
-          <g id="Layer_1">
-          </g>
-        </g></svg></li-icon>
+                          <span class="svg-icon-wrap">
+                            <span class="visually-hidden">See and edit how you look to people who are not signed in, and find you through search engines (ex: Google, Bing).</span>
+                            <li-icon aria-hidden="true" type="question-pebble-icon" size="small">
+                              <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                                <g class="small-icon" style="fill-opacity: 1">
+                                  <g id="question-pebble-icon">
+                                    <g>
+                                      <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
+                                      <rect style="fill:none;" width="16" height="16"></rect>
+                                    </g>
+                                  </g>
+                                  <g id="Layer_1"></g>
+                                </g>
+                              </svg>
+                            </li-icon>
                           </span>
 
                           <div role="tooltip" class="hovercard ">
@@ -443,23 +447,26 @@
                     </div>
                   </section>
 
-                  <section id="ember5828" class="add-secondary-language profile-action ember-view">
-                    <a data-control-name="add_secondary_language" href="https://www.linkedin.com/in/jigno-alfred-venezuela-757600b3/edit/secondary-language/" id="ember5829" class="profile-action-text ember-view">  Add profile in another language
-  </a>
+                  <section class="add-secondary-language profile-action ember-view">
+                    <a data-control-name="add_secondary_language" href="#" class="profile-action-text ember-view">Add profile in another language</a>
                     <div class="icon-tooltip">
-                      <div id="ember5830" class="ember-view">
+                      <div class="ember-view">
                         <div class="hovercard-container">
-                          <span class="svg-icon-wrap"><span class="visually-hidden">Creating a profile in another language makes it easier for local business contacts and recruiters to find you on LinkedIn.</span>
-                          <li-icon aria-hidden="true" type="question-pebble-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
-          <g id="question-pebble-icon">
-            <g>
-              <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
-              <rect style="fill:none;" width="16" height="16"></rect>
-            </g>
-          </g>
-          <g id="Layer_1">
-          </g>
-        </g></svg></li-icon>
+                          <span class="svg-icon-wrap">
+                            <span class="visually-hidden">Creating a profile in another language makes it easier for local business contacts and recruiters to find you on LinkedIn.</span>
+                            <li-icon aria-hidden="true" type="question-pebble-icon" size="small">
+                              <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                                <g class="small-icon" style="fill-opacity: 1">
+                                  <g id="question-pebble-icon">
+                                    <g>
+                                      <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
+                                      <rect style="fill:none;" width="16" height="16"></rect>
+                                    </g>
+                                  </g>
+                                  <g id="Layer_1"></g>
+                                </g>
+                              </svg>
+                            </li-icon>
                           </span>
 
                           <div role="tooltip" class="hovercard ">
@@ -470,74 +477,73 @@
                     </div>
                   </section>
                 </section>
-                <section id="ember5831" class="ad-banner-container ember-view"><iframe width="300" height="250" src="javascript:void(0)" scrolling="no" title="advertisement" class="ad-banner" src="./Jigno Alfred Venezuela _ LinkedIn_files/saved_resource(1).html"></iframe>
-                </section>
-                <section class="right-rail__info_container">
-                  <section id="ember5840" class="pv-profile-section artdeco-container-card connections-section ember-view">
-                    <a data-control-name="view_all_connections" href="https://www.linkedin.com/mynetwork/invite-connect/connections/" id="ember5841" class="ember-view">
-                      <h2 class="pv-profile-section__card-heading Sans-17px-black-85%-semibold">
-      See connections (0)
-    </h2>
 
-                      <div id="ember5854" class="facepile facepile-overlap xsmall stack-to-right ember-view">
-                        <!---->
-                      </div>
+                <section class="right-rail__info_container">
+                  <section class="pv-profile-section artdeco-container-card connections-section ember-view">
+                    <a data-control-name="view_all_connections" href="#" class="ember-view">
+                      <h2 class="pv-profile-section__card-heading Sans-17px-black-85%-semibold">See connections (0)</h2>
                     </a>
                   </section>
 
-                  <section tabindex="-1" id="ember5867" class="pv-profile-section artdeco-container-card pv-contact-info ember-view">
-                    <a data-control-name="self_edit_contact_info" href="https://www.linkedin.com/in/jigno-alfred-venezuela-757600b3/edit/contact-info/" id="ember5876" class="pv-profile-section__edit-action pv-profile-section__edit-action--show ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Edit contact info</span>
-                      <li-icon aria-hidden="true" type="pencil-icon"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
-          <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
-        </g></svg></li-icon>
+                  <section tabindex="-1" class="pv-profile-section artdeco-container-card pv-contact-info ember-view">
+                    <a data-control-name="self_edit_contact_info" href="#" class="pv-profile-section__edit-action pv-profile-section__edit-action--show ember-view">
+                      <span class="svg-icon-wrap">
+                        <span class="visually-hidden">Edit contact info</span>
+                        <li-icon aria-hidden="true" type="pencil-icon">
+                          <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                            <g class="large-icon" style="fill: currentColor">
+                              <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
+                            </g>
+                          </svg>
+                        </li-icon>
                       </span>
                     </a>
+
                     <h2 class="pv-profile-section__card-heading Sans-17px-black-85%-semibold">Contact and Personal Info</h2>
-
-                    <div class="pv-contact-info__card-sub-heading Sans-15px-black-55%-semibold mv1">
-                      {{profile.firstname}}’s Profile, Phone, Email, IM, and Birthday
-                    </div>
-
+                    <div class="pv-contact-info__card-sub-heading Sans-15px-black-55%-semibold mv1">{{profile.firstname}}’s Profile, Phone, Email, IM, and Birthday</div>
                     <button data-control-name="contact_see_more" class="contact-see-more-less link-without-visited-state" data-ember-action="" data-ember-action-5877="5877">
-    <span aria-hidden="true">
-      Show more
-      <span class="svg-icon-wrap"><li-icon aria-hidden="true" type="chevron-down-icon" class="icon-state" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
-          <path d="M8,9l5.93-4L15,6.54l-6.15,4.2a1.5,1.5,0,0,1-1.69,0L1,6.54,2.07,5Z"></path>
-        </g></svg></li-icon></span>
-     </span>
-    <span class="visually-hidden">See more contact and personal info</span>
-  </button>
+                      <span aria-hidden="true">
+                        Show more
+                        <span class="svg-icon-wrap">
+                          <li-icon aria-hidden="true" type="chevron-down-icon" class="icon-state" size="small">
+                            <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                              <g class="small-icon" style="fill-opacity: 1">
+                                <path d="M8,9l5.93-4L15,6.54l-6.15,4.2a1.5,1.5,0,0,1-1.69,0L1,6.54,2.07,5Z"></path>
+                              </g>
+                            </svg>
+                          </li-icon>
+                        </span>
+                       </span>
+                      <span class="visually-hidden">See more contact and personal info</span>
+                    </button>
                   </section>
-
                 </section>
 
-                <div style="" id="ember5878" class="pv-deferred-area ember-view">
+                <div style="" class="pv-deferred-area ember-view">
                   <div class="pv-deferred-area__content">
-                    <section id="ember5949" class="pv-profile-section artdeco-container-card pv-browsemap-section profile-section ember-view">
+                    <section class="pv-profile-section artdeco-container-card pv-browsemap-section profile-section ember-view">
                       <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">People Also Viewed</h2>
-
+                      <!-- NOTE: People Viewed list-->
                       <ul class="pv-profile-section__section-info section-info browsemap mt4">
                         <li ng-repeat="list in viewed" class="pv-browsemap-section__member-container mt4">
-                          <a data-control-name="browsemap_profile" href="https://www.linkedin.com/in/katherine-vi%C3%B1as-221b08b9/" id="ember5951" class="pv-browsemap-section__member ember-view"> <img class="lazy-image pv-browsemap-section__member-image EntityPhoto-circle-4" alt="Katherine Viñas" height="56" width="56">
+                          <a data-control-name="browsemap_profile" href="#" class="pv-browsemap-section__member ember-view">
                             <div class="pv-browsemap-section__member-detail">
-                              <h3 id="ember5964" class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view">
-                              <span class="name-and-icon">
-                                <span class="name actor-name">{{list.name}}</span>
-                              </span>
+                              <h3 class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view">
+                                <span class="name-and-icon">
+                                  <span class="name actor-name">{{list.name}}</span>
+                                </span>
 
-  <span id="ember5973" class="distance-badge separator ember-view">  <span class="visually-hidden">{{list.connection}} degree connection</span>
-
-  <span class="dist-value">{{list.connection}}</span>
-  </span>
-  </h3>
+                                <span  class="distance-badge separator ember-view">
+                                  <span class="visually-hidden">{{list.connection}} degree connection</span>
+                                  <span class="dist-value">{{list.connection}}</span>
+                                </span>
+                              </h3>
                               <p class="browsemap-headline Sans-15px-white-100%">{{list.headline}}</p>
                             </div>
                           </a>
                         </li>
                       </ul>
                     </section>
-
-
                   </div>
                 </div>
 
