@@ -3,4 +3,8 @@ node_modules
 .sass-cache
 bower_components
 .idea
+<<<<<<< HEAD
 Gruntfile.js
+=======
+Gruntfile.json
+>>>>>>> child
