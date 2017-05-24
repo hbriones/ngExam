@@ -73,6 +73,10 @@ angular.module('ngmaterialApp')
       name: 'Hyacinth Briones',
       headline: 'Blossom of Powerpuff Girls',
       connection: '1st'
+    }, {
+      name: 'Monique Noche',
+      headline: 'Buttercup of Powerpuff Girls',
+      connection: '1st'
     }
   ]
 
