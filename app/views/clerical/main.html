@@ -1,0 +1,7 @@
+<md-tabs md-dynamic-height md-border-bottom>
+  <div ng-repeat="ex in exams">
+    <md-tab label="{{ex.title}}">
+      <ng-include src="'views/clerical/exam-template.html'" onload="exam = ex"></ng-include>
+    </md-tab>
+  </div>
+</md-tabs>

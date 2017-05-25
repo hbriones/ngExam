@@ -19,27 +19,21 @@
 <!--
 TODO Create new partial html for sidenav
 -->
-
   <md-sidenav md-component-id="left" class="md-sidenav-left">
     <md-list>
       <md-list-item>
         <md-button flex class="md-raised md-primary" ng-click="goHome()">Home</md-button>
       </md-list-item>
-
       <md-divider></md-divider>
-
       <md-list-item>
-        <md-button flex class="md-raised md-primary" ng-click="goPage()">Page</md-button>
+        <md-button flex class="md-raised md-primary" ng-click="goClerical()">Clerical Exam</md-button>
       </md-list-item>
-
       <md-list-item>
         <md-button flex class="md-raised md-primary" ng-click="goWriter()">Writer Exam</md-button>
       </md-list-item>
   </md-sidenav>
-
   <md-content flex id="content" layout-padding>
     <md-content layout-padding ui-view="menuContent">
     </md-content>
   </md-content>
-
 </md-content>

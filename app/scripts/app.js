@@ -24,7 +24,6 @@ angular
     ])
     .config(
     function ($stateProvider, $urlRouterProvider, $mdThemingProvider) {
-
         $stateProvider
             .state('app', {
                 url: '/app',
@@ -49,12 +48,12 @@ angular
                     }
                 }
             })
-            .state('app.page', {
-                url: '/page',
+            .state('app.clerical', {
+                url: '/clerical',
                 views: {
                     'menuContent': {
-                        templateUrl: 'views/page.html',
-                        controller: 'PageCtrl'
+                        templateUrl: 'views/clerical/main.html',
+                        controller: 'ClericalCtrl'
                     }
                 }
             })
@@ -78,8 +77,8 @@ function AppCtrl($scope, $location, $mdSidenav, $mdToast) {
         $location.path('/app/home');
     };
 
-    $scope.goPage = function () {
-        $location.path('/app/page');
+    $scope.goClerical = function () {
+        $location.path('/app/clerical');
     };
 
     $scope.goWriter = function () {
