@@ -1,35 +1,54 @@
-  <md-dialog-content flex="50">
+<md-dialog-content flex="50">
 <md-dialog>
 
-    <h2 class="visually-hidden">Edit form</h2>
-    <div class="carousel-form ember-view">
-      <div  class="breadcrumb-carousel ember-view">
-        <div  class="carousel-header ember-view">
+  <h2 class="visually-hidden">Edit form</h2>
+  <div class="carousel-form ember-view">
+    <div  class="breadcrumb-carousel ember-view">
+      <div  class="carousel-header ember-view">
 
-          <div class="carousel-header__item Sans-21px-black-85% carousel-header__item--show ember-view">
-            <div class="carousel-header__item-content">
+        <div class="carousel-header__item Sans-21px-black-85% carousel-header__item--show ember-view">
+          <div class="carousel-header__item-content">
 
-              Edit Intro
-            </div>
+            Edit Intro
           </div>
+        </div>
 
-          <div  class="carousel-header__item Sans-21px-black-85% carousel-header__item--hide ember-view">
-            <div class="carousel-header__item-content">
-              Profile photo
-            </div>
+        <div  class="carousel-header__item Sans-21px-black-85% carousel-header__item--hide ember-view">
+          <div class="carousel-header__item-content">
+            Profile photo
           </div>
+        </div>
 
 <!--This is not functional-->
-          <!-- <div id="ember8196" class="carousel-header__item Sans-21px-black-85% carousel-header__item--hide ember-view">
-            <div id="carousel-header-item-edit-treasury" class="carousel-header__item-content">
-              Edit Media
-            </div>
-          </div> -->
+        <!-- <div id="ember8196" class="carousel-header__item Sans-21px-black-85% carousel-header__item--hide ember-view">
+          <div id="carousel-header-item-edit-treasury" class="carousel-header__item-content">
+            Edit Media
+          </div>
+        </div> -->
 
-          <button ng-click="cancel()" type="button" class="form-back-action Sans-15px-black-55%">
+        <button ng-click="cancel()" type="button" class="form-back-action Sans-15px-black-55%">
+          <span class="svg-icon-wrap">
+            <span class="visually-hidden">Cancel</span>
+            <li-icon aria-hidden="true" type="cancel-icon">
+              <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                <g class="large-icon" style="fill: currentColor">
+                  <path d="M20,5.32L13.32,12,20,18.68,18.66,20,12,13.33,5.34,20,4,18.68,10.68,12,4,5.32,5.32,4,12,10.69,18.68,4Z"></path>
+                </g>
+              </svg>
+            </li-icon>
+          </span>
+        </button>
+      </div>
+
+      <div class="pe-s-form__container">
+        <header class="pe-s-form__header pe-form-header">
+
+          <!--This is not functional-->
+
+          <!-- <button type="button" data-control-name="cancel" class="form-back-action Sans-15px-black-55%" data-ember-action="" data-ember-action-8202="8202">
             <span class="svg-icon-wrap">
               <span class="visually-hidden">Cancel</span>
-              <li-icon aria-hidden="true" type="cancel-icon">
+              <li-icon aria-hidden="true" type="cancel-icon" ng-click="cancel()">
                 <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
                   <g class="large-icon" style="fill: currentColor">
                     <path d="M20,5.32L13.32,12,20,18.68,18.66,20,12,13.33,5.34,20,4,18.68,10.68,12,4,5.32,5.32,4,12,10.69,18.68,4Z"></path>
@@ -37,362 +56,340 @@
                 </svg>
               </li-icon>
             </span>
-          </button>
-        </div>
+          </button> -->
 
-        <div class="pe-s-form__container">
-          <header class="pe-s-form__header pe-form-header">
-
-            <!--This is not functional-->
-
-            <!-- <button type="button" data-control-name="cancel" class="form-back-action Sans-15px-black-55%" data-ember-action="" data-ember-action-8202="8202">
-              <span class="svg-icon-wrap">
-                <span class="visually-hidden">Cancel</span>
-                <li-icon aria-hidden="true" type="cancel-icon" ng-click="cancel()">
-                  <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
-                    <g class="large-icon" style="fill: currentColor">
-                      <path d="M20,5.32L13.32,12,20,18.68,18.66,20,12,13.33,5.34,20,4,18.68,10.68,12,4,5.32,5.32,4,12,10.69,18.68,4Z"></path>
-                    </g>
-                  </svg>
-                </li-icon>
-              </span>
-            </button> -->
-
-            <h2 class="pe-form-header__title">Edit Intro</h2>
+          <h2 class="pe-form-header__title">Edit Intro</h2>
 
 
-            <!--This is not functional-->
+          <!--This is not functional-->
 
-            <!-- <button type="submit" class="pe-form-footer__action--submit form-submit-action Sans-15px-white-100%">
+          <!-- <button type="submit" class="pe-form-footer__action--submit form-submit-action Sans-15px-white-100%">
+            Save
+          </button> -->
+        </header>
 
-              Save
-            </button> -->
-          </header>
-
-          <div class="pe-s-form__body pe-form-body">
-            <div class="pe-form-body_top-area relative display-flex">
-              <div class="pe-form-field pe-top-card-form__photo-field">
-                <label for="top-card-form-edit-upload-input" class="pe-form-field__label pe-top-card-form__photo-field-label">
-                  Profile photo
-                </label>
-
-                <div class="profile-photo-edit ember-view">
-                  <button data-control-name="edit_profile_photo" class="profile-photo-edit__edit-btn" data-ember-action="" data-ember-action-8204="8204">
-                    <img src="images/profile.jpg" class="profile-photo-edit__preview" alt="Edit photo" height="79" width="79">
-                    <span class="profile-photo-edit__edit-icon svg-icon-wrap">
-                      <li-icon aria-hidden="true" type="pencil-icon" size="small">
-                        <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
-                          <g class="small-icon" style="fill-opacity: 1">
-                            <path d="M14.71,4L12,1.29a1,1,0,0,0-1.41,0L3,8.85,1,15l6.15-2,7.55-7.55A1,1,0,0,0,15,4.71,1,1,0,0,0,14.71,4Zm-8.84,7.6-1.5-1.5L9.42,5.07l1.5,1.5Zm5.72-5.72-1.5-1.5,1.17-1.17,1.5,1.5Z"></path>
-                          </g>
-                        </svg>
-                      </li-icon>
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="pe-s-multi-field">
-              <div class="pe-top-card-form__name-field">
-                <div data-form-elem-focus="true" class="pe-s-multi-field__item pe-form-field pe-top-card-form__first-name-field floating-label  ">
-                  <label for="topcard-firstname" class="pe-form-field__label label-text required">
-                    First Name
-                  </label>
-
-                  <input ng-model="profile.firstname" type="text" name="firstName" maxlength="20" class="ember-text-field pe-form-field__text-input ember-view">
-                </div>
-              </div>
-
-              <div class="pe-top-card-form__name-field">
-                <div data-form-elem-focus="true" class="pe-s-multi-field__item pe-form-field pe-top-card-form__last-name-field floating-label  ">
-                  <label for="topcard-lastname" class="pe-form-field__label label-text required">
-                    Last Name
-                  </label>
-
-                  <input ng-model="profile.lastname" type="text" name="lastName" maxlength="50" class="ember-text-field pe-form-field__text-input ember-view">
-                </div>
-              </div>
-            </div>
-
-            <div data-form-elem-focus="true" class="pe-form-field pe-top-card-form__headline-field floating-label  ">
-              <label for="topcard-headline" class="pe-form-field__label label-text required">
-                Headline
+        <div class="pe-s-form__body pe-form-body">
+          <div class="pe-form-body_top-area relative display-flex">
+            <div class="pe-form-field pe-top-card-form__photo-field">
+              <label for="top-card-form-edit-upload-input" class="pe-form-field__label pe-top-card-form__photo-field-label">
+                Profile photo
               </label>
 
-              <textarea ng-model="profile.headline" class="pe-top-card-form__headline-text ember-text-area pe-form-field__textarea ember-view"></textarea>
-            </div>
-
-            <div class="pe-form-field pe-top-card-form__current-position-field">
-              <label for="topcard-position" class="pe-form-field__label">
-                Current Position
-              </label>
-
-              <select ng-model="work" class="ember-view">
-                <option ng-repeat="company in experience" value="{{company.title}} at {{company.name}}">{{company.title}} at {{company.name}}</option>
-              </select>
-            </div>
-
-            <div class="pe-form-field pe-top-card-form__education-field">
-              <label for="topcard-education" class="pe-form-field__label">
-                Education
-              </label>
-
-              <select ng-model="school" name="topcard-education" class="ember-view"><!---->
-                <option ng-repeat="school in education" value="{{school.name}}">{{school.name}}</option>
-              </select>
-            </div>
-
-            <div id="ember8217" class="pe-top-card-form__location-picker ember-view">
-              <div class="pe-s-multi-field">
-                <div class="pe-s-multi-field__item pe-form-field ">
-                  <label for="location" class="pe-form-field__label">
-                    Location
-                  </label>
-
-                  <input ng-model="profile.location" type="text" name="location" maxlength="50" class="ember-text-field pe-form-field__text-input ember-view">
-                </div>
+              <div class="profile-photo-edit ember-view">
+                <button data-control-name="edit_profile_photo" class="profile-photo-edit__edit-btn" data-ember-action="" data-ember-action-8204="8204">
+                  <img src="images/profile.jpg" class="profile-photo-edit__preview" alt="Edit photo" height="79" width="79">
+                  <span class="profile-photo-edit__edit-icon svg-icon-wrap">
+                    <li-icon aria-hidden="true" type="pencil-icon" size="small">
+                      <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                        <g class="small-icon" style="fill-opacity: 1">
+                          <path d="M14.71,4L12,1.29a1,1,0,0,0-1.41,0L3,8.85,1,15l6.15-2,7.55-7.55A1,1,0,0,0,15,4.71,1,1,0,0,0,14.71,4Zm-8.84,7.6-1.5-1.5L9.42,5.07l1.5,1.5Zm5.72-5.72-1.5-1.5,1.17-1.17,1.5,1.5Z"></path>
+                        </g>
+                      </svg>
+                    </li-icon>
+                  </span>
+                </button>
               </div>
-            </div>
-
-            <div class="pe-form-field industry-field">
-              <label for="topcard-industry" class="pe-form-field__label">
-            Industry
-          </label>
-
-              <select ng-model="profile.industry" name="topcard-industry" class="ember-view">  <option value="">Choose an industry…</option>
-
-          <option value="urn:li:fs_industry:47">Accounting</option>
-          <option value="urn:li:fs_industry:94">Airlines/Aviation</option>
-          <option value="urn:li:fs_industry:120">Alternative Dispute Resolution</option>
-          <option value="urn:li:fs_industry:125">Alternative Medicine</option>
-          <option value="urn:li:fs_industry:127">Animation</option>
-          <option value="urn:li:fs_industry:19">Apparel &amp; Fashion</option>
-          <option value="urn:li:fs_industry:50">Architecture &amp; Planning</option>
-          <option value="urn:li:fs_industry:111">Arts and Crafts</option>
-          <option value="urn:li:fs_industry:53">Automotive</option>
-          <option value="urn:li:fs_industry:52">Aviation &amp; Aerospace</option>
-          <option value="urn:li:fs_industry:41">Banking</option>
-          <option value="urn:li:fs_industry:12">Biotechnology</option>
-          <option value="urn:li:fs_industry:36">Broadcast Media</option>
-          <option value="urn:li:fs_industry:49">Building Materials</option>
-          <option value="urn:li:fs_industry:138">Business Supplies and Equipment</option>
-          <option value="urn:li:fs_industry:129">Capital Markets</option>
-          <option value="urn:li:fs_industry:54">Chemicals</option>
-          <option value="urn:li:fs_industry:90">Civic &amp; Social Organization</option>
-          <option value="urn:li:fs_industry:51">Civil Engineering</option>
-          <option value="urn:li:fs_industry:128">Commercial Real Estate</option>
-          <option value="urn:li:fs_industry:118">Computer &amp; Network Security</option>
-          <option value="urn:li:fs_industry:109">Computer Games</option>
-          <option value="urn:li:fs_industry:3">Computer Hardware</option>
-          <option value="urn:li:fs_industry:5">Computer Networking</option>
-          <option value="urn:li:fs_industry:4">Computer Software</option>
-          <option value="urn:li:fs_industry:48">Construction</option>
-          <option value="urn:li:fs_industry:24">Consumer Electronics</option>
-          <option value="urn:li:fs_industry:25">Consumer Goods</option>
-          <option value="urn:li:fs_industry:91">Consumer Services</option>
-          <option value="urn:li:fs_industry:18">Cosmetics</option>
-          <option value="urn:li:fs_industry:65">Dairy</option>
-          <option value="urn:li:fs_industry:1">Defense &amp; Space</option>
-          <option value="urn:li:fs_industry:99">Design</option>
-          <option value="urn:li:fs_industry:69">Education Management</option>
-          <option value="urn:li:fs_industry:132">E-Learning</option>
-          <option value="urn:li:fs_industry:112">Electrical/Electronic Manufacturing</option>
-          <option value="urn:li:fs_industry:28">Entertainment</option>
-          <option value="urn:li:fs_industry:86">Environmental Services</option>
-          <option value="urn:li:fs_industry:110">Events Services</option>
-          <option value="urn:li:fs_industry:76">Executive Office</option>
-          <option value="urn:li:fs_industry:122">Facilities Services</option>
-          <option value="urn:li:fs_industry:63">Farming</option>
-          <option value="urn:li:fs_industry:43">Financial Services</option>
-          <option value="urn:li:fs_industry:38">Fine Art</option>
-          <option value="urn:li:fs_industry:66">Fishery</option>
-          <option value="urn:li:fs_industry:34">Food &amp; Beverages</option>
-          <option value="urn:li:fs_industry:23">Food Production</option>
-          <option value="urn:li:fs_industry:101">Fund-Raising</option>
-          <option value="urn:li:fs_industry:26">Furniture</option>
-          <option value="urn:li:fs_industry:29">Gambling &amp; Casinos</option>
-          <option value="urn:li:fs_industry:145">Glass, Ceramics &amp; Concrete</option>
-          <option value="urn:li:fs_industry:75">Government Administration</option>
-          <option value="urn:li:fs_industry:148">Government Relations</option>
-          <option value="urn:li:fs_industry:140">Graphic Design</option>
-          <option value="urn:li:fs_industry:124">Health, Wellness and Fitness</option>
-          <option value="urn:li:fs_industry:68">Higher Education</option>
-          <option value="urn:li:fs_industry:14">Hospital &amp; Health Care</option>
-          <option value="urn:li:fs_industry:31">Hospitality</option>
-          <option value="urn:li:fs_industry:137">Human Resources</option>
-          <option value="urn:li:fs_industry:134">Import and Export</option>
-          <option value="urn:li:fs_industry:88">Individual &amp; Family Services</option>
-          <option value="urn:li:fs_industry:147">Industrial Automation</option>
-          <option value="urn:li:fs_industry:84">Information Services</option>
-          <option value="urn:li:fs_industry:96">Information Technology and Services</option>
-          <option value="urn:li:fs_industry:42">Insurance</option>
-          <option value="urn:li:fs_industry:74">International Affairs</option>
-          <option value="urn:li:fs_industry:141">International Trade and Development</option>
-          <option value="urn:li:fs_industry:6">Internet</option>
-          <option value="urn:li:fs_industry:45">Investment Banking</option>
-          <option value="urn:li:fs_industry:46">Investment Management</option>
-          <option value="urn:li:fs_industry:73">Judiciary</option>
-          <option value="urn:li:fs_industry:77">Law Enforcement</option>
-          <option value="urn:li:fs_industry:9">Law Practice</option>
-          <option value="urn:li:fs_industry:10">Legal Services</option>
-          <option value="urn:li:fs_industry:72">Legislative Office</option>
-          <option value="urn:li:fs_industry:30">Leisure, Travel &amp; Tourism</option>
-          <option value="urn:li:fs_industry:85">Libraries</option>
-          <option value="urn:li:fs_industry:116">Logistics and Supply Chain</option>
-          <option value="urn:li:fs_industry:143">Luxury Goods &amp; Jewelry</option>
-          <option value="urn:li:fs_industry:55">Machinery</option>
-          <option value="urn:li:fs_industry:11">Management Consulting</option>
-          <option value="urn:li:fs_industry:95">Maritime</option>
-          <option value="urn:li:fs_industry:80">Marketing and Advertising</option>
-          <option value="urn:li:fs_industry:97">Market Research</option>
-          <option value="urn:li:fs_industry:135">Mechanical or Industrial Engineering</option>
-          <option value="urn:li:fs_industry:126">Media Production</option>
-          <option value="urn:li:fs_industry:17">Medical Devices</option>
-          <option value="urn:li:fs_industry:13">Medical Practice</option>
-          <option value="urn:li:fs_industry:139">Mental Health Care</option>
-          <option value="urn:li:fs_industry:71">Military</option>
-          <option value="urn:li:fs_industry:56">Mining &amp; Metals</option>
-          <option value="urn:li:fs_industry:35">Motion Pictures and Film</option>
-          <option value="urn:li:fs_industry:37">Museums and Institutions</option>
-          <option value="urn:li:fs_industry:115">Music</option>
-          <option value="urn:li:fs_industry:114">Nanotechnology</option>
-          <option value="urn:li:fs_industry:81">Newspapers</option>
-          <option value="urn:li:fs_industry:100">Nonprofit Organization Management</option>
-          <option value="urn:li:fs_industry:57">Oil &amp; Energy</option>
-          <option value="urn:li:fs_industry:113">Online Media</option>
-          <option value="urn:li:fs_industry:123">Outsourcing/Offshoring</option>
-          <option value="urn:li:fs_industry:87">Package/Freight Delivery</option>
-          <option value="urn:li:fs_industry:146">Packaging and Containers</option>
-          <option value="urn:li:fs_industry:61">Paper &amp; Forest Products</option>
-          <option value="urn:li:fs_industry:39">Performing Arts</option>
-          <option value="urn:li:fs_industry:15">Pharmaceuticals</option>
-          <option value="urn:li:fs_industry:131">Philanthropy</option>
-          <option value="urn:li:fs_industry:136">Photography</option>
-          <option value="urn:li:fs_industry:117">Plastics</option>
-          <option value="urn:li:fs_industry:107">Political Organization</option>
-          <option value="urn:li:fs_industry:67">Primary/Secondary Education</option>
-          <option value="urn:li:fs_industry:83">Printing</option>
-          <option value="urn:li:fs_industry:105">Professional Training &amp; Coaching</option>
-          <option value="urn:li:fs_industry:102">Program Development</option>
-          <option value="urn:li:fs_industry:79">Public Policy</option>
-          <option value="urn:li:fs_industry:98">Public Relations and Communications</option>
-          <option value="urn:li:fs_industry:78">Public Safety</option>
-          <option value="urn:li:fs_industry:82">Publishing</option>
-          <option value="urn:li:fs_industry:62">Railroad Manufacture</option>
-          <option value="urn:li:fs_industry:64">Ranching</option>
-          <option value="urn:li:fs_industry:44">Real Estate</option>
-          <option value="urn:li:fs_industry:40">Recreational Facilities and Services</option>
-          <option value="urn:li:fs_industry:89">Religious Institutions</option>
-          <option value="urn:li:fs_industry:144">Renewables &amp; Environment</option>
-          <option value="urn:li:fs_industry:70">Research</option>
-          <option value="urn:li:fs_industry:32">Restaurants</option>
-          <option value="urn:li:fs_industry:27">Retail</option>
-          <option value="urn:li:fs_industry:121">Security and Investigations</option>
-          <option value="urn:li:fs_industry:7">Semiconductors</option>
-          <option value="urn:li:fs_industry:58">Shipbuilding</option>
-          <option value="urn:li:fs_industry:20">Sporting Goods</option>
-          <option value="urn:li:fs_industry:33">Sports</option>
-          <option value="urn:li:fs_industry:104">Staffing and Recruiting</option>
-          <option value="urn:li:fs_industry:22">Supermarkets</option>
-          <option value="urn:li:fs_industry:8">Telecommunications</option>
-          <option value="urn:li:fs_industry:60">Textiles</option>
-          <option value="urn:li:fs_industry:130">Think Tanks</option>
-          <option value="urn:li:fs_industry:21">Tobacco</option>
-          <option value="urn:li:fs_industry:108">Translation and Localization</option>
-          <option value="urn:li:fs_industry:92">Transportation/Trucking/Railroad</option>
-          <option value="urn:li:fs_industry:59">Utilities</option>
-          <option value="urn:li:fs_industry:106">Venture Capital &amp; Private Equity</option>
-          <option value="urn:li:fs_industry:16">Veterinary</option>
-          <option value="urn:li:fs_industry:93">Warehousing</option>
-          <option value="urn:li:fs_industry:133">Wholesale</option>
-          <option value="urn:li:fs_industry:142">Wine and Spirits</option>
-          <option value="urn:li:fs_industry:119">Wireless</option>
-          <option value="urn:li:fs_industry:103">Writing and Editing</option>
-        </select>
-              <!---->
-            </div>
-
-            <div data-form-elem-focus="true" class="pe-form-field summary-field floating-label  ">
-                <label for="topcard-summary" class="pe-form-field__label label-text">
-                  Summary
-                </label>
-
-
-              <textarea ng-model="profile.summary" id="topcard-summary" class="ember-text-area pe-form-field__textarea ember-view"></textarea>
-<!--
-              <textarea ng-model="profile.summary" class="ember-text-area pe-form-field__textarea ember-view"></textarea> -->
-
-              <!---->
-            </div>
-            <!---->
-            <div class="ember-view">
-              <div class="pe-form-field pe-treasury-view">
-                <!-- <label class="pe-form-field__label pe-treasury-view__label label-text Sans-13px-black-55%-semibold">
-            Media
-          </label>
-
-                <span class="pe-treasury-view__description Sans-15px-black-55% pb4 block">
-            Add or link to external documents, photos, sites, videos, and presentations.
-          </span>
-
-                <div class="pe-treasury-view__actions display-flex justify-space-between">
-                  <input type="file" name="file" class="visually-hidden pe-treasury-view__media">
-                  <label for="pe-treasury-view__media-upload" class="pe-treasury-view__upload-label button-primary-large">
-              Upload
-            </label>
-                  <button data-control-name="add_link" class="pe-treasury-view__link-button button-secondary-large" data-ember-action="" data-ember-action-8619="8619">Link</button>
-                </div> -->
-
-                <!---->
-                <div class="pe-treasury-view__supported-container">
-                  <!-- <a target="_blank" href="https://www.linkedin.com/help/linkedin/answer/34327/supported-providers-and-content-types-for-work-samples-on-your-profile" id="ember8620" class="pe-treasury-view__supported-link inline-block mb4 mt2 ember-view">
-                    <li-icon aria-hidden="true" type="question-pebble-icon" class="pe-treasury-view__supported-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
-                <g >
-                  <g>
-                    <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
-                    <rect style="fill:none;" width="16" height="16"></rect>
-                  </g>
-                </g>
-                <g id="Layer_1">
-                </g>
-              </g></svg></li-icon>
-                    <span class="pe-treasury-view__supported-text Sans-13px-black-55% v-align-top">Supported formats</span>
-                  </a> -->
-                </div>
-<!-- 
-                <li-icon aria-hidden="true" type="loader" class="pe-treasury-view__loader mt2" size="small"><svg x="50%" y="50%" width="60px" height="60px" viewBox="0 0 60 60"><g class="small-icon" style="fill-opacity: 1;-webkit-transform: translate(15px, 15px) scale(.5);transform: translate(15px, 15px) scale(.5);">
-                <path opacity="1" d="M30.1,16.1L30.1,16.1c-0.6,0-1-0.5-1-1V1c0-0.6,0.5-1,1-1l0,0c0.6,0,1,0.5,1,1v14.1C31.1,15.7,30.6,16.1,30.1,16.1z"></path>
-                <path opacity="0.85" d="M23.1,18.1L23.1,18.1c-0.5,0.3-1.1,0.1-1.4-0.4L14.5,5.6c-0.3-0.5-0.2-1.1,0.4-1.4l0,0C15.4,3.9,16,4,16.3,4.6l7.2,12.1C23.8,17.2,23.6,17.8,23.1,18.1z"></path>
-                <path opacity="0.77" d="M17.9,23.1L17.9,23.1c-0.3,0.5-0.9,0.7-1.4,0.4l-12.2-7c-0.5-0.3-0.7-0.9-0.4-1.4l0,0c0.3-0.5,0.9-0.7,1.4-0.4l12.2,7C18,22,18.2,22.7,17.9,23.1z"></path>
-                <path opacity="0.69" d="M16.1,30.1L16.1,30.1c0,0.6-0.5,1-1,1L1,31.2c-0.6,0-1-0.5-1-1l0,0c0-0.6,0.5-1,1-1l14.1-0.1C15.7,29.1,16.1,29.5,16.1,30.1z"></path>
-                <path opacity="0.61" d="M18,36.9L18,36.9c0.3,0.5,0.2,1.1-0.4,1.4L5.5,45.6c-0.5,0.3-1.1,0.2-1.4-0.4l0,0c-0.3-0.5-0.2-1.1,0.4-1.4l12.1-7.3C17.1,36.2,17.7,36.4,18,36.9z"></path>
-                <path opacity="0.53" d="M23.3,42.1L23.3,42.1c0.5,0.3,0.6,0.9,0.4,1.4l-7.3,12.1c-0.3,0.5-0.9,0.6-1.4,0.4l0,0c-0.5-0.3-0.6-0.9-0.4-1.4l7.3-12.1C22.1,41.9,22.8,41.8,23.3,42.1z"></path>
-                <path opacity="0.45" d="M30.1,43.9L30.1,43.9c0.6,0,1,0.5,1,1V59c0,0.6-0.5,1-1,1l0,0c-0.6,0-1-0.5-1-1V44.9C29,44.4,29.5,43.9,30.1,43.9z"></path>
-                <path opacity="0.37" d="M37,41.9L37,41.9c0.5-0.3,1.1-0.2,1.4,0.4l7.2,12.1c0.3,0.5,0.2,1.1-0.4,1.4l0,0c-0.5,0.3-1.1,0.2-1.4-0.4l-7.2-12.1C36.4,42.8,36.6,42.2,37,41.9z"></path>
-                <path opacity="0.29" d="M42.2,36.8L42.2,36.8c0.3-0.5,0.9-0.7,1.4-0.4l12.2,7c0.5,0.3,0.7,0.9,0.4,1.4l0,0c-0.3,0.5-0.9,0.7-1.4,0.4l-12.2-7C42.1,38,41.9,37.4,42.2,36.8z"></path>
-                <path opacity="0.21" d="M44,29.9L44,29.9c0-0.6,0.5-1,1-1h14.1c0.6,0,1,0.5,1,1l0,0c0,0.6-0.5,1-1,1L45,31C44.4,31,44,30.5,44,29.9z"></path>
-                <path opacity="0.13" d="M42.1,23.1L42.1,23.1c-0.3-0.5-0.2-1.1,0.4-1.4l12.1-7.3c0.5-0.3,1.1-0.2,1.4,0.4l0,0c0.3,0.4,0.1,1.1-0.4,1.3l-12.1,7.3C43.1,23.7,42.4,23.6,42.1,23.1z"></path>
-                <path opacity="0.05" d="M36.9,17.9L36.9,17.9c-0.5-0.3-0.6-0.9-0.4-1.4l7.3-12.1c0.3-0.5,0.9-0.6,1.4-0.4l0,0c0.5,0.3,0.6,0.9,0.4,1.4l-7.4,12.2C38,18.1,37.3,18.2,36.9,17.9z"></path>
-              </g></svg></li-icon> -->
-              </div>
-
-
             </div>
           </div>
 
-          <footer class="pe-s-form__footer pe-form-footer">
-            <div class="pe-form-footer__actions">
+          <div class="pe-s-multi-field">
+            <div class="pe-top-card-form__name-field">
+              <div data-form-elem-focus="true" class="pe-s-multi-field__item pe-form-field pe-top-card-form__first-name-field floating-label  ">
+                <label for="topcard-firstname" class="pe-form-field__label label-text required">
+                  First Name
+                </label>
 
-              <button ng-click="save()" type="submit" class="pe-form-footer__action--submit form-submit-action Sans-15px-white-100%">
-                  Save
-                </button>
+                <input ng-model="profile.firstname" type="text" name="firstName" maxlength="20" class="ember-text-field pe-form-field__text-input ember-view">
+              </div>
             </div>
-          </footer>
 
+            <div class="pe-top-card-form__name-field">
+              <div data-form-elem-focus="true" class="pe-s-multi-field__item pe-form-field pe-top-card-form__last-name-field floating-label  ">
+                <label for="topcard-lastname" class="pe-form-field__label label-text required">
+                  Last Name
+                </label>
+
+                <input ng-model="profile.lastname" type="text" name="lastName" maxlength="50" class="ember-text-field pe-form-field__text-input ember-view">
+              </div>
+            </div>
+          </div>
+
+          <div data-form-elem-focus="true" class="pe-form-field pe-top-card-form__headline-field floating-label  ">
+            <label for="topcard-headline" class="pe-form-field__label label-text required">
+              Headline
+            </label>
+
+            <textarea ng-model="profile.headline" class="pe-top-card-form__headline-text ember-text-area pe-form-field__textarea ember-view"></textarea>
+          </div>
+
+          <div class="pe-form-field pe-top-card-form__current-position-field">
+            <label for="topcard-position" class="pe-form-field__label">
+              Current Position
+            </label>
+
+            <select ng-model="work" class="ember-view">
+              <option ng-repeat="company in experience" value="{{company.title}} at {{company.name}}">{{company.title}} at {{company.name}}</option>
+            </select>
+          </div>
+
+          <div class="pe-form-field pe-top-card-form__education-field">
+            <label for="topcard-education" class="pe-form-field__label">
+              Education
+            </label>
+
+            <select ng-model="school" name="topcard-education" class="ember-view"><!---->
+              <option ng-repeat="school in education" value="{{school.name}}">{{school.name}}</option>
+            </select>
+          </div>
+
+          <div id="ember8217" class="pe-top-card-form__location-picker ember-view">
+            <div class="pe-s-multi-field">
+              <div class="pe-s-multi-field__item pe-form-field ">
+                <label for="location" class="pe-form-field__label">
+                  Location
+                </label>
+
+                <input ng-model="profile.location" type="text" name="location" maxlength="50" class="ember-text-field pe-form-field__text-input ember-view">
+              </div>
+            </div>
+          </div>
+
+          <div class="pe-form-field industry-field">
+            <label for="topcard-industry" class="pe-form-field__label">
+          Industry
+        </label>
+
+            <select ng-model="profile.industry" name="topcard-industry" class="ember-view">  <option value="">Choose an industry…</option>
+
+        <option value="urn:li:fs_industry:47">Accounting</option>
+        <option value="urn:li:fs_industry:94">Airlines/Aviation</option>
+        <option value="urn:li:fs_industry:120">Alternative Dispute Resolution</option>
+        <option value="urn:li:fs_industry:125">Alternative Medicine</option>
+        <option value="urn:li:fs_industry:127">Animation</option>
+        <option value="urn:li:fs_industry:19">Apparel &amp; Fashion</option>
+        <option value="urn:li:fs_industry:50">Architecture &amp; Planning</option>
+        <option value="urn:li:fs_industry:111">Arts and Crafts</option>
+        <option value="urn:li:fs_industry:53">Automotive</option>
+        <option value="urn:li:fs_industry:52">Aviation &amp; Aerospace</option>
+        <option value="urn:li:fs_industry:41">Banking</option>
+        <option value="urn:li:fs_industry:12">Biotechnology</option>
+        <option value="urn:li:fs_industry:36">Broadcast Media</option>
+        <option value="urn:li:fs_industry:49">Building Materials</option>
+        <option value="urn:li:fs_industry:138">Business Supplies and Equipment</option>
+        <option value="urn:li:fs_industry:129">Capital Markets</option>
+        <option value="urn:li:fs_industry:54">Chemicals</option>
+        <option value="urn:li:fs_industry:90">Civic &amp; Social Organization</option>
+        <option value="urn:li:fs_industry:51">Civil Engineering</option>
+        <option value="urn:li:fs_industry:128">Commercial Real Estate</option>
+        <option value="urn:li:fs_industry:118">Computer &amp; Network Security</option>
+        <option value="urn:li:fs_industry:109">Computer Games</option>
+        <option value="urn:li:fs_industry:3">Computer Hardware</option>
+        <option value="urn:li:fs_industry:5">Computer Networking</option>
+        <option value="urn:li:fs_industry:4">Computer Software</option>
+        <option value="urn:li:fs_industry:48">Construction</option>
+        <option value="urn:li:fs_industry:24">Consumer Electronics</option>
+        <option value="urn:li:fs_industry:25">Consumer Goods</option>
+        <option value="urn:li:fs_industry:91">Consumer Services</option>
+        <option value="urn:li:fs_industry:18">Cosmetics</option>
+        <option value="urn:li:fs_industry:65">Dairy</option>
+        <option value="urn:li:fs_industry:1">Defense &amp; Space</option>
+        <option value="urn:li:fs_industry:99">Design</option>
+        <option value="urn:li:fs_industry:69">Education Management</option>
+        <option value="urn:li:fs_industry:132">E-Learning</option>
+        <option value="urn:li:fs_industry:112">Electrical/Electronic Manufacturing</option>
+        <option value="urn:li:fs_industry:28">Entertainment</option>
+        <option value="urn:li:fs_industry:86">Environmental Services</option>
+        <option value="urn:li:fs_industry:110">Events Services</option>
+        <option value="urn:li:fs_industry:76">Executive Office</option>
+        <option value="urn:li:fs_industry:122">Facilities Services</option>
+        <option value="urn:li:fs_industry:63">Farming</option>
+        <option value="urn:li:fs_industry:43">Financial Services</option>
+        <option value="urn:li:fs_industry:38">Fine Art</option>
+        <option value="urn:li:fs_industry:66">Fishery</option>
+        <option value="urn:li:fs_industry:34">Food &amp; Beverages</option>
+        <option value="urn:li:fs_industry:23">Food Production</option>
+        <option value="urn:li:fs_industry:101">Fund-Raising</option>
+        <option value="urn:li:fs_industry:26">Furniture</option>
+        <option value="urn:li:fs_industry:29">Gambling &amp; Casinos</option>
+        <option value="urn:li:fs_industry:145">Glass, Ceramics &amp; Concrete</option>
+        <option value="urn:li:fs_industry:75">Government Administration</option>
+        <option value="urn:li:fs_industry:148">Government Relations</option>
+        <option value="urn:li:fs_industry:140">Graphic Design</option>
+        <option value="urn:li:fs_industry:124">Health, Wellness and Fitness</option>
+        <option value="urn:li:fs_industry:68">Higher Education</option>
+        <option value="urn:li:fs_industry:14">Hospital &amp; Health Care</option>
+        <option value="urn:li:fs_industry:31">Hospitality</option>
+        <option value="urn:li:fs_industry:137">Human Resources</option>
+        <option value="urn:li:fs_industry:134">Import and Export</option>
+        <option value="urn:li:fs_industry:88">Individual &amp; Family Services</option>
+        <option value="urn:li:fs_industry:147">Industrial Automation</option>
+        <option value="urn:li:fs_industry:84">Information Services</option>
+        <option value="urn:li:fs_industry:96">Information Technology and Services</option>
+        <option value="urn:li:fs_industry:42">Insurance</option>
+        <option value="urn:li:fs_industry:74">International Affairs</option>
+        <option value="urn:li:fs_industry:141">International Trade and Development</option>
+        <option value="urn:li:fs_industry:6">Internet</option>
+        <option value="urn:li:fs_industry:45">Investment Banking</option>
+        <option value="urn:li:fs_industry:46">Investment Management</option>
+        <option value="urn:li:fs_industry:73">Judiciary</option>
+        <option value="urn:li:fs_industry:77">Law Enforcement</option>
+        <option value="urn:li:fs_industry:9">Law Practice</option>
+        <option value="urn:li:fs_industry:10">Legal Services</option>
+        <option value="urn:li:fs_industry:72">Legislative Office</option>
+        <option value="urn:li:fs_industry:30">Leisure, Travel &amp; Tourism</option>
+        <option value="urn:li:fs_industry:85">Libraries</option>
+        <option value="urn:li:fs_industry:116">Logistics and Supply Chain</option>
+        <option value="urn:li:fs_industry:143">Luxury Goods &amp; Jewelry</option>
+        <option value="urn:li:fs_industry:55">Machinery</option>
+        <option value="urn:li:fs_industry:11">Management Consulting</option>
+        <option value="urn:li:fs_industry:95">Maritime</option>
+        <option value="urn:li:fs_industry:80">Marketing and Advertising</option>
+        <option value="urn:li:fs_industry:97">Market Research</option>
+        <option value="urn:li:fs_industry:135">Mechanical or Industrial Engineering</option>
+        <option value="urn:li:fs_industry:126">Media Production</option>
+        <option value="urn:li:fs_industry:17">Medical Devices</option>
+        <option value="urn:li:fs_industry:13">Medical Practice</option>
+        <option value="urn:li:fs_industry:139">Mental Health Care</option>
+        <option value="urn:li:fs_industry:71">Military</option>
+        <option value="urn:li:fs_industry:56">Mining &amp; Metals</option>
+        <option value="urn:li:fs_industry:35">Motion Pictures and Film</option>
+        <option value="urn:li:fs_industry:37">Museums and Institutions</option>
+        <option value="urn:li:fs_industry:115">Music</option>
+        <option value="urn:li:fs_industry:114">Nanotechnology</option>
+        <option value="urn:li:fs_industry:81">Newspapers</option>
+        <option value="urn:li:fs_industry:100">Nonprofit Organization Management</option>
+        <option value="urn:li:fs_industry:57">Oil &amp; Energy</option>
+        <option value="urn:li:fs_industry:113">Online Media</option>
+        <option value="urn:li:fs_industry:123">Outsourcing/Offshoring</option>
+        <option value="urn:li:fs_industry:87">Package/Freight Delivery</option>
+        <option value="urn:li:fs_industry:146">Packaging and Containers</option>
+        <option value="urn:li:fs_industry:61">Paper &amp; Forest Products</option>
+        <option value="urn:li:fs_industry:39">Performing Arts</option>
+        <option value="urn:li:fs_industry:15">Pharmaceuticals</option>
+        <option value="urn:li:fs_industry:131">Philanthropy</option>
+        <option value="urn:li:fs_industry:136">Photography</option>
+        <option value="urn:li:fs_industry:117">Plastics</option>
+        <option value="urn:li:fs_industry:107">Political Organization</option>
+        <option value="urn:li:fs_industry:67">Primary/Secondary Education</option>
+        <option value="urn:li:fs_industry:83">Printing</option>
+        <option value="urn:li:fs_industry:105">Professional Training &amp; Coaching</option>
+        <option value="urn:li:fs_industry:102">Program Development</option>
+        <option value="urn:li:fs_industry:79">Public Policy</option>
+        <option value="urn:li:fs_industry:98">Public Relations and Communications</option>
+        <option value="urn:li:fs_industry:78">Public Safety</option>
+        <option value="urn:li:fs_industry:82">Publishing</option>
+        <option value="urn:li:fs_industry:62">Railroad Manufacture</option>
+        <option value="urn:li:fs_industry:64">Ranching</option>
+        <option value="urn:li:fs_industry:44">Real Estate</option>
+        <option value="urn:li:fs_industry:40">Recreational Facilities and Services</option>
+        <option value="urn:li:fs_industry:89">Religious Institutions</option>
+        <option value="urn:li:fs_industry:144">Renewables &amp; Environment</option>
+        <option value="urn:li:fs_industry:70">Research</option>
+        <option value="urn:li:fs_industry:32">Restaurants</option>
+        <option value="urn:li:fs_industry:27">Retail</option>
+        <option value="urn:li:fs_industry:121">Security and Investigations</option>
+        <option value="urn:li:fs_industry:7">Semiconductors</option>
+        <option value="urn:li:fs_industry:58">Shipbuilding</option>
+        <option value="urn:li:fs_industry:20">Sporting Goods</option>
+        <option value="urn:li:fs_industry:33">Sports</option>
+        <option value="urn:li:fs_industry:104">Staffing and Recruiting</option>
+        <option value="urn:li:fs_industry:22">Supermarkets</option>
+        <option value="urn:li:fs_industry:8">Telecommunications</option>
+        <option value="urn:li:fs_industry:60">Textiles</option>
+        <option value="urn:li:fs_industry:130">Think Tanks</option>
+        <option value="urn:li:fs_industry:21">Tobacco</option>
+        <option value="urn:li:fs_industry:108">Translation and Localization</option>
+        <option value="urn:li:fs_industry:92">Transportation/Trucking/Railroad</option>
+        <option value="urn:li:fs_industry:59">Utilities</option>
+        <option value="urn:li:fs_industry:106">Venture Capital &amp; Private Equity</option>
+        <option value="urn:li:fs_industry:16">Veterinary</option>
+        <option value="urn:li:fs_industry:93">Warehousing</option>
+        <option value="urn:li:fs_industry:133">Wholesale</option>
+        <option value="urn:li:fs_industry:142">Wine and Spirits</option>
+        <option value="urn:li:fs_industry:119">Wireless</option>
+        <option value="urn:li:fs_industry:103">Writing and Editing</option>
+      </select>
+            <!---->
+          </div>
+
+          <div data-form-elem-focus="true" class="pe-form-field summary-field floating-label  ">
+              <label for="topcard-summary" class="pe-form-field__label label-text">
+                Summary
+              </label>
+
+
+            <textarea ng-model="profile.summary" id="topcard-summary" class="ember-text-area pe-form-field__textarea ember-view"></textarea>
+<!--
+            <textarea ng-model="profile.summary" class="ember-text-area pe-form-field__textarea ember-view"></textarea> -->
+
+            <!---->
+          </div>
+          <!---->
+          <div class="ember-view">
+            <div class="pe-form-field pe-treasury-view">
+              <!-- <label class="pe-form-field__label pe-treasury-view__label label-text Sans-13px-black-55%-semibold">
+          Media
+        </label>
+              <span class="pe-treasury-view__description Sans-15px-black-55% pb4 block">
+          Add or link to external documents, photos, sites, videos, and presentations.
+        </span>
+              <div class="pe-treasury-view__actions display-flex justify-space-between">
+                <input type="file" name="file" class="visually-hidden pe-treasury-view__media">
+                <label for="pe-treasury-view__media-upload" class="pe-treasury-view__upload-label button-primary-large">
+            Upload
+          </label>
+                <button data-control-name="add_link" class="pe-treasury-view__link-button button-secondary-large" data-ember-action="" data-ember-action-8619="8619">Link</button>
+              </div> -->
+
+              <!---->
+              <div class="pe-treasury-view__supported-container">
+                <!-- <a target="_blank" href="https://www.linkedin.com/help/linkedin/answer/34327/supported-providers-and-content-types-for-work-samples-on-your-profile" id="ember8620" class="pe-treasury-view__supported-link inline-block mb4 mt2 ember-view">
+                  <li-icon aria-hidden="true" type="question-pebble-icon" class="pe-treasury-view__supported-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
+              <g >
+                <g>
+                  <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
+                  <rect style="fill:none;" width="16" height="16"></rect>
+                </g>
+              </g>
+              <g id="Layer_1">
+              </g>
+            </g></svg></li-icon>
+                  <span class="pe-treasury-view__supported-text Sans-13px-black-55% v-align-top">Supported formats</span>
+                </a> -->
+              </div>
+<!--
+              <li-icon aria-hidden="true" type="loader" class="pe-treasury-view__loader mt2" size="small"><svg x="50%" y="50%" width="60px" height="60px" viewBox="0 0 60 60"><g class="small-icon" style="fill-opacity: 1;-webkit-transform: translate(15px, 15px) scale(.5);transform: translate(15px, 15px) scale(.5);">
+              <path opacity="1" d="M30.1,16.1L30.1,16.1c-0.6,0-1-0.5-1-1V1c0-0.6,0.5-1,1-1l0,0c0.6,0,1,0.5,1,1v14.1C31.1,15.7,30.6,16.1,30.1,16.1z"></path>
+              <path opacity="0.85" d="M23.1,18.1L23.1,18.1c-0.5,0.3-1.1,0.1-1.4-0.4L14.5,5.6c-0.3-0.5-0.2-1.1,0.4-1.4l0,0C15.4,3.9,16,4,16.3,4.6l7.2,12.1C23.8,17.2,23.6,17.8,23.1,18.1z"></path>
+              <path opacity="0.77" d="M17.9,23.1L17.9,23.1c-0.3,0.5-0.9,0.7-1.4,0.4l-12.2-7c-0.5-0.3-0.7-0.9-0.4-1.4l0,0c0.3-0.5,0.9-0.7,1.4-0.4l12.2,7C18,22,18.2,22.7,17.9,23.1z"></path>
+              <path opacity="0.69" d="M16.1,30.1L16.1,30.1c0,0.6-0.5,1-1,1L1,31.2c-0.6,0-1-0.5-1-1l0,0c0-0.6,0.5-1,1-1l14.1-0.1C15.7,29.1,16.1,29.5,16.1,30.1z"></path>
+              <path opacity="0.61" d="M18,36.9L18,36.9c0.3,0.5,0.2,1.1-0.4,1.4L5.5,45.6c-0.5,0.3-1.1,0.2-1.4-0.4l0,0c-0.3-0.5-0.2-1.1,0.4-1.4l12.1-7.3C17.1,36.2,17.7,36.4,18,36.9z"></path>
+              <path opacity="0.53" d="M23.3,42.1L23.3,42.1c0.5,0.3,0.6,0.9,0.4,1.4l-7.3,12.1c-0.3,0.5-0.9,0.6-1.4,0.4l0,0c-0.5-0.3-0.6-0.9-0.4-1.4l7.3-12.1C22.1,41.9,22.8,41.8,23.3,42.1z"></path>
+              <path opacity="0.45" d="M30.1,43.9L30.1,43.9c0.6,0,1,0.5,1,1V59c0,0.6-0.5,1-1,1l0,0c-0.6,0-1-0.5-1-1V44.9C29,44.4,29.5,43.9,30.1,43.9z"></path>
+              <path opacity="0.37" d="M37,41.9L37,41.9c0.5-0.3,1.1-0.2,1.4,0.4l7.2,12.1c0.3,0.5,0.2,1.1-0.4,1.4l0,0c-0.5,0.3-1.1,0.2-1.4-0.4l-7.2-12.1C36.4,42.8,36.6,42.2,37,41.9z"></path>
+              <path opacity="0.29" d="M42.2,36.8L42.2,36.8c0.3-0.5,0.9-0.7,1.4-0.4l12.2,7c0.5,0.3,0.7,0.9,0.4,1.4l0,0c-0.3,0.5-0.9,0.7-1.4,0.4l-12.2-7C42.1,38,41.9,37.4,42.2,36.8z"></path>
+              <path opacity="0.21" d="M44,29.9L44,29.9c0-0.6,0.5-1,1-1h14.1c0.6,0,1,0.5,1,1l0,0c0,0.6-0.5,1-1,1L45,31C44.4,31,44,30.5,44,29.9z"></path>
+              <path opacity="0.13" d="M42.1,23.1L42.1,23.1c-0.3-0.5-0.2-1.1,0.4-1.4l12.1-7.3c0.5-0.3,1.1-0.2,1.4,0.4l0,0c0.3,0.4,0.1,1.1-0.4,1.3l-12.1,7.3C43.1,23.7,42.4,23.6,42.1,23.1z"></path>
+              <path opacity="0.05" d="M36.9,17.9L36.9,17.9c-0.5-0.3-0.6-0.9-0.4-1.4l7.3-12.1c0.3-0.5,0.9-0.6,1.4-0.4l0,0c0.5,0.3,0.6,0.9,0.4,1.4l-7.4,12.2C38,18.1,37.3,18.2,36.9,17.9z"></path>
+            </g></svg></li-icon> -->
+            </div>
+
+
+          </div>
         </div>
+
+        <footer class="pe-s-form__footer pe-form-footer">
+          <div class="pe-form-footer__actions">
+
+            <button ng-click="save()" type="submit" class="pe-form-footer__action--submit form-submit-action Sans-15px-white-100%">
+                Save
+              </button>
+          </div>
+        </footer>
+
       </div>
     </div>
+  </div>
 
 </md-dialog>
-  </md-dialog-content>
+</md-dialog-content>
