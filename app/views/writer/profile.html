@@ -29,8 +29,8 @@
                 <div style="height:220px;" class="bg-img__cropper"></div>
                 <div class="bg-img-edit__grid bg-img-edit__grid--edit-btn ">
                   <div class="bg-img-edit__grid-line bg-img-edit__grid-line--edit-btn ">
-                    <div data-control-name="profile_background_image_edit" id="ember5644" class="bg-img-edit__grid-right-rail bg-img-edit-button ember-view">
-                      <div id="ember5649" class="bg-img-edit-button__dropdown dropdown closed ember-view">
+                    <div data-control-name="profile_background_image_edit" class="bg-img-edit__grid-right-rail bg-img-edit-button ember-view">
+                      <div class="bg-img-edit-button__dropdown dropdown closed ember-view">
                         <button type="button" aria-controls="ember5649-options" aria-expanded="false" data-control-name="profile_background_image_edit" id="ember5649-trigger" class="bg-img-edit-button__dropdown-trigger dropdown-trigger ember-view">
                           <div class="bg-img-edit-button__action-body bg-img-edit-button__action-body--dropdown-trigger">
                             <span class="bg-img-edit-button__action-icon bg-img-edit-button__action-icon--dropdown-trigger svg-icon-wrap">
@@ -55,9 +55,12 @@
 
           <div class="pv-content profile-view-grid neptune-grid two-column ghost-animate-in ">
             <div role="main" class="core-rail">
-              <section id="ember5684" class="pv-profile-section artdeco-container-card pv-top-card-section ember-view">
+
+              <section class="pv-profile-section artdeco-container-card pv-top-card-section ember-view">
+
+                <!-- TODO: Test for deletion -->
                 <div class="pv-top-card-section__overflow-wrapper pv-top-card-section__right-corner-action pv-top-card-section__overflow-wrapper--self">
-                  <div id="ember5693" class="dropdown pv-top-card-overflow closed ember-view">
+                  <div class="dropdown pv-top-card-overflow closed ember-view">
                     <button type="button" aria-controls="ember5693-options" aria-expanded="false" data-control-name="overflow_view" id="ember5693-trigger" class="pv-top-card-overflow__trigger button-tertiary-medium-round-inverse dropdown-trigger ember-view">
                       <span class="icon svg-icon-wrap">
                         <span class="visually-hidden">More Actions</span>
@@ -73,17 +76,15 @@
                   </div>
                 </div>
 
-                <span id="ember5703" style="display: none;" class="pv-member-badge ember-view">
-                  <span class="visually-hidden">{{porfile.firstname}} has an account</span>
-                </span>
-
+                <!-- NOTE: Profile Photo section -->
                 <div class="pv-top-card-section__header">
                   <div class="pv-top-card-section__photo-wrapper EntityPhoto-circle-8">
+
                     <label for="member-photo-edit-upload-input" class="visually-hidden">
                       Profile photo
                     </label>
 
-                    <div id="ember5712" class="pv-top-card-section__edit-photo profile-photo-edit ember-view">
+                    <div class="pv-top-card-section__edit-photo profile-photo-edit ember-view">
                       <button data-control-name="edit_profile_photo" class="profile-photo-edit__edit-btn" data-ember-action="" data-ember-action-5713="5713">
                         <img src="images/profile.jpg" class="profile-photo-edit__preview" alt="Edit photo" height="128" width="128"></img>
                         <span class="profile-photo-edit__edit-icon svg-icon-wrap">
@@ -100,20 +101,23 @@
                   </div>
                 </div>
 
-                <a data-control-name="edit_top_card" id="ember5718" class="pv-top-card-section__edit pv-top-card-section__right-corner-action button-tertiary-medium-round active ember-view">
+                <!-- NOTE: Edit Profile section -->
+                <a data-control-name="edit_top_card" class="pv-top-card-section__edit pv-top-card-section__right-corner-action button-tertiary-medium-round active ember-view">
                   <span class="svg-icon-wrap">
                     <span class="visually-hidden">Edit Profile</span>
-                  <li-icon aria-hidden="true" type="pencil-icon" ng-click="editIntro($event)">
-                    <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
-                        <g class="large-icon" style="fill: currentColor">
-                          <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
-                        </g>
-                      </svg>
-                  </li-icon>
+                    <li-icon aria-hidden="true" type="pencil-icon" ng-click="editIntro($event)">
+                      <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                          <g class="large-icon" style="fill: currentColor">
+                            <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
+                          </g>
+                        </svg>
+                    </li-icon>
                   </span>
                 </a>
 
+                <!-- NOTE: Profile section -->
                 <div class="pv-top-card-section__body">
+                  <!-- NOTE: Profile Intro section -->
                   <div class="pv-top-card-section__information mt3">
                     <h1 class="pv-top-card-section__name Sans-26px-black-85% mb1">{{profile.firstname}} {{profile.lastname}}</h1>
                     <h2 class="pv-top-card-section__headline Sans-19px-black-85% mb1">{{profile.headline}}</h2>
@@ -145,9 +149,9 @@
                       </span>
                     </h3>
                   </div>
-
+                  <!-- NOTE: Profile Summary section -->
                   <div class="pv-top-card-section__rich-content mt4 ph2">
-                    <p id="ember5723" class="pv-top-card-section__summary Sans-15px-black-55% mt5 pt5 ember-view">
+                    <p class="pv-top-card-section__summary Sans-15px-black-55% mt5 pt5 ember-view">
                       <div class="truncate-multiline--truncation-target">
                         <span layout-align="center center" class="truncate-multiline--last-line-wrapper">
                           <span class="md-subhead">{{profile.summary}}</span>
@@ -171,10 +175,12 @@
                     </button>
                   </div>
                 </div>
+
               </section>
 
-              <section id="ember5738" class="pv-profile-section artdeco-container-card pv-wvmp-wvmu-section ember-view">
-                <div id="ember6352" class="pv-wvmp-wvmu-section__wvmp-wvmu-item p0 popover-container ember-view">
+              <section class="pv-profile-section artdeco-container-card pv-wvmp-wvmu-section ember-view">
+
+                <div class="pv-wvmp-wvmu-section__wvmp-wvmu-item p0 popover-container ember-view">
                   <span class="pv-wvmp-wvmu-section__wvmp-wvmu-all-star-inner trigger">
                     <span class="mr1 svg-icon-wrap">
                       <li-icon aria-hidden="true" type="star-filled-icon" class="pv-pcm-complete__icon" size="large">
@@ -185,9 +191,7 @@
                         </svg>
                       </li-icon>
                     </span>
-                  <span class="Sans-15px-black-85%-semibold">
-                        All-Star profile
-                    </span>
+                    <span class="Sans-15px-black-85%-semibold">All-Star profile</span>
                   </span>
                 </div>
 
@@ -201,233 +205,238 @@
               </section>
 
               <div class="profile-detail">
-                <div style="" id="ember5749" class="pv-deferred-area ember-view">
-                  <div class="pv-deferred-area__content">  </div>
-                </div>
-
-                <div id="ember5756" class="pv-oc ember-view">
+                <div class="pv-oc ember-view">
                   <span class="background-details">
-                    <section id="ember6221" class="pv-profile-section artdeco-container-card background-section pv-profile-section--reorder-enabled ember-view">
-                      <section id="ember6232" class="pv-profile-section experience-section ember-view">
-                        <header class="pv-profile-section__card-header">
-                          <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">
-                            Experience
-                          </h2>
+                    <section class="pv-profile-section artdeco-container-card background-section pv-profile-section--reorder-enabled ember-view">
 
-                          <a data-control-name="add_position" id="ember6233" class="pv-profile-section__header-add-action add-position ember-view">
+                      <!-- NOTE: Experience section -->
+                      <section class="pv-profile-section experience-section ember-view">
+                        <header class="pv-profile-section__card-header">
+                          <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">Experience</h2>
+
+                          <a data-control-name="add_position" class="pv-profile-section__header-add-action add-position ember-view">
                             <span class="svg-icon-wrap">
                               <span class="visually-hidden">Add new position</span>
-                  <li-icon aria-hidden="true" type="plus-icon" ng-click="addExperience($event)">
-                    <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                              <li-icon aria-hidden="true" type="plus-icon" ng-click="addExperience($event)">
+                                <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
                                   <g class="large-icon" style="fill: currentColor">
                                     <path d="M21,13H13v8H11V13H3V11h8V3h2v8h8v2Z"></path>
                                   </g>
                                 </svg>
-                  </li-icon>
-                  </span>
-                  </a>
-                  </header>
+                              </li-icon>
+                            </span>
+                          </a>
+                        </header>
 
-                  <ul class="pv-profile-section__section-info section-info pv-profile-section__section-info--has-no-more">
-                    <li ng-repeat="company in experience" id="747258657" class="pv-profile-section__card-item pv-position-entity ember-view">
-                      <div class="pv-entity__actions">
-                        <a data-control-name="edit_position" id="ember6246" class="pv-profile-section__edit-action ember-view">
-                          <span class="svg-icon-wrap">
-                                        <span class="visually-hidden">Edit position {{company.title}}</span>
-                          <li-icon aria-hidden="true" type="pencil-icon" ng-click="editExperience($event, company)">
-                            <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
-                                            <g class="large-icon" style="fill: currentColor">
-                                              <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
-                                            </g>
-                                          </svg>
-                          </li-icon>
-                          </span>
-                        </a>
-                      </div>
+                        <!-- NOTE: Experience list -->
+                        <ul class="pv-profile-section__section-info section-info pv-profile-section__section-info--has-no-more">
+                          <li ng-repeat="company in experience" id="747258657" class="pv-profile-section__card-item pv-position-entity ember-view">
+                            <div class="pv-entity__actions">
+                              <a data-control-name="edit_position" id="ember6246" class="pv-profile-section__edit-action ember-view">
+                                <span class="svg-icon-wrap">
+                                <span class="visually-hidden">Edit position {{company.title}}</span>
+                                <li-icon aria-hidden="true" type="pencil-icon" ng-click="editExperience($event, company)">
+                                  <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                                    <g class="large-icon" style="fill: currentColor">
+                                      <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
+                                    </g>
+                                  </svg>
+                                </li-icon>
+                                </span>
+                              </a>
+                            </div>
 
-                      <!-- NOTE: Experience list -->
-                      <a data-control-name="background_details_company" id="ember6247" class="ember-view">
-                        <div class="pv-entity__summary-info">
-                          <h3 ng-if="company.title" class="Sans-17px-black-85%-semibold">{{company.title}}</h3>
-
-                          <h4>
+                            <a data-control-name="background_details_company" class="ember-view">
+                              <div class="pv-entity__summary-info">
+                                <h3 ng-if="company.title" class="Sans-17px-black-85%-semibold">{{company.title}}</h3>
+                                <h4>
                                   <span class="visually-hidden">Company Name</span>
-                                  <span ng-if="company.name" class="pv-position-entity__secondary-title pv-entity__secondary-title Sans-15px-black-55%">
-                                    {{company.name}}
-                                  </span>
+                                  <span ng-if="company.name" class="pv-position-entity__secondary-title pv-entity__secondary-title Sans-15px-black-55%">{{company.name}}</span>
                                 </h4>
 
-                          <h4 class="pv-entity__date-range Sans-15px-black-55%">
+                                <h4 class="pv-entity__date-range Sans-15px-black-55%">
                                   <span class="visually-hidden">Dates Employed</span>
                                   <span>{{company.startdate | date: 'MMMM yyyy'}} – {{company.enddate | date: 'MMMM yyyy'}}</span>
                                 </h4>
 
-                          <h4 class="pv-entity__duration Sans-15px-black-55% ml1">
+                                <h4 class="pv-entity__duration Sans-15px-black-55% ml1">
                                   <span class="visually-hidden">Employment Duration</span>
                                   <span class="pv-entity__bullet-item">{{duration}}</span>
                                 </h4>
 
-                          <h4 ng-if="company.location" class="pv-entity__location Sans-15px-black-55% block">
+                                <h4 ng-if="company.location" class="pv-entity__location Sans-15px-black-55% block">
                                   <span class="visually-hidden">Location</span>
                                   <span>{{company.location}}</span>
                                 </h4>
-                        </div>
-                      </a>
+                              </div>
+                            </a>
 
-                      <div class="pv-entity__extra-details">
-                        <p id="profile-position-747258657" tabindex="-1" class="pv-entity__description Sans-15px-black-70% mt4">
-                          {{company.description}}
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                  </section>
-
-                  <!-- NOTE: Education list -->
-                  <section ng-if="education" id="education-section" class="pv-profile-section education-section ember-view">
-                    <header class="pv-profile-section__card-header">
-                      <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">
-      Education
-    </h2>
-
-                      <a data-control-name="add_education" id="ember6294" class="pv-profile-section__header-add-action add-education ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Add new education</span>
-                        <li-icon aria-hidden="true" type="plus-icon" ng-click="addEducation($event)"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
-          <path d="M21,13H13v8H11V13H3V11h8V3h2v8h8v2Z"></path>
-        </g></svg></li-icon>
-                        </span>
-                      </a>
-                    </header>
-
-                    <ul class="pv-profile-section__section-info section-info pv-profile-section__section-info--has-no-more">
-                      <li ng-repeat="school in education" id="317208516" class="pv-education-entity pv-profile-section__card-item ember-view">
-                        <a data-control-name="edit_education" id="ember6305" class="pv-profile-section__edit-action ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Edit education First Asia Institute of Technology and Humanities</span>
-                          <li-icon aria-hidden="true" type="pencil-icon" ng-click="editEducation($event, school)"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
-          <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
-        </g></svg></li-icon>
-                          </span>
-                        </a>
-                        <a data-control-name="background_details_school" id="ember6306" class="ember-view">
-                          <div class="pv-entity__summary-info">
-                            <div class="pv-entity__degree-info">
-                              <h3 ng-if="school.name" class="pv-entity__school-name Sans-17px-black-85%-semibold">{{school.name}}</h3>
-
-                              <p ng-if="school.degree" class="pv-education-entity__secondary-title pv-entity__degree-name pv-entity__secondary-title Sans-15px-black-55%">
-                                <span class="visually-hidden">Degree Name</span>
-                                <span class="pv-entity__comma-item">{{school.degree}}</span>
-                              </p>
-
-                              <p ng-if="school.field" class="pv-education-entity__secondary-title pv-entity__fos pv-entity__secondary-title Sans-15px-black-55%">
-                                <span class="visually-hidden">Field Of Study</span>
-                                <span class="pv-entity__comma-item">{{school.field}}</span>
-                              </p>
-
-                              <p ng-if="school.grade" class="pv-education-entity__secondary-title pv-entity__grade pv-entity__secondary-title Sans-15px-black-55%">
-                                <span class="visually-hidden">Grade</span>
-                                <span class="pv-entity__comma-item">{{school.grade}}</span>
-                              </p>
-
-                              <p ng-if="school.startdate" class="pv-education-entity__date pv-entity__dates Sans-15px-black-55%">
-                                <span class="visually-hidden">Dates attended or expected graduation</span>
-                                <span>
-            <time>{{school.startdate | date: 'yyyy'}}</time> – <time>{{school.enddate | date: 'yyyy'}}</time>
-      </span>
-                              </p>
-
-                              <p ng-if="school.activities" class="pv-education-entity__activities pv-entity__secondary-title Sans-15px-black-55%">
-                                <span class="activities-label">Activities and Societies:</span>
-                                <span class="activities-societies">{{school.activities}}</span>
-                              </p>
-
+                            <div class="pv-entity__extra-details">
+                              <p tabindex="-1" class="pv-entity__description Sans-15px-black-70% mt4">{{company.description}}</p>
                             </div>
-                          </div>
-                        </a>
+                          </li>
+                        </ul>
+                      </section>
 
-                        <div ng-if="school.description" class="pv-entity__extra-details">
-                          <p tabindex="-1" class="pv-entity__description Sans-15px-black-70% mt4">
-                            {{school.description}}
-                          </p>
+                      <!-- NOTE: Education section -->
+                      <section ng-if="education" class="pv-profile-section education-section ember-view">
+                        <header class="pv-profile-section__card-header">
+                          <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">Education</h2>
+                          <a data-control-name="add_education" class="pv-profile-section__header-add-action add-education ember-view">
+                            <span class="svg-icon-wrap">
+                              <span class="visually-hidden">Add new education</span>
+                              <li-icon aria-hidden="true" type="plus-icon" ng-click="addEducation($event)">
+                                <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                                  <g class="large-icon" style="fill: currentColor">
+                                    <path d="M21,13H13v8H11V13H3V11h8V3h2v8h8v2Z"></path>
+                                  </g>
+                                </svg>
+                              </li-icon>
+                            </span>
+                          </a>
+                        </header>
+
+                        <ul class="pv-profile-section__section-info section-info pv-profile-section__section-info--has-no-more">
+                          <li ng-repeat="school in education" class="pv-education-entity pv-profile-section__card-item ember-view">
+
+                            <a data-control-name="edit_education" class="pv-profile-section__edit-action ember-view">
+                              <span class="svg-icon-wrap">
+                                <span class="visually-hidden">Edit education {{school.name}}</span>
+                                <li-icon aria-hidden="true" type="pencil-icon" ng-click="editEducation($event, school)">
+                                  <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                                    <g class="large-icon" style="fill: currentColor">
+                                      <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
+                                    </g>
+                                  </svg>
+                                </li-icon>
+                              </span>
+                            </a>
+
+                            <a data-control-name="background_details_school"  class="ember-view">
+                              <div class="pv-entity__summary-info">
+                                <div class="pv-entity__degree-info">
+                                  <h3 ng-if="school.name" class="pv-entity__school-name Sans-17px-black-85%-semibold">{{school.name}}</h3>
+
+                                  <p ng-if="school.degree" class="pv-education-entity__secondary-title pv-entity__degree-name pv-entity__secondary-title Sans-15px-black-55%">
+                                    <span class="visually-hidden">Degree Name</span>
+                                    <span class="pv-entity__comma-item">{{school.degree}}</span>
+                                  </p>
+
+                                  <p ng-if="school.field" class="pv-education-entity__secondary-title pv-entity__fos pv-entity__secondary-title Sans-15px-black-55%">
+                                    <span class="visually-hidden">Field Of Study</span>
+                                    <span class="pv-entity__comma-item">{{school.field}}</span>
+                                  </p>
+
+                                  <p ng-if="school.grade" class="pv-education-entity__secondary-title pv-entity__grade pv-entity__secondary-title Sans-15px-black-55%">
+                                    <span class="visually-hidden">Grade</span>
+                                    <span class="pv-entity__comma-item">{{school.grade}}</span>
+                                  </p>
+
+                                  <p ng-if="school.startdate" class="pv-education-entity__date pv-entity__dates Sans-15px-black-55%">
+                                    <span class="visually-hidden">Dates attended or expected graduation</span>
+                                    <span>
+                                      <time>{{school.startdate | date: 'yyyy'}}</time> – <time>{{school.enddate | date: 'yyyy'}}</time>
+                                    </span>
+                                  </p>
+
+                                  <p ng-if="school.activities" class="pv-education-entity__activities pv-entity__secondary-title Sans-15px-black-55%">
+                                    <span class="activities-label">Activities and Societies:</span>
+                                    <span class="activities-societies">{{school.activities}}</span>
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+
+                            <div ng-if="school.description" class="pv-entity__extra-details">
+                              <p tabindex="-1" class="pv-entity__description Sans-15px-black-70% mt4">{{school.description}}</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </section>
+
+                      <!-- NOTE: Skills section -->
+                      <section class="pv-profile-section artdeco-container-card pv-featured-skills-section ember-view">
+                        <a ng-click="addSkills($event)"data-control-name="edit_skills_add" class="pv-skills-section__add-label button-tertiary-medium-muted ember-view">Add a new skill</a>
+                        <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">Featured Skills &amp; Endorsements</h2>
+                        <div tabindex="-1">
+                          <ul class="pv-featured-skills-list pv-featured-skills-list--no-highlights section-info no-highlights">
+                            <li ng-repeat="skill in skills" class="pv-skill-entity--featured pb5 pv-skill-entity relative ember-view">
+                              <div class="pv-skill-entity__header">
+                                <button class="pv-skill-entity__delete-button button-tertiary-small-round-muted" data-ember-action="" data-ember-action-11469="11469">
+                                  <span class="svg-icon-wrap">
+                                    <span class="visually-hidden">Delete {{skill}}</span>
+                                    <li-icon ng-click="deleteSkill(skill)" aria-hidden="true" type="cancel-icon" size="large">
+                                      <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                                        <g class="large-icon" style="fill: currentColor">
+                                          <path d="M20,5.32L13.32,12,20,18.68,18.66,20,12,13.33,5.34,20,4,18.68,10.68,12,4,5.32,5.32,4,12,10.69,18.68,4Z"></path>
+                                        </g>
+                                      </svg>
+                                    </li-icon>
+                                  </span>
+                                </button>
+
+                                <div class="tooltip-container">
+                                  <div class="pv-skill-entity__pill-contents static-pill">
+                                    <span class="pv-skill-entity__skill-name truncate Sans-15px-black-85%-semibold inline-block">{{skill}}</span>
+                                  </div>
+
+                                  <div role="tooltip" id="pv-skill-entity-name-tooltip" class="tooltip">{{skill}}</div>
+                                </div>
+                              </div>
+
+                              <span class="pv-skill-entity--reorder-disabled">
+                                <span class="pv-skill-entity__handle svg-icon-wrap">
+                                  <span class="visually-hidden">Click and drag to reorder skills</span>
+                                  <li-icon aria-hidden="true" type="reorder-icon" size="medium">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" style="" x="0" y="0" preserveAspectRatio="xMinYMin meet">
+                                      <g class="large-icon" style="fill: currentColor">
+                                        <path d="M22,5V7H2V5H22ZM2,11H22V9H2v2Zm0,4H22V13H2v2Zm0,4H22V17H2v2Z" style="isolation: isolate"></path>
+                                      </g>
+                                    </svg>
+                                  </li-icon>
+                                </span>
+                              </span>
+                            </li>
+                          </ul>
                         </div>
-                      </li>
-                    </ul>
-                  </section>
-
-                  <!-- NOTE: Skills list -->
-                  <section id="ember3813" class="pv-profile-section artdeco-container-card pv-featured-skills-section ember-view">
-
-                    <a ng-click="addSkills($event)"data-control-name="edit_skills_add" id="ember3815" class="pv-skills-section__add-label button-tertiary-medium-muted ember-view">  Add a new skill
-</a>
-
-                    <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">Featured Skills &amp; Endorsements</h2>
-                    <div id="featured-skills-expanded" tabindex="-1">
-                      <ul class="pv-featured-skills-list pv-featured-skills-list--no-highlights section-info no-highlights">
-                        <li ng-repeat="skill in skills" id="ember5496" class="pv-skill-entity--featured pb5 pv-skill-entity relative ember-view">
-
-                          <div class="pv-skill-entity__header">
-                            <button class="pv-skill-entity__delete-button button-tertiary-small-round-muted" data-ember-action="" data-ember-action-11469="11469">
-                <span class="svg-icon-wrap"><span class="visually-hidden">Delete {{skill}}</span><li-icon ng-click="deleteSkill(skill)" aria-hidden="true" type="cancel-icon" size="large"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
-                    <path d="M20,5.32L13.32,12,20,18.68,18.66,20,12,13.33,5.34,20,4,18.68,10.68,12,4,5.32,5.32,4,12,10.69,18.68,4Z"></path>
-                  </g></svg></li-icon></span>
-              </button>
-                            <!-- <div class="tooltip-container"> -->
-
-                              <div class="pv-skill-entity__pill-contents static-pill">
-                                <span class="pv-skill-entity__skill-name truncate Sans-15px-black-85%-semibold inline-block">{{skill}}</span>
-                              </div>
-
-                              <div role="tooltip" id="pv-skill-entity-name-tooltip" class="tooltip">
-                                {{skill}}
-                              </div>
-                            <!-- </div> -->
-                          </div>
-
-                          <span class="pv-skill-entity--reorder-disabled">
-  <span class="pv-skill-entity__handle svg-icon-wrap"><span class="visually-hidden">Click and drag to reorder skills</span>
-                          <li-icon aria-hidden="true" type="reorder-icon" size="medium"><svg viewBox="0 0 24 24" width="24" height="24" style="" x="0" y="0" preserveAspectRatio="xMinYMin meet"><g class="large-icon" style="fill: currentColor">
-        <path d="M22,5V7H2V5H22ZM2,11H22V9H2v2Zm0,4H22V13H2v2Zm0,4H22V17H2v2Z" style="isolation: isolate"></path>
-      </g></svg></li-icon>
-                          </span>
-                          </span>
-                        </li>
-                      </ul>
-                  </section>
-
-                  </section>
+                      </section>
+                    </section>
                   </span>
-                  </div>
-
-                  <div id="ember5759" class="pv-occludable__accomplishments ember-view"></div>
-
                 </div>
               </div>
+            </div>
+
               <div class="right-rail ">
-                <section id="ember5769" class="pv-profile-section pv-profile-info-section pv-profile-section ember-view">
-                  <div id="ember5778" class="pv-profile-info-section__sticky-content sticky ember-view">
-                    <section id="ember5791" class="pe-hub-section mb2 ember-view"><button data-control-name="profile_edit_fab" aria-expanded="false" class="pe-hub-section__expand-button pe-hub__action " data-ember-action="" data-ember-action-5796="5796">
-    <span>Add new profile section</span>
-    <span class="pe-hub-section__icon triangle-icon "></span>
-  </button>
-
+                <section class="pv-profile-section pv-profile-info-section pv-profile-section ember-view">
+                  <div class="pv-profile-info-section__sticky-content sticky ember-view">
+                    <section class="pe-hub-section mb2 ember-view">
+                      <button data-control-name="profile_edit_fab" aria-expanded="false" class="pe-hub-section__expand-button pe-hub__action " data-ember-action="" data-ember-action-5796="5796">
+                        <span>Add new profile section</span>
+                        <span class="pe-hub-section__icon triangle-icon "></span>
+                      </button>
                     </section>
-
                   </div>
 
-                  <section id="ember5805" class="view-public-profile profile-action ember-view">
-                    <a target="_blank" href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" id="ember5814" class="profile-action-text ember-view">  Edit your public profile
-  </a>
+                  <section class="view-public-profile profile-action ember-view">
+                    <a target="_blank" href="#" class="profile-action-text ember-view">Edit your public profile</a>
                     <div class="icon-tooltip">
-                      <div id="ember5819" class="ember-view">
+                      <div class="ember-view">
                         <div class="hovercard-container">
-                          <span class="svg-icon-wrap"><span class="visually-hidden">See and edit how you look to people who are not signed in, and find you through search engines (ex: Google, Bing).</span>
-                          <li-icon aria-hidden="true" type="question-pebble-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
-          <g id="question-pebble-icon">
-            <g>
-              <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
-              <rect style="fill:none;" width="16" height="16"></rect>
-            </g>
-          </g>
-          <g id="Layer_1">
-          </g>
-        </g></svg></li-icon>
+                          <span class="svg-icon-wrap">
+                            <span class="visually-hidden">See and edit how you look to people who are not signed in, and find you through search engines (ex: Google, Bing).</span>
+                            <li-icon aria-hidden="true" type="question-pebble-icon" size="small">
+                              <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                                <g class="small-icon" style="fill-opacity: 1">
+                                  <g id="question-pebble-icon">
+                                    <g>
+                                      <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
+                                      <rect style="fill:none;" width="16" height="16"></rect>
+                                    </g>
+                                  </g>
+                                  <g id="Layer_1"></g>
+                                </g>
+                              </svg>
+                            </li-icon>
                           </span>
 
                           <div role="tooltip" class="hovercard ">
@@ -438,23 +447,26 @@
                     </div>
                   </section>
 
-                  <section id="ember5828" class="add-secondary-language profile-action ember-view">
-                    <a data-control-name="add_secondary_language" href="https://www.linkedin.com/in/jigno-alfred-venezuela-757600b3/edit/secondary-language/" id="ember5829" class="profile-action-text ember-view">  Add profile in another language
-  </a>
+                  <section class="add-secondary-language profile-action ember-view">
+                    <a data-control-name="add_secondary_language" href="#" class="profile-action-text ember-view">Add profile in another language</a>
                     <div class="icon-tooltip">
-                      <div id="ember5830" class="ember-view">
+                      <div class="ember-view">
                         <div class="hovercard-container">
-                          <span class="svg-icon-wrap"><span class="visually-hidden">Creating a profile in another language makes it easier for local business contacts and recruiters to find you on LinkedIn.</span>
-                          <li-icon aria-hidden="true" type="question-pebble-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
-          <g id="question-pebble-icon">
-            <g>
-              <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
-              <rect style="fill:none;" width="16" height="16"></rect>
-            </g>
-          </g>
-          <g id="Layer_1">
-          </g>
-        </g></svg></li-icon>
+                          <span class="svg-icon-wrap">
+                            <span class="visually-hidden">Creating a profile in another language makes it easier for local business contacts and recruiters to find you on LinkedIn.</span>
+                            <li-icon aria-hidden="true" type="question-pebble-icon" size="small">
+                              <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                                <g class="small-icon" style="fill-opacity: 1">
+                                  <g id="question-pebble-icon">
+                                    <g>
+                                      <path d="M7,10h2v2H7V10z M15,8c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-3.866,3.134-7,7-7S15,4.134,15,8z M13.23,8c0-2.884-2.346-5.23-5.23-5.23S2.77,5.116,2.77,8c0,2.884,2.346,5.23,5.23,5.23S13.23,10.884,13.23,8z M8.5,4h-1C6.119,4,5,5.119,5,6.5V7h1.875V5.875h2.25v1.25H8c-0.552,0-1,0.448-1,1V9h1.5C9.875,9,11,7.875,11,6.5C11,5.119,9.881,4,8.5,4z"></path>
+                                      <rect style="fill:none;" width="16" height="16"></rect>
+                                    </g>
+                                  </g>
+                                  <g id="Layer_1"></g>
+                                </g>
+                              </svg>
+                            </li-icon>
                           </span>
 
                           <div role="tooltip" class="hovercard ">
@@ -465,74 +477,73 @@
                     </div>
                   </section>
                 </section>
-                <section id="ember5831" class="ad-banner-container ember-view"><iframe width="300" height="250" src="javascript:void(0)" scrolling="no" title="advertisement" class="ad-banner" src="./Jigno Alfred Venezuela _ LinkedIn_files/saved_resource(1).html"></iframe>
-                </section>
-                <section class="right-rail__info_container">
-                  <section id="ember5840" class="pv-profile-section artdeco-container-card connections-section ember-view">
-                    <a data-control-name="view_all_connections" href="https://www.linkedin.com/mynetwork/invite-connect/connections/" id="ember5841" class="ember-view">
-                      <h2 class="pv-profile-section__card-heading Sans-17px-black-85%-semibold">
-      See connections (0)
-    </h2>
 
-                      <div id="ember5854" class="facepile facepile-overlap xsmall stack-to-right ember-view">
-                        <!---->
-                      </div>
+                <section class="right-rail__info_container">
+                  <section class="pv-profile-section artdeco-container-card connections-section ember-view">
+                    <a data-control-name="view_all_connections" href="#" class="ember-view">
+                      <h2 class="pv-profile-section__card-heading Sans-17px-black-85%-semibold">See connections (0)</h2>
                     </a>
                   </section>
 
-                  <section tabindex="-1" id="ember5867" class="pv-profile-section artdeco-container-card pv-contact-info ember-view">
-                    <a data-control-name="self_edit_contact_info" href="https://www.linkedin.com/in/jigno-alfred-venezuela-757600b3/edit/contact-info/" id="ember5876" class="pv-profile-section__edit-action pv-profile-section__edit-action--show ember-view"> <span class="svg-icon-wrap"><span class="visually-hidden">Edit contact info</span>
-                      <li-icon aria-hidden="true" type="pencil-icon"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
-          <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
-        </g></svg></li-icon>
+                  <section tabindex="-1" class="pv-profile-section artdeco-container-card pv-contact-info ember-view">
+                    <a data-control-name="self_edit_contact_info" href="#" class="pv-profile-section__edit-action pv-profile-section__edit-action--show ember-view">
+                      <span class="svg-icon-wrap">
+                        <span class="visually-hidden">Edit contact info</span>
+                        <li-icon aria-hidden="true" type="pencil-icon">
+                          <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                            <g class="large-icon" style="fill: currentColor">
+                              <path d="M21.71,5L19,2.29a1,1,0,0,0-1.41,0L4,15.85,2,22l6.15-2L21.71,6.45A1,1,0,0,0,22,5.71,1,1,0,0,0,21.71,5ZM6.87,18.64l-1.5-1.5L15.92,6.57l1.5,1.5ZM18.09,7.41l-1.5-1.5,1.67-1.67,1.5,1.5Z"></path>
+                            </g>
+                          </svg>
+                        </li-icon>
                       </span>
                     </a>
+
                     <h2 class="pv-profile-section__card-heading Sans-17px-black-85%-semibold">Contact and Personal Info</h2>
-
-                    <div class="pv-contact-info__card-sub-heading Sans-15px-black-55%-semibold mv1">
-                      {{profile.firstname}}’s Profile, Phone, Email, IM, and Birthday
-                    </div>
-
+                    <div class="pv-contact-info__card-sub-heading Sans-15px-black-55%-semibold mv1">{{profile.firstname}}’s Profile, Phone, Email, IM, and Birthday</div>
                     <button data-control-name="contact_see_more" class="contact-see-more-less link-without-visited-state" data-ember-action="" data-ember-action-5877="5877">
-    <span aria-hidden="true">
-      Show more
-      <span class="svg-icon-wrap"><li-icon aria-hidden="true" type="chevron-down-icon" class="icon-state" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="small-icon" style="fill-opacity: 1">
-          <path d="M8,9l5.93-4L15,6.54l-6.15,4.2a1.5,1.5,0,0,1-1.69,0L1,6.54,2.07,5Z"></path>
-        </g></svg></li-icon></span>
-     </span>
-    <span class="visually-hidden">See more contact and personal info</span>
-  </button>
+                      <span aria-hidden="true">
+                        Show more
+                        <span class="svg-icon-wrap">
+                          <li-icon aria-hidden="true" type="chevron-down-icon" class="icon-state" size="small">
+                            <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon">
+                              <g class="small-icon" style="fill-opacity: 1">
+                                <path d="M8,9l5.93-4L15,6.54l-6.15,4.2a1.5,1.5,0,0,1-1.69,0L1,6.54,2.07,5Z"></path>
+                              </g>
+                            </svg>
+                          </li-icon>
+                        </span>
+                       </span>
+                      <span class="visually-hidden">See more contact and personal info</span>
+                    </button>
                   </section>
-
                 </section>
 
-                <div style="" id="ember5878" class="pv-deferred-area ember-view">
+                <div style="" class="pv-deferred-area ember-view">
                   <div class="pv-deferred-area__content">
-                    <section id="ember5949" class="pv-profile-section artdeco-container-card pv-browsemap-section profile-section ember-view">
+                    <section class="pv-profile-section artdeco-container-card pv-browsemap-section profile-section ember-view">
                       <h2 class="pv-profile-section__card-heading Sans-17px-black-85%">People Also Viewed</h2>
-
+                      <!-- NOTE: People Viewed list-->
                       <ul class="pv-profile-section__section-info section-info browsemap mt4">
                         <li ng-repeat="list in viewed" class="pv-browsemap-section__member-container mt4">
-                          <a data-control-name="browsemap_profile" href="https://www.linkedin.com/in/katherine-vi%C3%B1as-221b08b9/" id="ember5951" class="pv-browsemap-section__member ember-view"> <img class="lazy-image pv-browsemap-section__member-image EntityPhoto-circle-4" alt="Katherine Viñas" height="56" width="56">
+                          <a data-control-name="browsemap_profile" href="#" class="pv-browsemap-section__member ember-view">
                             <div class="pv-browsemap-section__member-detail">
-                              <h3 id="ember5964" class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view">
-                              <span class="name-and-icon">
-                                <span class="name actor-name">{{list.name}}</span>
-                              </span>
+                              <h3 class="pv-browsemap-section__member-detail--has-hover actor-name-with-distance single-line-truncate ember-view">
+                                <span class="name-and-icon">
+                                  <span class="name actor-name">{{list.name}}</span>
+                                </span>
 
-  <span id="ember5973" class="distance-badge separator ember-view">  <span class="visually-hidden">{{list.connection}} degree connection</span>
-
-  <span class="dist-value">{{list.connection}}</span>
-  </span>
-  </h3>
+                                <span  class="distance-badge separator ember-view">
+                                  <span class="visually-hidden">{{list.connection}} degree connection</span>
+                                  <span class="dist-value">{{list.connection}}</span>
+                                </span>
+                              </h3>
                               <p class="browsemap-headline Sans-15px-white-100%">{{list.headline}}</p>
                             </div>
                           </a>
                         </li>
                       </ul>
                     </section>
-
-
                   </div>
                 </div>
 

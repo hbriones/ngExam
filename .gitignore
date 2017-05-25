@@ -3,4 +3,7 @@ node_modules
 .sass-cache
 bower_components
 .idea
+<<<<<<< HEAD
 Gruntfile.js
+=======
+>>>>>>> 55416df3c87ebd2ca61e57c38c04cb1eee2cfe64
